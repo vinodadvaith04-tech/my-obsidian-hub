@@ -166,10 +166,11 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "omnisearch:Omnisearch": false,
-      "obsidian-git:Open Git source control": false
+      "omnisearch:Omnisearch": false
     }
   },
   "active": "7e1a756af7c9ce9e",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Alive"
+  ]
 }
