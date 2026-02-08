@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hi/Does this work.md",
+                "file": "Alive/This works ig.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Does this work"
+              "title": "This works ig"
             }
           }
         ]
@@ -171,6 +171,8 @@
   },
   "active": "7e1a756af7c9ce9e",
   "lastOpenFiles": [
+    "Hi/Does this work.md",
+    "Alive/This works ig.md",
     "Alive"
   ]
 }
