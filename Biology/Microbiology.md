@@ -1,0 +1,8 @@
+- Structure of the Prokaryotic cell, including differences and similarities of bacteria and archaea in build-up of cell wall, lipid membranes and cytoplasmic architecture; structure of main cell components  
+- Growth of microorganisms, including growth kinetics; auxotrophy and nutrient requirements; growth on surfaces and in solution; environmental factors; microbial communities  
+- Energy transduction, including basic principles of redox reactions,; substrate-level and oxidative phosphorylation; chemiosmotic theory  
+- Metabolic diversity, including carbon, nitrogen and sulfur cycle; aerobic versus anaerobic growth; respiration versus fermentation; chemolithotrophy, phototrophy and heterotrophy  
+- Extremophiles, including ecology of microorganism, metabolic adaptations  
+- Industrial microbiology, including overflow metabolism, antibiotic production,  
+- Host-microbe interactions, including pathogenicity, virulence factors, immunity  
+- Taxonomy, including phylogeny and methods to determine evolutionary relatedness
