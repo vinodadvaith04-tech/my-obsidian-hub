@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MSc Cognitive Neuroscience/Semester 2/Social Neurocognition.md",
+                "file": "Empty/Hello from windows.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Social Neurocognition"
+              "title": "Hello from windows"
             }
           }
         ]
@@ -183,8 +183,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "70b73a844b737f06",
+  "active": "0683324a53fb0e32",
   "lastOpenFiles": [
+    "MSc Cognitive Neuroscience/Semester 2/Social Neurocognition.md",
+    "Empty/Hello from windows.md",
     "Empty",
     "To do/To do list.md",
     "Integrative transcriptomics and electrophysiological profiling of hiPSC-derived neurons identifies novel druggable pathways in Koolen-de Vries Syndrome.md",
@@ -192,7 +194,6 @@
     "MSc Cognitive Neuroscience/Semester 2/Neurophilosophy.md",
     "MSc Cognitive Neuroscience/Semester 2/Sensorimotor Neurotechnology.md",
     "MSc Cognitive Neuroscience/Semester 2/Quantitative Brain Networks.md",
-    "MSc Cognitive Neuroscience/Semester 2/Social Neurocognition.md",
     "MSc Cognitive Neuroscience/Semester 2/Whats Next.md",
     "MSc Cognitive Neuroscience/Semester 1/Trends.md",
     "MSc Cognitive Neuroscience/Semester 1/Mathematics for neuroimaging.md",
