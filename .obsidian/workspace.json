@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "The Final test/Mac has written, who can read?.md",
+                "file": "Last check/iPad has written.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mac has written, who can read?"
+              "title": "iPad has written"
             }
           }
         ]
@@ -173,23 +173,22 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "omnisearch:Omnisearch": false,
-      "obsidian-git:Open Git source control": false,
       "graph:Open graph view": false,
       "daily-notes:Open today's daily note": false,
       "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "omnisearch:Omnisearch": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "70b73a844b737f06",
+  "active": "0683324a53fb0e32",
   "lastOpenFiles": [
-    "MSc Cognitive Neuroscience/Semester 2/Quantitative Brain Networks.md",
-    "The Final test/Mac has written, who can read?.md",
-    "The Final test",
     "Hi/Does this work.md",
+    "Last check/iPad has written.md",
+    "Last check",
     "Empty/We say hi, lets see how this goes.md",
     "Hi",
     "MSc Cognitive Neuroscience/Semester 2/Social Neurocognition.md",
@@ -199,6 +198,7 @@
     "Project.md",
     "MSc Cognitive Neuroscience/Semester 2/Neurophilosophy.md",
     "MSc Cognitive Neuroscience/Semester 2/Sensorimotor Neurotechnology.md",
+    "MSc Cognitive Neuroscience/Semester 2/Quantitative Brain Networks.md",
     "MSc Cognitive Neuroscience/Semester 2/Whats Next.md",
     "MSc Cognitive Neuroscience/Semester 1/Trends.md",
     "MSc Cognitive Neuroscience/Semester 1/Mathematics for neuroimaging.md",
