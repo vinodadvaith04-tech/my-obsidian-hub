@@ -1,2 +1,3 @@
-Mac has written, and it can read by iPad properly, downl function works. 
-iPad had written, who can read?
+Mac can write and it was read by iPad, downl function works properly, testing out upl function
+Will it work
+I pad writes, who can read
