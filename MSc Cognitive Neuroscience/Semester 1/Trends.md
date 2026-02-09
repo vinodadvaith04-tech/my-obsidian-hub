@@ -142,6 +142,17 @@ Learning
 Brain is a predictive machine that learns from prediction error
 Predictive coding, sensory area meets the information coming from higher brain areas. 
 
+##### Curiosity 
+Trait curiosity and state curiosity
+
+Learning rewards memory via dopamine
+Curiousity also motivates learning 
+
+Research design
+	Measure it based on curiosity and how easy it is to answers
+
+**Curiosity predicts recall**
+But rewards had a very minimal effect
 
 
 ### **Linda Geerligs**
