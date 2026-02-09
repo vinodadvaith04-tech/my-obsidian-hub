@@ -138,6 +138,11 @@ Top-down Vision
 
 ### **Harold Bekkering**
 Learning & motivation
+Learning
+Brain is a predictive machine that learns from prediction error
+Predictive coding, sensory area meets the information coming from higher brain areas. 
+
+
 
 ### **Linda Geerligs**
 Dynamic & Naturalistic Cognitive Neuroscience
