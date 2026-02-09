@@ -1,4 +1,4 @@
-### **Fleur Zeldenrust**
+### **Fleur Zeldenrust** is cool
 #### Biophysics of Neural Computation
 
 ### **Hanneke den Ouden**
