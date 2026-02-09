@@ -5,7 +5,19 @@
   
   ### **2: Quantifying the Dynamics of Neural Networks**
 
-  ### **3: Signals: LFP and spikes 1**
+### **3: Signals: LFP and spikes 1**
+  Electrophysiology 
+  Always extracellular tissue, 
+  local field potential- all below 200hz(low pass)
+  Passing through high pass - high frequencies, action potentials, 
+  **Local field potentials vs spikes** debate??
+  EEG, Ecog, LFP, Laminar, Microelectrod
+  
+  You work with fields more since it is replicable, and easily detectable and hence can be used as a form of therapy\
+  Primary currents and secondary(volume currents)
+  Divergence of both would be equal?
+  Primary current - How much influx in a certain volume due to a synaptic input
+  
    
   ### **4: Spikes and LFPs**
   
