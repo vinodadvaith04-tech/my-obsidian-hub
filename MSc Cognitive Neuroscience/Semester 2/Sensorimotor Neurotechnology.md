@@ -56,6 +56,24 @@ Here it is sensitive to the whole work space, but codes only across one dimensio
 
 
 ### **Somatosensory system 2**
+Somatosensory - tactile and proprioceptive neurons integrate in area 2 and 5 .
+Posture/hand position shows a certain activation pattern, however cutaneous input changes that. 
+**Illusion of limb movement**
+Pinocchio illusion 
+	Vibration on the bicep tendon as you grab you nose
+
+How does the brain find object size
+Tactile localisation 
+
+**Multi sensory integration**
+Modalities have different reliability in terms of location 
+	Vision having the most
+	Followed by proprioception
+	Sound is unreliable
+
+Optimal object size perception 
+Weighting one modality over this other 
+
 
 ### **Motor control**
 
