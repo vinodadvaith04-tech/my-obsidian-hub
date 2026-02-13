@@ -24,3 +24,9 @@ Themis to make the booklets
 *Send  confirmation for booklet content to the speakers 
 Big poster on the doors
 Check if there is a way to contact andra
+
+Poster ready by 16th 
+Brochure ready by 23rd, send emails with the brochure content 
+Keep a few q and a ready for each speaker in case.
+Stroopwafel and tin for speaker gift
+Grocery by Shen
