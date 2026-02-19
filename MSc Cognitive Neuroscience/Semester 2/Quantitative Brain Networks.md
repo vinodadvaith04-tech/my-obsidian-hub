@@ -18,8 +18,9 @@
   Divergence of both would be equal?
   Primary current - How much influx in a certain volume due to a synaptic input
   
-   
-  ### **4: Spikes and LFPs**
+### **4: Spikes and LFPs**
+Cable theory??
+
   
   ### **5: Graph theory & brain connectivity 1**
   

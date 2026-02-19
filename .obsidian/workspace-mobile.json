@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MSc Cognitive Neuroscience/Semester 2/Social Neurocognition.md",
+                "file": "MSc Cognitive Neuroscience/Semester 2/Quantitative Brain Networks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Social Neurocognition"
+              "title": "Quantitative Brain Networks"
             }
           }
         ]
@@ -112,7 +112,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "MSc Cognitive Neuroscience/Semester 2/Neural Basis of Animal Cognition.md",
+            "file": "MSc Cognitive Neuroscience/Semester 2/Social Neurocognition.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -171,6 +171,8 @@
   },
   "active": "6a1252d6a1cb312b",
   "lastOpenFiles": [
+    "MSc Cognitive Neuroscience/Semester 2/Developmental Cognitive Neuroscience.md",
+    "MSc Cognitive Neuroscience/Semester 2/Social Neurocognition.md",
     "To do/To do list.md",
     "MSc Cognitive Neuroscience/Semester 2/N2 Haemodynamics.md",
     "MSc Cognitive Neuroscience/Semester 2/Neural Basis of Animal Cognition.md",
