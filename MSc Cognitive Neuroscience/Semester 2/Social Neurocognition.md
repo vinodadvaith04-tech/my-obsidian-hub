@@ -20,6 +20,16 @@ What does the social brain do?
 
 ### Non-human social cognition    
 
+Tying to see different theories for mind in non human primates
+	Informational theory of mind
+	Perceptual theory of mind
+
+Something that might have evolved much earlier 
+	Early emergence such that certain sub species that split from humans earlier have it
+	Late occurrences - perhaps different capacities came at different times 
+
+Chimps have a weak perceptual theory of mind 
+
 ### Introduction to communicative behaviours
 
 ### Neurocognition of ostensive communication

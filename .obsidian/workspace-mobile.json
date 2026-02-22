@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MSc Cognitive Neuroscience/Semester 2/Quantitative Brain Networks.md",
+                "file": "Triple network theory.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Quantitative Brain Networks"
+              "title": "Triple network theory"
+            }
+          },
+          {
+            "id": "5597dad45ab64a4b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lab rotations info.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lab rotations info"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -112,7 +127,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "MSc Cognitive Neuroscience/Semester 2/Social Neurocognition.md",
+            "file": "Lab rotations info.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -169,22 +184,25 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "6a1252d6a1cb312b",
+  "active": "5597dad45ab64a4b",
   "lastOpenFiles": [
-    "MSc Cognitive Neuroscience/Semester 2/Developmental Cognitive Neuroscience.md",
+    "Lab rotations info.md",
+    "Triple network theory.md",
+    "Project.md",
+    "Journal club.md",
     "MSc Cognitive Neuroscience/Semester 2/Social Neurocognition.md",
     "To do/To do list.md",
+    "MSc Cognitive Neuroscience/Semester 2/Quantitative Brain Networks.md",
+    "MSc Cognitive Neuroscience/Semester 2/Developmental Cognitive Neuroscience.md",
     "MSc Cognitive Neuroscience/Semester 2/N2 Haemodynamics.md",
     "MSc Cognitive Neuroscience/Semester 2/Neural Basis of Animal Cognition.md",
     "Temp/Gate Prep.md",
     "Neuroscience mind map.md",
     "MSc Cognitive Neuroscience/Semester 2/Neurophilosophy.md",
-    "Journal club.md",
     "MSc Cognitive Neuroscience/Semester 2/Sensorimotor Neurotechnology.md",
     "MSc Cognitive Neuroscience/Semester 2/N2 Electrophysiology.md",
     "Sensation and perception of touch.md",
     "MSc Cognitive Neuroscience/Semester 1/Trends.md",
-    "MSc Cognitive Neuroscience/Semester 2/Quantitative Brain Networks.md",
     "Last check/iPad has written.md",
     "The Final test/Mac has written, who can read?.md",
     "Last check",
