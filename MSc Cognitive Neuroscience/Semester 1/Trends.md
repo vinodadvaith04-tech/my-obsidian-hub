@@ -158,6 +158,39 @@ But rewards had a very minimal effect
 ### **Linda Geerligs**
 Dynamic & Naturalistic Cognitive Neuroscience
 
+Integration 
+Segmentation
+
+*Temporal receptive window*
+Time it takes for some old data in the brain to be able to integrate with some new information
+TRC is studied by using stories or by audio tracks
+Naturalistic stimuli and more ecologically valid 
+Inter-subject synchronisation??
+
+Processing hierarchy has a correlation with temporal receptive window. 
+More complex areas vs lower sensory areas have smaller vs larger receptive windows
+Previous events are stored as long term memory, chunking of multiple events 
+##### Event Segmentation Theory
+Neural state correlation. 
+Dividing a voxel into multiple time points, comparing each voxel activity at a time point, with every other. 
+![[Pasted image 20260223155841.png]]
+Every brain region segments stimuli into many states.
+But at different rates fore ach region 
+Higher areas tend to segement at even boundaries
+Certain overlaps between neural states. Multimodal areas might be those common state boundaries
+Temporal hierarchy of the cortex - Finding which area has what temporal hierarchy of state duration.
+
+Event boundary - what people say is a different event 
+Neural state boundary - what your brain keeps as a boundary
+
+Studying predictive processing in a naturalistic setting
+Listening to a story, you predict the same way a a LLM?
+Sending the stories through the human as well as the gpt, then try to see if you can get a prediction brain signal. Compare the two. 
+Take a review paper as template and empirical as evidence for it ??
+
+
+
+
 ### **Carys Evans**
 Cognitive Neuromodulation
 
