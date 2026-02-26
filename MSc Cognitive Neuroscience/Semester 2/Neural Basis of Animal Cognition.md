@@ -32,3 +32,26 @@ Multiple coupled, coordinated firings in the CA1 together
 Transcient
 
 ### Methods of studying replay
+
+### Semantic memory in rodents
+Memory types
+	Episodic vs Semantic 
+
+Declarative vs procedurally memory -> not very straightforward when compared to animal models.
+
+Memory consolidation - whole brain are network, and points towards to hippocampus(Cell assembly)
+Event memories - from hippocampus areas, 
+semantic memory is the principles learnt from the event that took place. Mainly in the cortical area. 
+
+
+Reference memory tasks 
+	Barnes maze
+	Water maze
+	Radial arm maze
+
+Memory generalisation - 
+
+Familiarity vs Recollection 
+
+#### Schema
+Object space task
