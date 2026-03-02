@@ -1,2 +1,3 @@
-### Lecture 3
+### Lecture 5
 Echo Planar Imaging 
+

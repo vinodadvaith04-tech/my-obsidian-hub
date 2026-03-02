@@ -31,3 +31,10 @@ Consciousness
 Mind
 
 ### Free will 
+
+# Topics
+Psychedelics
+Neurodegeneration as a predictive processing error 
+Organoid intelligence 
+Memory is a myth
+Brain - the best 10 bit/s simulator?
