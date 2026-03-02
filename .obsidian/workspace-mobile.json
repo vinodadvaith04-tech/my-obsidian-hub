@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MSc Cognitive Neuroscience/Semester 2/Quantitative Brain Networks.md",
+                "file": "Lab rotations info.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Quantitative Brain Networks"
+              "title": "Lab rotations info"
             }
           },
           {
@@ -126,7 +126,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "MSc Cognitive Neuroscience/Semester 2/Quantitative Brain Networks.md",
+            "file": "Lab rotations info.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -185,8 +185,8 @@
   },
   "active": "5597dad45ab64a4b",
   "lastOpenFiles": [
-    "MSc Cognitive Neuroscience/Semester 2/Neurophilosophy.md",
     "MSc Cognitive Neuroscience/Semester 2/Quantitative Brain Networks.md",
+    "MSc Cognitive Neuroscience/Semester 2/Neurophilosophy.md",
     "Note-qbn add.md",
     "Lab rotations info.md",
     "NAM talk.md",
