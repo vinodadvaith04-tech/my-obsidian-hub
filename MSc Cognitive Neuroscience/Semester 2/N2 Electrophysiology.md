@@ -16,3 +16,9 @@ You need to separate all these sources and in mix them
 Forward solution 
 Inverse solution 
 
+### Forward solution 
+How we model this
+Biophysical constraints
+We limit our model using this constraints
+We also have mathematical constraints
+Forward matrix, 

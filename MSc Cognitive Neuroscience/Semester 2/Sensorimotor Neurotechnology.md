@@ -79,6 +79,50 @@ Weighting one modality over this other
 
 ### **Prosthetic control 1**
 
+![[Pasted image 20260304104050.png]]
+Most of our finger movements are controlled by your forearms 
+Read about the nerves and muscles in the arm
+![[Pasted image 20260304104242.png]]
+Spacial specificity of the motor cortex, have electrodes for each place responsible fo the specific place
+Somatotopy - Preserved in amputees, cause of phantom limb syndrome??
+
+Volitoinal control of Brian signals 
+Decoding hand motor imagery from PPC-posterior parietal cortex
+Certain neurons have preferential activity for certain types of instruction/grasps
+
+
+Peripheral Interphaces
+
+![[Pasted image 20260304105543.png]]
+
+
+Myoelectric recording from the surface of the skin, from other muscles
+EMG sensors
+Type of control was just direct mapping - just have a threshold 
+Can be done also with classification 
+But its accuracy may vary, requires retraining of the algorithm,  
+
+#### Neuromuscular interface 
+Take signals directly from the nerve
+
+
+### Brain machine interfaces 
+Takes main eeg and ecog as signals 
+Using recordings from m1
+When done on monkeys, they could use their arms and the prosthetic arm at the same time
+Why??
+Error correction was possible 
+
+
+### Brain to movement mapping 
+Biomimetic approach 
+Kinematic based control
+Goal: map firing rate f to kinematic features v (i.e., invert the encoding model)
+The b corresponds to the weight of the specific feature v (like in linear regressio
+
+Adaptation approach 
+
+
 ### **Prosthetic control 2**
 
 ### **Prosthetic touch 1**

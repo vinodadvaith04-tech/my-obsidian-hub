@@ -13,20 +13,30 @@ Neurological Movement Disorders
 
 Email format 
 
-Dear blank, 
+Dear Anne Sophie Hafner,
 
-I am Advaith Vinod, a first year CNS student in track 3 Development and Lifelong Plasticity. 
-I’m writing this email to enquire if your lab takes in students for a lab rotation. 
-I think I should let you know that I am from. Psychology background and have very limited wet lab experience and considering the work that your lab does, I would be required to have wet lab experience. 
-However i am very motivated to learn and gain experience and would eventually move towards this field 
-Please do let me know if a lab rotation is possible and if you require any other information from my side. 
-I am looking forward to your reply
-Thank you
-Regards
+  
+
+I am Advaith Vinod, a first-year Cognitive Neuroscience (CNS) student in the Development and Lifelong Plasticity track. I am writing to inquire if your lab has any availability for a lab rotation.
+
+I have a background in Psychology, and while my current wet lab experience is limited, I am highly motivated and would like to gain experience in the methods used by your lab.
+
+Please let me know if a rotation might be possible or if you would like me to send over any additional information.
+
+Thank you for your time and consideration.
+
+  
+
+Best regards,
+
 Advaith Vinod
-
 
 To send 
 lisenka.vissers@radboudumc.nl
 marcel.verbeek@radboudumc.nl
 barbara.franke@radboudumc.nl
+Hans
+Nael
+Lisa grenzel
+Judith homberg
+En zo Hermans
