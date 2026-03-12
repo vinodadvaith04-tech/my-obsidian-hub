@@ -55,3 +55,36 @@ Familiarity vs Recollection
 
 #### Schema
 Object space task
+
+
+### Journal Club
+Check journal of neuroscience, might be a good source.
+
+
+## Exam questions 
+Replay  
+a) Describe hippocampal replay and the brain states associated with its occurrence (2pts)  
+During sleep, place cell activity sequences observed during wakefulness,  are reactivated at a faster rate 10x
+Replay often is depicted in the sequence in the order experienced or in reverse forward replay vs reverse 
+Replay can be local or remote spaces as well as explored or unexplored places.
+Ripples are associated with sharp-wave ripples oscillations. 
+Often implicated with memory consolidation, navigation/spatial planning, imagination, cognitive mapping, reinforcement learning. 
+
+b) Discuss two studies that indicate replay may support planning (6pts)  
+Pfeiffer & Foster 2013, showed that replay during a task where animals alternated between random foraging and goal directed navigation predicted the animals paths during goals trials before the animals initiates a goals directed trajectory 
+
+Jadhav et al 2012, disrupted ripples while animals carried out working memory tasks and showed, did not have an effect if affected during sleep. 
+
+Spatial representations in the brain  
+a) Describe what a place cell is, where place cells can be found and determines where they  
+fire (2pts)  
+Found in the hippocampus and are fired when you walk at certain location. Each cell corresponds to a particular area. Context(smell colour etc tasks), self motion, geometry, distal cues landmarks. 
+
+b) Describe place cell re-mapping, please substantiate your answer with the discussion of  
+at least one hippocampal re-mapping study (3pts)
+When place cells change their firing location in repossessed to changes in the environment
+If a square environment becomes rectangular, cells that had a place field along the border will tend to elongate. 
+If an additional boundary was added, place cells 
+
+c) Describe place cell phase precession and theta sequences (3pts
+

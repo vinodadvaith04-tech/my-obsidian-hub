@@ -125,6 +125,8 @@ Adaptation approach
 
 ### **Prosthetic control 2**
 
+
+
 ### **Prosthetic touch 1**
 
 ### **Prosthetic touch 2**
