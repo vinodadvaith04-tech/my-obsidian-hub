@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MSc Cognitive Neuroscience/Semester 2/N2 Electrophysiology.md",
+                "file": "MSc Cognitive Neuroscience/Semester 1/Trends.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "N2 Electrophysiology"
+              "title": "Trends"
             }
           }
         ]
@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Hi/Does this work.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Does this work"
             }
           },
           {
@@ -172,27 +173,34 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "omnisearch:Omnisearch": false,
-      "obsidian-git:Open Git source control": false,
       "graph:Open graph view": false,
       "daily-notes:Open today's daily note": false,
       "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "omnisearch:Omnisearch": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0683324a53fb0e32",
+  "active": "70b73a844b737f06",
   "lastOpenFiles": [
-    "MSc Cognitive Neuroscience/Semester 2/Developmental Cognitive Neuroscience.md",
-    "The Final test/Mac has written, who can read?.md",
+    "z_Attachments/Pasted image 20260304105543.png",
+    "z_Attachments/Pasted image 20260304104242.png",
+    "z_Attachments/Pasted image 20260304104050.png",
+    "z_Attachments/Pasted image 20260225084429.png",
+    "z_Attachments/Pasted image 20260223155841.png",
     "Sensation and perception of touch.md",
+    "Note-qbn add.md",
     "Neuroscience mind map.md",
+    "Neural basis review article.md",
+    "NAM talk.md",
+    "Lab rotations info.md",
     "Journal club.md",
-    "MSc Cognitive Neuroscience/Semester 2/Quantitative Brain Networks.md",
-    "The Final test",
+    "Last check/iPad has written.md",
     "Hi/Does this work.md",
+    "Last check",
     "Empty/We say hi, lets see how this goes.md",
     "Hi",
     "MSc Cognitive Neuroscience/Semester 2/Social Neurocognition.md",
@@ -202,32 +210,25 @@
     "Project.md",
     "MSc Cognitive Neuroscience/Semester 2/Neurophilosophy.md",
     "MSc Cognitive Neuroscience/Semester 2/Sensorimotor Neurotechnology.md",
+    "MSc Cognitive Neuroscience/Semester 2/Quantitative Brain Networks.md",
     "MSc Cognitive Neuroscience/Semester 2/Whats Next.md",
     "MSc Cognitive Neuroscience/Semester 1/Trends.md",
     "MSc Cognitive Neuroscience/Semester 1/Mathematics for neuroimaging.md",
     "MSc Cognitive Neuroscience/Semester 2/Neural Basis of Animal Cognition.md",
     "MSc Cognitive Neuroscience/Semester 2/N2 Haemodynamics.md",
     "MSc Cognitive Neuroscience/Semester 2/N2 Electrophysiology.md",
+    "MSc Cognitive Neuroscience/Semester 2/Developmental Cognitive Neuroscience.md",
     "MSc Cognitive Neuroscience/Semester 1/Neuroimaging 1.md",
-    "MSc Cognitive Neuroscience/Semester 1/Neurogenetics.md",
     "MSc Cognitive Neuroscience/Semester 2",
-    "MSc Cognitive Neuroscience/Semester 1/Animal models.md",
     "z_Attachments/Pasted image 20251209002159.png",
-    "Temp/Email format.md",
     "z_Attachments/Pasted image 20251203134045.png",
-    "t.md",
     "z_Attachments/Pasted image 20251201140223.png",
     "z_Attachments/Pasted image 20251201135306.png",
-    "Triple network theory.md",
     "Untitled.base",
     "z_Attachments/Screenshot 2025-11-30 at 19.22.56.png",
     "z_Attachments/Pasted image 20251124085034.png",
-    "z_Attachments/Screenshot 2025-11-24 at 08.37.30.png",
-    "z_Attachments/Pasted image 20251124142635.png",
     "z_Attachments",
-    "BSc Psychology/Semester 4/z_Attachments/Pasted image 20251124142543.png",
     "BSc Psychology/Semester 4/z_Attachments",
-    "z_Attachments/Pasted image 20251124113847.png",
     "Textbooks/1. History and Systems of Psychology Brennan.pdf",
     "Textbooks/Theories of Personalities - Schults^2.pdf",
     "Textbooks/The Cognitive Neurosciences.pdf",
