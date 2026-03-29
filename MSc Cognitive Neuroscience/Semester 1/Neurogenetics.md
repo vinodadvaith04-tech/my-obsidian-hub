@@ -1,5 +1,15 @@
 Lecture 1 - Introduction
+Genetic variation is the primary driver of human diversity and disorders. 
+We don’t talk about mutations anymore, just about variances. 
+Everyone has 3-4 million (SNVs) Single nucleotide variants
+Polymorphisms are variants(SNP) Single nucleotide polymorphisms. That are present in more than 1% of the population. 
+Mutations are variances that appear at frequencies lower than 1%
 
+
+Types of mutations 
+Silent mutation 
+misense mutation 
+Nonsense mutation 
 
 
 
