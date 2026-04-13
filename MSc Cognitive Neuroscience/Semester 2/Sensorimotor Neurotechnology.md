@@ -129,6 +129,8 @@ Adaptation approach
 
 ### **Prosthetic touch 1**
 
+
+
 ### **Prosthetic touch 2**
 
 ### **Prosthetic proprioception**
