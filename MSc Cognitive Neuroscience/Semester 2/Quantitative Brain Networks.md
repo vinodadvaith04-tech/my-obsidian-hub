@@ -63,6 +63,27 @@ Communication through coherence
 
 # 6: Graph theory & brain connectivity 2
 
+Graph theory, 
+Directed and undirected graph - matrix representation(column wise)
+Properties of a graph
+	Degree(undirected) projections or connections for a certain node
+	Connections - number of ones in the network for one node, double
+	Mean degree per node
+	Density of edges - 
+	Dense network & sparse networks
+
+Path length - speed from one neuron to another, shorter path length is normally good
+Sequence of edges between to specific nodes. 
+	Self avoiding 
+	Geodesic 
+Mean path length
+
+Clustering - 
+
+Hub - centrality 
+Degree centrality - vertices with high degree, most well connected 
+Eigenvector centrality - how important are the vertices you connect to. 
+
 
 # 7: Phase amplitude coupling: experiments
 
