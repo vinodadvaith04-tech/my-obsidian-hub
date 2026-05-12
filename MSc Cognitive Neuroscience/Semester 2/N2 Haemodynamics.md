@@ -23,5 +23,29 @@ Segmentation of sub structures
 Deformable model, mesh wrapping 
  Jacobian map. Is multiplied with the normal image, this helps to make sure it is standardised after the non linear transformation 
 
+Principle of bold signal 
+	
+Static dephasing vs. dynamic dephasing 
+Depends on the size of the blood vessel 
 
+Distortion field moves as well as
+
+
+
+# Statistic in fMRI
+Null hypthesis
+	Opposite of what I hope to see
+	What happens if there is no effect of your intervention or no difference between the groups
+Test statistic 
+
+
+
+
+Family wise error
+
+Using resel-which is the number of voxels that….
+
+Gaussian random field theory 
+
+Cluster based, always reject the null hypothesis of the largest cluster. 
 

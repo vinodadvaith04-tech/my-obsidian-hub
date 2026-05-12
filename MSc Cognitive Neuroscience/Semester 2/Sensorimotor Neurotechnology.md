@@ -133,6 +133,8 @@ Adaptation approach
 
 ### **Prosthetic touch 2**
 
+
+
 ### **Prosthetic proprioception**
 
 ### **Body augmentation**
