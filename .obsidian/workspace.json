@@ -181,11 +181,13 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "omnisearch:Omnisearch": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "0683324a53fb0e32",
   "lastOpenFiles": [
+    "Biology/Behavioural Neuroscience.md",
     "MSc Cognitive Neuroscience/Semester 1/Neurogenetics.md",
     "MSc Cognitive Neuroscience/Semester 1/Trends.md",
     "z_Attachments/Pasted image 20260304105543.png",
@@ -219,7 +221,6 @@
     "MSc Cognitive Neuroscience/Semester 2/N2 Haemodynamics.md",
     "MSc Cognitive Neuroscience/Semester 2/N2 Electrophysiology.md",
     "MSc Cognitive Neuroscience/Semester 2/Developmental Cognitive Neuroscience.md",
-    "MSc Cognitive Neuroscience/Semester 1/Neuroimaging 1.md",
     "MSc Cognitive Neuroscience/Semester 2",
     "z_Attachments/Pasted image 20251209002159.png",
     "z_Attachments/Pasted image 20251203134045.png",

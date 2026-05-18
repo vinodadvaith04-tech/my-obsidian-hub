@@ -7,14 +7,6 @@
       "key": "H"
     }
   ],
-  "editor:toggle-highlight": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "ArrowUp"
-    }
-  ],
   "editor:toggle-comments": [],
   "editor:toggle-code": [
     {
@@ -48,46 +40,11 @@
       "key": "3"
     }
   ],
-  "workspace:goto-tab-1": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "1"
-    }
-  ],
-  "workspace:goto-tab-2": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "2"
-    }
-  ],
-  "workspace:goto-tab-3": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "3"
-    }
-  ],
-  "workspace:goto-tab-4": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "4"
-    }
-  ],
-  "workspace:goto-tab-5": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "5"
-    }
-  ],
+  "workspace:goto-tab-1": [],
+  "workspace:goto-tab-2": [],
+  "workspace:goto-tab-3": [],
+  "workspace:goto-tab-4": [],
+  "workspace:goto-tab-5": [],
   "workspace:goto-tab-6": [],
   "workspace:goto-tab-7": [],
   "workspace:goto-tab-8": [],
@@ -97,19 +54,6 @@
         "Ctrl"
       ],
       "key": "Tab"
-    },
-    {
-      "modifiers": [
-        "Meta",
-        "Shift"
-      ],
-      "key": "]"
-    },
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "ArrowRight"
     }
   ],
   "workspace:previous-tab": [
@@ -119,19 +63,6 @@
         "Shift"
       ],
       "key": "Tab"
-    },
-    {
-      "modifiers": [
-        "Meta",
-        "Shift"
-      ],
-      "key": "["
-    },
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "ArrowLeft"
     }
   ],
   "editor:set-heading-4": [
@@ -209,14 +140,6 @@
       "key": "O"
     }
   ],
-  "editor:insert-table": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "T"
-    }
-  ],
   "editor:insert-codeblock": [
     {
       "modifiers": [
@@ -261,6 +184,47 @@
         "Mod"
       ],
       "key": "C"
+    }
+  ],
+  "workspace:goto-last-tab": [],
+  "editor:insert-table": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "T"
+    }
+  ],
+  "editor:table-col-after": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowRight"
+    }
+  ],
+  "editor:table-col-before": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowLeft"
+    }
+  ],
+  "editor:table-row-after": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowDown"
+    }
+  ],
+  "editor:table-row-before": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowUp"
     }
   ]
 }
