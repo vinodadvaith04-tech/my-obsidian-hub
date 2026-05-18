@@ -5,6 +5,7 @@ Real network -> Network schematic
 Neurons -> Nodes
 Connections ->Edges
 
+
 ##### Identifying neuronal types
 Morphological -Shape, size location etc
 Biochemical - Staining profile 
