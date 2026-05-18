@@ -193,5 +193,13 @@
       ],
       "key": "4"
     }
+  ],
+  "editor:toggle-numbered-list": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "`"
+    }
   ]
 }

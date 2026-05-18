@@ -1,4 +1,4 @@
-
+[[Neurogenetics]]
 hiPSCs lines
 The above mentioned microglial and astrocyte functioning assays will be performed for both control and KdVS derived hiPSCs. The hiPSCs lines were chosen as described in (Verboven et al., 2024). 3 control lines (C1, C2, C3) along with 4 KdVS lines (KdVS1,2,3,4). All hiPSCs were derived from fibroblasts from either healthy controls or a full spectrum of KdVS variations (Koolen et al., 2016) to ensure the entire spectrum of symptoms due to KdVS are included. These hiPSCs lines were used for microglial and astrocyte functioning assays, however for the MEA sequencing method, only one control line and one KdVS line was selected as this will be a quad culture and too many lines would result in excessive control and KdVS groups for each cell type. 
 

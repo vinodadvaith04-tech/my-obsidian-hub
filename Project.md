@@ -1,4 +1,4 @@
-
+[[Animal models]]
 Title: Effects of Immunotherapy and Environmental Enrichment on Cocaine-Seeking Motivation in Rats Under Long-Access Conditions
 Cocaine
 	According to a 2019 statistics, It is estimated that 20million humans. Out of that 20% end up being addicted to the substance. It is a stimulant. A reuptake inhibitor of monoamines(dopamine, norepinephrine, seratonin) causing a huge surge of euphoria. 

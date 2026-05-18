@@ -1,4 +1,4 @@
-
+[[Lab rotations info]]
 2 cell lines. Male and female
 Check how well zip9 and AR knockout using crispr/cas9 are on neurons and non neuronal cells. 
 Check normal functioning for all these mono cultures
