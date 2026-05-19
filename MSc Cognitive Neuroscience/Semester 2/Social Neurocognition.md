@@ -65,7 +65,12 @@ Influences the brain through 3 main pathways
 Blood stream, the olfactory bulb, trigeminal
 ![[Screenshot 2026-05-19 at 13.58.27.png]]
 
-Both admmin
+Both admministration of O as well as measuring how much is actually gone in the human is extremely hard to do. 
+Another method to do so is with neuroimaging. however that only deal with blood flow in the brain. 
+
+
+Main effects of oxytocin 
+1. Axioletic effects - reduces anxeity both in menstruation, child birth and others. 
 
 ### Individual presentation grant proposals 
 
