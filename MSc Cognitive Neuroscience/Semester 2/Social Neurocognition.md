@@ -76,6 +76,8 @@ Main effects of oxytocin
 4. enhances adaptive responses to social behaviour
 5. Enhances regulative systems(balance) for social as well as non social challenges. 
 
+
+
 ### Individual presentation grant proposals 
 
 ### Submission grant proposal & course questions Students
