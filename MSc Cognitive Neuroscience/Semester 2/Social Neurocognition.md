@@ -60,7 +60,13 @@ O administered to children. Caregivers who believed their children have O, repor
 
 
 
-#### 
+#### Inahalation of oxytocin.
+Influences the brain through 3 main pathways
+Blood stream, the olfactory bulb, trigeminal
+![[Screenshot 2026-05-19 at 13.58.27.png]]
+
+Both admmin
+
 ### Individual presentation grant proposals 
 
 ### Submission grant proposal & course questions Students
