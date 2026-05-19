@@ -77,6 +77,8 @@ Main effects of oxytocin
 5. Enhances regulative systems(balance) for social as well as non social challenges. 
 
 
+6. Promote cognitive exploration - for communicative problems. 
+7. 
 
 ### Individual presentation grant proposals 
 
