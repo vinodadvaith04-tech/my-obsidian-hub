@@ -48,6 +48,13 @@ Chimps have a weak perceptual theory of mind
 
 ### Oxytocin and social cognition    
 
+oxytocin has several effects to begin with, has several additional affects. 
+Neuromodulator, effects excitatory neurons as well as inhibitory that indirectly affects excitatory neurons. 
+
+Used as a marker for social behaviour as well. 
+*Oxytocin recepter differences between two different types of voles*
+
+
 ### Individual presentation grant proposals 
 
 ### Submission grant proposal & course questions Students
