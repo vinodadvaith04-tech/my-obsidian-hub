@@ -78,7 +78,9 @@ Main effects of oxytocin
 
 
 6. Promote cognitive exploration - for communicative problems. 
-7. 
+
+Helps with adjustments, in semantic congruent vs incongruent
+
 
 ### Individual presentation grant proposals 
 
