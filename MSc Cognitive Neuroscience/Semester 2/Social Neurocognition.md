@@ -70,7 +70,9 @@ Another method to do so is with neuroimaging. however that only deal with blood 
 
 
 Main effects of oxytocin 
-1. Axioletic effects - reduces anxeity both in menstruation, child birth and others. 
+1. Axioletic effects - reduces anxiety both in menstruation, child birth and others. 
+2. Mediate a behavioural immune response. 
+3. Enhances the salience of social stimuli
 
 ### Individual presentation grant proposals 
 
