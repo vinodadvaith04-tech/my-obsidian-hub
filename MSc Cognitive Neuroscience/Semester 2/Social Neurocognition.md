@@ -73,6 +73,8 @@ Main effects of oxytocin
 1. Axioletic effects - reduces anxiety both in menstruation, child birth and others. 
 2. Mediate a behavioural immune response. 
 3. Enhances the salience of social stimuli
+4. enhances adaptive responses to social behaviour
+5. Enhances regulative systems(balance) for social as well as non social challenges. 
 
 ### Individual presentation grant proposals 
 
