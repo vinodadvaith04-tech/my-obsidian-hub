@@ -49,3 +49,34 @@ Gaussian random field theory
 
 Cluster based, always reject the null hypothesis of the largest cluster. 
 
+
+FDR - false discovery rate. 
+FDR vs FWE
+
+
+# Advance linear modelling 
+Reasons for finding the temporal derivative. 
+Motion parameter confounds - 
+
+Outlier timepoint detection 
+	Removes all time points that are outliers, however it does not go away completely, it just doesn’t take into account any influences at that time point. 
+
+ICA denoising 
+
+Location of certain effects - cardiacs in more central areas, respiratory everywhere. 
+	Cant be controlled by recording heart rate and respiration. 
+
+Demeaning EVs
+	demeaning your regressors 
+
+Parametric designs 
+Either different levels of pain are modelled in the same mode, this assumes that lower pain and higher pain is proportional 
+Or you can seperate both stimulus and look at them as 2 seperate designs and not in a gradient. 
+Linear trend(model it using multiple EVs) vs 
+
+F-contrasts - 
+
+Modelling positive and negative interaction. 
+
+Correlation of EVs
+
