@@ -54,6 +54,9 @@ Neuromodulator, effects excitatory neurons as well as inhibitory that indirectly
 Used as a marker for social behaviour as well. 
 *Oxytocin recepter differences between two different types of voles*
 
+#### History of using oxytocin in human trials
+
+O administered to children. Caregivers who believed their children have O, reported
 
 ### Individual presentation grant proposals 
 
