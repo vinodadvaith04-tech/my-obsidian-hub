@@ -124,6 +124,8 @@ Meg data of a tone task.
 It is also specific based on the area, as well the band which is modulated.
 
 PA coupling and behavioural performance. - No no go task
+Increases with learning.
+
 # 8: Phase amplitude coupling: methods
 
 
