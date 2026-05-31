@@ -111,7 +111,12 @@ How do these different oscillation bands communicate with each other.
 
 Since the 2 frequencies we have are fixed, f1, f2
 The only variables that are there for both the frequencies are:
-Amplitude across time 
+Amplitude across time Af1(t), Af2(t)
+Phase across time Φf1(t), ΦAf2(t)
+
+Amplitude, amplitude coupling. 
+phase, phase coupling. 
+phase amplitude coupling. 
 
 # 8: Phase amplitude coupling: methods
 
