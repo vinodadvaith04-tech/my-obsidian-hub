@@ -88,7 +88,10 @@ Eigenvector centrality - how important are the vertices you connect to.
 
 # 7: Phase amplitude coupling: experiments
 
-
+Cross frequency coupling: Why we need to know it, what it does. 
+Oscillatory phenomenon in the brain. 
+Put an electrode in the brain, you measure fluctuations in the voltage. (split it into high frequencies and low frequencies.)
+High frequencies
 # 8: Phase amplitude coupling: methods
 
 
