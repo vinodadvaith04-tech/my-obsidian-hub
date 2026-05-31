@@ -99,6 +99,17 @@ In EEG lower frequencies is the only thing you get. Spike recordings are hard, o
 You always check variations in the 1/f scaling. 
 ![[Pasted image 20260531172654.png|184]]
 
+Ripples - short events 150-200hz
+Gamma oscillation (30-150hz onward large umbrella )
+Beta oscillation 
+Spindles
+Theta oscillation(in humans called alpha just below 10hz)
+below that delta(), below that delta = slow oscillation 1hz
+infra slow oscillation less than 1 hz
+
+How do these different oscillation bands communicate with each other. 
+
+
 # 8: Phase amplitude coupling: methods
 
 
