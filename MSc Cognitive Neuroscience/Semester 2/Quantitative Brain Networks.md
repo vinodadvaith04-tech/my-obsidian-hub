@@ -122,6 +122,8 @@ Amplitude of the fast oscillation is modulated by the phase of the slower oscill
 It is task dependent
 Meg data of a tone task. 
 It is also specific based on the area, as well the band which is modulated.
+
+PA coupling and behavioural performance. - No no go task
 # 8: Phase amplitude coupling: methods
 
 
