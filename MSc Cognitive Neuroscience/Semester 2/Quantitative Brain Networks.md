@@ -91,7 +91,11 @@ Eigenvector centrality - how important are the vertices you connect to.
 Cross frequency coupling: Why we need to know it, what it does. 
 Oscillatory phenomenon in the brain. 
 Put an electrode in the brain, you measure fluctuations in the voltage. (split it into high frequencies and low frequencies.)
-High frequencies
+High frequencies(>500Hz) - spikes of the neurons (milliseconds long)
+Upon highpass you get the point like events of the signal
+Low frequencies(<200Hz) slow oscillation, independent from the spikes, overall population, excitability or a population of neurons. 
+In EEG lower frequencies is the only thing you get. Spike recordings are hard, oscillatory events in the brain is much more easier. 
+1/f scale, 
 # 8: Phase amplitude coupling: methods
 
 
