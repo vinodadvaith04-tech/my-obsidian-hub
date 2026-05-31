@@ -95,7 +95,10 @@ High frequencies(>500Hz) - spikes of the neurons (milliseconds long)
 Upon highpass you get the point like events of the signal
 Low frequencies(<200Hz) slow oscillation, independent from the spikes, overall population, excitability or a population of neurons. 
 In EEG lower frequencies is the only thing you get. Spike recordings are hard, oscillatory events in the brain is much more easier. 
-1/f scale, 
+1/f scale, power of high frequencies reduce. 
+You always check variations in the 1/f scaling. 
+![[Pasted image 20260531172654.png|184]]
+
 # 8: Phase amplitude coupling: methods
 
 
