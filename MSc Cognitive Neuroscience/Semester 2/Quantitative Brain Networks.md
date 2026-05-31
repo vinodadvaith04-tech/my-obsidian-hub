@@ -117,6 +117,8 @@ Phase across time Φf1(t), ΦAf2(t)
 Amplitude, amplitude coupling. 
 phase, phase coupling. 
 phase amplitude coupling. 
+![[Pasted image 20260531175208.png|250]]
+Amplitude of the fast oscillation is modulated by the phase of the slower oscillation. 
 
 # 8: Phase amplitude coupling: methods
 
