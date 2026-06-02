@@ -32,6 +32,8 @@ Distortion field moves as well as
 
 
 
+# 
+
 # Statistic in fMRI
 Null hypthesis
 	Opposite of what I hope to see
