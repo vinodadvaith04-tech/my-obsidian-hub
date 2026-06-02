@@ -36,7 +36,9 @@ Distortion field moves as well as
 
 EPI spiral makes more sense 
 Spin echo, straight makes more sense
-
+Distortions - susceptibility gradient, 
+Frequency dependent ofset, sheering effect. 
+All appear in the phase encoding direction, dropout. 
 
 # Statistic in fMRI
 Null hypthesis
