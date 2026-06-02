@@ -41,6 +41,10 @@ Frequency dependent ofset, sheering effect.
 All appear in the phase encoding direction, dropout. 
 Distortion and bandwidth. increase in acquisition bandwidth in read direction, reduces the time it takes. Shorter time between successive datapoints. 
 Bandwidth, frequency, gradient, noise
+Epi- accelerating epi, limiting factor of this acc, 2d epi - all acc in the slice direction. Multislice. If worried about regions with short t2 star, multiecho, accelerate in plane. 
+3d epi for higher resolution, 
+
+
 
 
 # Statistic in fMRI
