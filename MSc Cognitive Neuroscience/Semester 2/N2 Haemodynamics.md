@@ -32,7 +32,11 @@ Distortion field moves as well as
 
 
 
-# 
+# Notes to keep in mind
+
+EPI spiral makes more sense 
+Spin echo, straight makes more sense
+
 
 # Statistic in fMRI
 Null hypthesis
