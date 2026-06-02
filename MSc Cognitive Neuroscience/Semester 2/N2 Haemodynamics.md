@@ -48,6 +48,8 @@ DWI not based on relaxation time for uses epi.
 
 Motion leads to a signal increase, 
 Spin history effects increase or decrease signal. Depends on the movement. 
+Spin echo, gradient echo across all 4 contrasts
+1 question per lecture/topic. 
 
 
 # Statistic in fMRI
