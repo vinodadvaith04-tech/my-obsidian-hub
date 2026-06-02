@@ -39,6 +39,8 @@ Spin echo, straight makes more sense
 Distortions - susceptibility gradient, 
 Frequency dependent ofset, sheering effect. 
 All appear in the phase encoding direction, dropout. 
+Distortion and bandwidth. increase in acquisition bandwidth in read direction, reduces the time it takes. Shorter time between successive datapoints. 
+
 
 # Statistic in fMRI
 Null hypthesis
