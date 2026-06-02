@@ -44,7 +44,10 @@ Bandwidth, frequency, gradient, noise
 Epi- accelerating epi, limiting factor of this acc, 2d epi - all acc in the slice direction. Multislice. If worried about regions with short t2 star, multiecho, accelerate in plane. 
 3d epi for higher resolution, 
 
+DWI not based on relaxation time for uses epi. 
 
+Motion leads to a signal increase, 
+Spin history effects increase or decrease signal. Depends on the movement. 
 
 
 # Statistic in fMRI
