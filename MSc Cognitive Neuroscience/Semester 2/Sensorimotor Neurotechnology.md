@@ -1,3 +1,8 @@
+# 8 questions, answer only 7
+Short form questions 
+10 marks per question. 
+
+
 
 ### **Intro to Sensorimotor Tech**
 
