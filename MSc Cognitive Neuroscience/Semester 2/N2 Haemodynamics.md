@@ -126,3 +126,5 @@ intensity normalization - why its done
 
 ![[Pasted image 20260605091213.png|240]]
  Multiple comparison problems
+cluster thresholding
+False discovery rate(important)
