@@ -133,3 +133,4 @@ Paired t test
 Demeaning
 Parametric variation - linear trends
 How can you test when you are close to 
+Structured noise and GLM
