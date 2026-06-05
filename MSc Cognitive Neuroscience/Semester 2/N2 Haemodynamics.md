@@ -136,3 +136,6 @@ How can you test when you are close to
 Structured noise and GLM
 
 Structural connectivity - diffusion
+
+
+DTI important
