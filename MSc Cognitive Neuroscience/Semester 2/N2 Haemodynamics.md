@@ -130,3 +130,4 @@ cluster thresholding
 False discovery rate(important)
 Group analysis very important
 Paired t test
+Demeaning
