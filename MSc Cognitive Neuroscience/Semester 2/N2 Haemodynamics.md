@@ -112,3 +112,11 @@ masking, transfering binary masks
 Anatomical structre not as important but read,
 Probability model iportant 
 	Bias field correction
+	spatial neighbourhood information!
+
+Optional use of prior important for resit(modelling shape and intensity)
+
+Voxel based analysis of gm volum, what are the disadvantaged
+no atrohpy
+![[Pasted image 20260605090408.png|243]]
+
