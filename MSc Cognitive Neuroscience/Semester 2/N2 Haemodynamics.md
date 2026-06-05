@@ -100,3 +100,7 @@ Modelling positive and negative interaction.
 
 Correlation of EVs
 
+## Beckmann summary class
+first few slide minus artefacts
+No PET in first exam, pet in the resit
+Registration important(Anatomy)
