@@ -104,3 +104,8 @@ Correlation of EVs
 first few slide minus artefacts
 No PET in first exam, pet in the resit
 Registration important(Anatomy)
+![[Pasted image 20260605085037.png|286]]
+Cost function not as important
+interpolation important
+	pros and cons of types of interpolation
+masking, 
