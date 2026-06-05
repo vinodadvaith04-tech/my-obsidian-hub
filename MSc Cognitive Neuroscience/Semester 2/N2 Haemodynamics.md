@@ -108,4 +108,7 @@ Registration important(Anatomy)
 Cost function not as important
 interpolation important
 	pros and cons of types of interpolation
-masking, 
+masking, transfering binary masks
+Anatomical structre not as important but read,
+Probability model iportant 
+	Bias field correction
