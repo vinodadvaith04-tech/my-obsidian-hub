@@ -120,3 +120,6 @@ Voxel based analysis of gm volum, what are the disadvantaged
 no atrohpy
 ![[Pasted image 20260605090408.png|243]]
 
+What order should you do motion correction and slice timing(ideally should be done in 4d)
+use the temporal derevitive as an additional regressor in the GLM
+
