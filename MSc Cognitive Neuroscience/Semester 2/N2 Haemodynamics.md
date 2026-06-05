@@ -128,3 +128,5 @@ intensity normalization - why its done
  Multiple comparison problems
 cluster thresholding
 False discovery rate(important)
+Group analysis very important
+Paired t test
