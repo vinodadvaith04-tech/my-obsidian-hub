@@ -131,3 +131,5 @@ False discovery rate(important)
 Group analysis very important
 Paired t test
 Demeaning
+Parametric variation - linear trends
+How can you test when you are close to 
