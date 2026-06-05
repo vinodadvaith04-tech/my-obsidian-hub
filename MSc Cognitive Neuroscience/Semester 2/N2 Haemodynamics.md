@@ -122,4 +122,7 @@ no atrohpy
 
 What order should you do motion correction and slice timing(ideally should be done in 4d)
 use the temporal derevitive as an additional regressor in the GLM
+intensity normalization - why its done
+
+![[Pasted image 20260605091213.png|240]]
 
