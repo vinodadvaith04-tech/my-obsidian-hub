@@ -125,4 +125,4 @@ use the temporal derevitive as an additional regressor in the GLM
 intensity normalization - why its done
 
 ![[Pasted image 20260605091213.png|240]]
-
+ Multiple comparison problems
