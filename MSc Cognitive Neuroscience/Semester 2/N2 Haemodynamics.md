@@ -116,7 +116,7 @@ Probability model iportant
 
 Optional use of prior important for resit(modelling shape and intensity)
 
-Voxel based analysis of gm volum, what are the disadvantaged
+Voxel based analysis of gm volume, what are the disadvantaged
 no atrohpy
 ![[Pasted image 20260605090408.png|243]]
 
@@ -125,7 +125,7 @@ use the temporal derevitive as an additional regressor in the GLM
 intensity normalization - why its done
 
 ![[Pasted image 20260605091213.png|240]]
- Multiple comparison problems
+Multiple comparison problems
 cluster thresholding
 False discovery rate(important)
 Group analysis very important
