@@ -122,6 +122,9 @@ no atrohpy
 
 What order should you do motion correction and slice timing(ideally should be done in 4d)
 use the temporal derevitive as an additional regressor in the GLM
+4d would be good but its numerically challenging but doesnt do much. Instead we skip slice timing and add temporal derivative to GLM (Taylor expansion) to save ourselves the interpolation. The derivative can also account for different Haemodynamic delays within a slice.
+
+
 intensity normalization - why its done
 
 ![[Pasted image 20260605091213.png|240]]
