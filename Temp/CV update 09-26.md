@@ -14,4 +14,5 @@ GATE marks
 Nimhans trainings (4)
 
 Skills
-matlab, python, java, 
+Programming - matlab, python, java
+Animal - Drosophila, zebrafish, mice  
