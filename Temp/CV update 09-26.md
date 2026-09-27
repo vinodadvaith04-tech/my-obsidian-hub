@@ -1,9 +1,15 @@
 
 
 
-
-
+Donders center for neurobiology
+Christ - Neurochemistry lab
+Fortis
+Banjara Academy
 virya dewdrop
 
+Paper presentation
 
-Nimhans trainings
+GATE marks 
+
+Nimhans trainings (4)
+
