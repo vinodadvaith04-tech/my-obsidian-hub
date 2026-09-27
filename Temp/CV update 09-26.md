@@ -17,4 +17,4 @@ Skills
 Programming - matlab, python, java
 Animal - Drosophila, zebrafish, mice 
 Neuroimaging 
-Wet lab
+Wet lab - Microscopy, Staining, Patch clamping, 
