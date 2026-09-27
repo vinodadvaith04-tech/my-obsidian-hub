@@ -13,3 +13,5 @@ GATE marks
 
 Nimhans trainings (4)
 
+Skills
+matlab, python, java, 
