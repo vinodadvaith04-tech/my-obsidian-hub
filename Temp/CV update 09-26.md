@@ -15,4 +15,6 @@ Nimhans trainings (4)
 
 Skills
 Programming - matlab, python, java
-Animal - Drosophila, zebrafish, mice  
+Animal - Drosophila, zebrafish, mice 
+Neuroimaging 
+Wet lab
