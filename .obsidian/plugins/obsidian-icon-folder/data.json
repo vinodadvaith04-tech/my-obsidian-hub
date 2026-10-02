@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "✍",
       "🥼",
       "LiClock",
       "LiBook",
-      "LiAlertCircle",
-      "LiComputer"
+      "LiAlertCircle"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -41,5 +41,6 @@
   "BSc Psychology": "LiBrain",
   "Temp": "LiAlertCircle",
   "MSc Cognitive Neuroscience": "LiBrainCircuit",
-  "Lab Journal": "🥼"
+  "Lab Journal": "🥼",
+  "Internship": "✍"
 }
