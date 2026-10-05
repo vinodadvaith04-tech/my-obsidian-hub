@@ -1,11 +1,11 @@
-## Current internal 
+## Current internal 0 and -60mV holding
 
-## Using current internal
+## Using current internal intermediate holding
 
 ## Using current internal + TTX
 
-## Using current internal
+## Caesium internal with low Cl- 
 
-## Using current internal
+
 
 
