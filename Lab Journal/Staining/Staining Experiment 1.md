@@ -77,3 +77,13 @@ Thursday & Friday.(8th/9th October)
 		Goat - anti chicken 488
 		Goat - anti guinea pig 647
 		Goat - anti rat 405 
+	
+- [ ] **Incubate with secondary antibodies**
+	3-4 hours on shaker 
+	3 hours
+	
+- [ ] **Washing step**
+	Wash 3x with 1x PBS (for at least 10 min)
+	3 x 10 mins
+	
+- [ ] **Mounting**
