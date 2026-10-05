@@ -28,8 +28,12 @@ Thursday & Friday.(8th/9th October)
 		TritonX-100     50 µl (for pipetting triton cut the tip of pipet tip)
 		MQ water         8950 µl
 		First add PBS and then TritonX, then add MQ.
+	
 	In a 24 well plate, permeabilise the slice with 250 µl 0.5% TritonX-100 in PBS for 15 min
 	15 mins 
+- [ ] **Washing step**
+	3 x 10 mins 
+	30 mins 
 - [ ] **Blocking** 
 		Prepare blocking solution (10% goat serum + 0.2% TritonX-100 in 1x PBS), make it for N+1! Keep on ice.
 		For **10ml of blocking solution**:
@@ -39,5 +43,13 @@ Thursday & Friday.(8th/9th October)
 		MQ water                          7980 µl
 		First add PBS and then TritonX, then add MQ.
 	
-
+	Add 250 µl of Blocking Solution per slice at room temperature 
+	1h 
+	On the shaker 
+- [ ] Primary Anti-body preparation 
+	Prepare antibody solution in blocking solution (10% goat serum + 0.2% TritonX-100), make it for N+1!
+	Rabbit - anti Iba-1 
+	Chicken - anti vGAT 
+	G
+	Rat - anti CD68 
 
