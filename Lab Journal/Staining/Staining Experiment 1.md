@@ -22,13 +22,13 @@ Thursday & Friday.(8th/9th October)
 	3 x 5 mins
 	15 mins 
 	During 3rd wash prepare permeabilisation solution  
-- [ ] **Permeabilisation** 
+- [ ] **Permeabilisation preparation**
 	For 10ml of 0.5% TritonX-100:
 		10X PBS           1ml
 		TritonX-100     50 µl (for pipetting triton cut the tip of pipet tip)
 		MQ water         8950 µl
 		First add PBS and then TritonX, then add MQ.
-	
+- [ ] **Permeabilisation**
 	In a 24 well plate, permeabilise the slice with 250 µl 0.5% TritonX-100 in PBS for 15 min
 	15 mins 
 - [ ] **Washing step**
@@ -43,13 +43,16 @@ Thursday & Friday.(8th/9th October)
 		MQ water                          7980 µl
 		First add PBS and then TritonX, then add MQ.
 	
-	Add 250 µl of Blocking Solution per slice at room temperature 
+- [ ] **Add 250 µl of Blocking Solution** per slice at room temperature 
 	1h 
 	On the shaker 
-- [ ] Primary Anti-body preparation 
+- [ ] **Primary Anti-body preparation** 
 	Prepare antibody solution in blocking solution (10% goat serum + 0.2% TritonX-100), make it for N+1!
-	Rabbit - anti Iba-1 
-	Chicken - anti vGAT 
-	G
-	Rat - anti CD68 
+		Rabbit - anti Iba-1 (1:1500)
+		Chicken - anti vGAT (1:1000)
+		Guinea pig - anti vGLUT (1:500)
+		Rat - anti CD68 (1:200)
+	All of it in blocking solution 
+- [ ] **Primary antibody addition**
+	Add it but leave one as a 
 
