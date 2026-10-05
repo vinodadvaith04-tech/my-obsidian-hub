@@ -14,7 +14,7 @@ Trying to do a VGAT, VGLUT, Iba-1 and CD-68 staining on mouse hippocampal slices
 
 Thursday & Friday.(8th/9th October)
 
-8th October 2026 (Thursday morning)
+#### 8th October 2026 (Thursday morning)
 - [ ] **Fixation step**
 	Fix the slices with 4% PFA (in PBS)  for 30 min at RT.
 	30 mins
@@ -65,6 +65,15 @@ Thursday & Friday.(8th/9th October)
 	Add it but leave one as a negative control 
 	Keep it in 4C overnight 
 
-9th October 2026 (Wednesday morning)
-- [ ] Washing step 
-- [ ] 
+#### 9th October 2026 (Wednesday morning)
+- [ ] **Washing step** 
+	Wash 3x with 1x PBS 
+	3 x 10 mins 
+	
+- [ ] **Secondary Anti-body preparation** 
+	Prepare in blocking solution (10% goat serum + 0.2% TritonX-100)
+	*respectively*
+		Goat - anti rabbit 568 
+		Goat - anti chicken 488
+		Goat - anti guinea pig 647
+		Goat - anti rat 405 
