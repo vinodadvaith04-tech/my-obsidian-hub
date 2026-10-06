@@ -64,7 +64,8 @@ Thursday & Friday.(8th/9th October)
 	Alternate conc
 		Rabbit - anti Iba-1 (1:1000)
 		Chicken - anti vGAT (1:500)
-		Guinea pig - anti vGLUT (1:1000)
+		~~Guinea pig - anti vGLUT (1:1000)~~
+		Mouse - anti Gephyrin (1:1000) + 1:500 secondary! no. 3
 		Rat - anti CD68 (1:100)
 	
 - [ ] **Primary antibody addition**
@@ -83,7 +84,7 @@ Thursday & Friday.(8th/9th October)
 		Goat - anti chicken 488
 		~~Goat - anti guinea pig 647~~
 		Goat - anti rat 405 
-		Goat - donkey mouse 647
+		Donkey - mouse 647
 	
 - [ ] **Incubate with secondary antibodies**
 	3-4 hours on shaker 
