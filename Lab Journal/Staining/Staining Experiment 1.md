@@ -60,6 +60,11 @@ Thursday & Friday.(8th/9th October)
 		Guinea pig - anti vGLUT (1:500)
 		Rat - anti CD68 (1:200)
 	All of it in blocking solution 
+	Alternate conc
+		Rabbit - anti Iba-1 (1:1000)
+		Chicken - anti vGAT (1:500)
+		Guinea pig - anti vGLUT (1:1000)
+		Rat - anti CD68 (1:100)
 	
 - [ ] **Primary antibody addition**
 	Add it but leave one as a negative control 
