@@ -55,11 +55,11 @@ Thursday & Friday.(8th/9th October)
 	
 - [ ] **Primary Anti-body preparation** 
 	Prepare antibody solution in blocking solution (10% goat serum + 0.2% TritonX-100), make it for N+1!
-		Rabbit - anti Iba-1 (1:1500)
-		Chicken - anti vGAT (1:1000)
+		Rabbit - anti Iba-1 (1:1500) no. 5
+		Chicken - anti vGAT (1:1000) no. 18
 		~~Guinea pig - anti vGLUT (1:500)~~
-		Guinea pig - anti Neun (1:500)
-		Rat - anti CD68 (1:200)
+		Mouse - anti Gephyrin (1:1000) + 1:500 secondary! no. 3
+		Rat - anti CD68 (1:200) no. 44
 	All of it in blocking solution 
 	Alternate conc
 		Rabbit - anti Iba-1 (1:1000)
@@ -81,8 +81,9 @@ Thursday & Friday.(8th/9th October)
 	*respectively*
 		Goat - anti rabbit 568 
 		Goat - anti chicken 488
-		Goat - anti guinea pig 647
+		~~Goat - anti guinea pig 647~~
 		Goat - anti rat 405 
+		Goat - donkey mouse 647
 	
 - [ ] **Incubate with secondary antibodies**
 	3-4 hours on shaker 
