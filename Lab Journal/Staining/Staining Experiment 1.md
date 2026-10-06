@@ -57,7 +57,8 @@ Thursday & Friday.(8th/9th October)
 	Prepare antibody solution in blocking solution (10% goat serum + 0.2% TritonX-100), make it for N+1!
 		Rabbit - anti Iba-1 (1:1500)
 		Chicken - anti vGAT (1:1000)
-		Guinea pig - anti vGLUT (1:500)
+		~~Guinea pig - anti vGLUT (1:500)~~
+		Guinea pig - anti Neun (1:500)
 		Rat - anti CD68 (1:200)
 	All of it in blocking solution 
 	Alternate conc
