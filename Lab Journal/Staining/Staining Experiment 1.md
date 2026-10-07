@@ -21,7 +21,7 @@ Thursday & Friday.(8th/9th October)
 	
 - [ ] **Washing step** 
 	Wash 3x with 1x PBS (for at least 5 min)
-	3 x 5 mins
+	3 x 10 mins
 	15 mins 
 	During 3rd wash prepare permeabilisation solution  
 	
