@@ -31,7 +31,7 @@ Trying to do a VGAT, VGLUT, Iba-1 and CD-68 staining on mouse hippocampal slices
 
 Thursday & Friday.(8th/9th October)
 #### 8th October 2026 (Thursday morning)
-- [ ] **Fixation step**
+- [x] **Fixation step**
 	Fix the slices with 4% PFA (in PBS)  for 30 min at RT.
 	0.5-1 ml per well
 	30 mins
