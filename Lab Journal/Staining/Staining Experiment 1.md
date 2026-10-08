@@ -124,7 +124,7 @@ Thursday & Friday.(8th/9th October)
 		Goat - anti chicken 488
 		~~Goat - anti guinea pig 647~~
 		Goat - anti rat 405 
-		Donkey - mouse 647
+		Donkey - mouse 647 1:500 secondary
 	
 - [ ] **Incubate with secondary antibodies**
 	3-4 hours on shaker 
