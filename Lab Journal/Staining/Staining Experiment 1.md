@@ -52,7 +52,8 @@ Thursday & Friday.(8th/9th October)
 		Making 3 ml TritonX solution 
 		0.3ml 10x PBS
 		15µl TritonX-100
-		26
+		2685µl MQ water 
+		First add PBS and then TritonX, then add MQ
 - [ ] **Permeabilisation**
 	In a 24 well plate, permeabilise the slice with 250 µl 0.5% TritonX-100 in PBS for 15 min
 	15 mins 
