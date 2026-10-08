@@ -74,9 +74,9 @@ Thursday & Friday.(8th/9th October)
 	Keep it in 4C overnight 
 
 
-| 1                                               | 2      | 3      | 4      | 5                      | 6                       |
-| ----------------------------------------------- | ------ | ------ | ------ | ---------------------- | ----------------------- |
-| DIV 22<br>No 1* anti body<br>Main concentration | DIV 22 | DIV 22 | DIV 22 | DIV 22 (Different pup) | DIV 22 (Difference pup) |
+| Well      | 1                          | 2                            | 3                                 | 5                                            | 6                                                 |
+| --------- | -------------------------- | ---------------------------- | --------------------------------- | -------------------------------------------- | ------------------------------------------------- |
+| Condition | DIV 22<br>Negative control | DIV 22<br>Main concentration | DIV 22<br>Alternate concentration | DIV 22 (Different pup)<br>Main concentration | DIV 22 (Different pup)<br>Alternate concentration |
 
 
 #### 9th October 2026 (Wednesday morning)
