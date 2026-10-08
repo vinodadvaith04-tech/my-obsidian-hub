@@ -36,7 +36,7 @@ Thursday & Friday.(8th/9th October)
 	0.5-1 ml per well
 	30 mins
 	
-- [ ] **Washing step** 
+- [x] **Washing step** 
 	Wash 3x with 1x PBS (for at least 5 min)
 	3 x 5 mins
 	15 mins 
