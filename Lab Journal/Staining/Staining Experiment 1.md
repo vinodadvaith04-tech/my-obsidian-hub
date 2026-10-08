@@ -13,18 +13,18 @@ Trying to do a VGAT, VGLUT, Iba-1 and CD-68 staining on mouse hippocampal slices
 	*CD - 68*
 
 
-| Slice  | DoB      | Slice Day | DIV | Gender | Slicer | Comments | Plate & Slice no. |
-| ------ | -------- | --------- | --- | ------ | ------ | -------- | ----------------- |
-| **1**  | 21-09-26 | 29-09-26  | 9   | Male   | Helena | Damaged  | 1 - 10            |
-| **2**  | 21-09-26 | 29-09-26  | 9   | Male   | Helena | Damaged  | 1 - 11            |
-| **3**  | 21-09-26 | 29-09-26  | 9   | Male   | Helena | Damaged  | 1 - 12            |
-| **4**  | 08-09-26 | 15-09-26  | 23  | Female | Helena | Good     | 6 - 10            |
-| **5**  | 08-09-26 | 15-09-26  | 23  | Female | Helena | Good     | 6 - 11            |
-| **6**  | 08-09-26 | 15-09-26  | 23  | Female | Helena | Good     | 6 - 12            |
-| **7**  |          |           |     | Female | Troy   | Good     | 5                 |
-| **8**  |          |           |     |        |        |          |                   |
-| **9**  |          |           |     |        |        |          |                   |
-| **10** |          |           |     |        |        |          |                   |
+| Slice  | DoB      | Slice Day | DIV | Gender         | Slicer | Comments | Plate & Slice no. |
+| ------ | -------- | --------- | --- | -------------- | ------ | -------- | ----------------- |
+| **1**  | 21-09-26 | 29-09-26  | 9   | Male           | Helena | Damaged  | 1 - 10            |
+| **2**  | 21-09-26 | 29-09-26  | 9   | Male   </mark> | Helena | Damaged  | 1 - 11            |
+| **3**  | 21-09-26 | 29-09-26  | 9   | Male           | Helena | Damaged  | 1 - 12            |
+| **4**  | 08-09-26 | 15-09-26  | 23  | Female         | Helena | Good     | 6 - 10            |
+| **5**  | 08-09-26 | 15-09-26  | 23  | Female         | Helena | Good     | 6 - 11            |
+| **6**  | 08-09-26 | 15-09-26  | 23  | Female         | Helena | Good     | 6 - 12            |
+| **7**  | 08-09-26 | 15-09-26  | 23  | Female         | Troy   | Good     | 5 - 12            |
+| **8**  | 08-09-26 | 15-09-26  | 23  | Female         | Sam    | Good     | 2 - 10            |
+| **9**  | 08-09-26 | 15-09-26  | 23  | Female         | Sam    | Good     | 2 - 11            |
+| **10** | 08-09-26 | 15-09-26  | 23  | Female         | Sam    | Good     | 2 - 12            |
 
 
 
