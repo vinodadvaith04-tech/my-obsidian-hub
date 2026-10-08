@@ -26,9 +26,9 @@ Trying to do a VGAT, VGLUT, Iba-1 and CD-68 staining on mouse hippocampal slices
 | **9**  | 08-09-26 | 15-09-26  | 23  | Female         | Sam    | Good     | 2 - 11            |
 | **10** | 08-09-26 | 15-09-26  | 23  | Female         | Sam    | Good     | 2 - 12            |
 
-Main staining - 2,4,6,8
+#### **Main staining - 2,4,6,8**
 
-Alternate staining - 1,3,5,7
+#### **Alternate staining - 1,3,5,7**
 
 
 
@@ -109,9 +109,7 @@ Thursday & Friday.(8th/9th October)
 	Keep it in 4C overnight 
 
 
-| Well      | 1                          | 2                            | 3                                 | 5                                            | 6                                                 |
-| --------- | -------------------------- | ---------------------------- | --------------------------------- | -------------------------------------------- | ------------------------------------------------- |
-| Condition | DIV 22<br>Negative control | DIV 22<br>Main concentration | DIV 22<br>Alternate concentration | DIV 22 (Different pup)<br>Main concentration | DIV 22 (Different pup)<br>Alternate concentration |
+
 
 
 #### 9th October 2026 (Wednesday morning)
