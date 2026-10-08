@@ -17,18 +17,19 @@ Thursday & Friday.(8th/9th October)
 #### 8th October 2026 (Thursday morning)
 - [ ] **Fixation step**
 	Fix the slices with 4% PFA (in PBS)  for 30 min at RT.
+	0.5-1 ml per well
 	30 mins
 	
 - [ ] **Washing step** 
 	Wash 3x with 1x PBS (for at least 5 min)
 	3 x 10 mins
-	15 mins 
+	30 mins 
 	During 3rd wash prepare permeabilisation solution  
 	
 - [ ] **Permeabilisation preparation**
 	For 10ml of 0.5% TritonX-100:
 		10X PBS           1ml
-		TritonX-100     50 µl (for pipetting triton cut the tip of pipet tip)
+		TritonX-100     50 µl (for pipetting triton cut the tip of pipette tip)
 		MQ water         8950 µl
 		First add PBS and then TritonX, then add MQ.
 	
