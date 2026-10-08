@@ -61,7 +61,7 @@ Thursday & Friday.(8th/9th October)
 	In a 24 well plate, permeabilise the slice with 250 µl 0.5% TritonX-100 in PBS for 15 min
 	15 mins 
 	
-- [ ] **Washing step**
+- [x] **Washing step**
 	3 x 10 mins 
 	30 mins 
 	
