@@ -86,10 +86,10 @@ Thursday & Friday.(8th/9th October)
 		Mouse - anti Gephyrin (1:1000) + 1:500 secondary! no. 3  
 		Rat - anti CD68 (1:200) no. 44  
 		
-		Rabbit - anti Iba-1 (1:1500) no. 5  
-		Chicken - anti vGAT (1:1000) no. 18  
-		Mouse - anti Gephyrin (1:1000) no. 3  
-		Rat - anti CD68 (1:200) no. 44
+		Rabbit - anti Iba-1 (1:1500) no. 5   1µl in 1500µl
+		Chicken - anti vGAT (1:1000) no. 18   1.5µl in 1500µl
+		Mouse - anti Gephyrin (1:1000) no. 3   1.5µl in 1500µl
+		Rat - anti CD68 (1:200) no. 44  7.5µl in 1500µl
 	All of it in blocking solution 
 	Alternate conc
 		Rabbit - anti Iba-1 (1:1000)  (.5µl / 500µl)
