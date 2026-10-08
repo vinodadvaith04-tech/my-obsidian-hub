@@ -73,6 +73,12 @@ Thursday & Friday.(8th/9th October)
 	Add it but leave one as a negative control 
 	Keep it in 4C overnight 
 
+
+| 1                                               | 2      | 3      | 4      | 5                      | 6                       |
+| ----------------------------------------------- | ------ | ------ | ------ | ---------------------- | ----------------------- |
+| DIV 22<br>No 1* anti body<br>Main concentration | DIV 22 | DIV 22 | DIV 22 | DIV 22 (Different pup) | DIV 22 (Difference pup) |
+
+
 #### 9th October 2026 (Wednesday morning)
 - [ ] **Washing step** 
 	Wash 3x with 1x PBS 
