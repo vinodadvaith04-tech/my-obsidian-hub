@@ -80,6 +80,7 @@ Thursday & Friday.(8th/9th October)
 	
 - [ ] **Primary Anti-body preparation** 
 	Prepare antibody solution in blocking solution (10% goat serum + 0.2% TritonX-100), make it for N+1!
+	**<u>Main concentration</u>**
 		Rabbit - anti Iba-1 (1:1500) no. 5  
 		Chicken - anti vGAT (1:1000) no. 18  
 		~~Guinea pig - anti vGLUT (1:500)~~
@@ -91,12 +92,17 @@ Thursday & Friday.(8th/9th October)
 		Mouse - anti Gephyrin (1:1000) no. 3   1.5µl in 1500µl
 		Rat - anti CD68 (1:200) no. 44  7.5µl in 1500µl
 	All of it in blocking solution 
-	Alternate conc
+	**<u>Alternate concentration</u>**
 		Rabbit - anti Iba-1 (1:1000)  (.5µl / 500µl)
 		Chicken - anti vGAT (1:500)  (1µl / 500µl)
 		~~Guinea pig - anti vGLUT (1:1000)~~
 		Mouse - anti Gephyrin (1:1000) + 1:500 secondary! no. 3  (.5µl / 500µl)
 		Rat - anti CD68 (1:100)  (5µl / 500µl)
+		
+		Rabbit - anti Iba-1 (1:1000)  1.5µl in 1500µl
+		Chicken - anti vGAT (1:500)  3µl in 1500µl
+		Mouse - anti Gephyrin (1:1000)  1.5µl in 1500µl
+		Rat - anti CD68 (1:100)  15µl in 1500µl
 	
 - [ ] **Primary antibody addition**
 	Add it but leave one as a negative control 
