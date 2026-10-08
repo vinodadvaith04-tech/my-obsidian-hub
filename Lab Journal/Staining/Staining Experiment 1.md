@@ -26,6 +26,9 @@ Trying to do a VGAT, VGLUT, Iba-1 and CD-68 staining on mouse hippocampal slices
 | **9**  | 08-09-26 | 15-09-26  | 23  | Female         | Sam    | Good     | 2 - 11            |
 | **10** | 08-09-26 | 15-09-26  | 23  | Female         | Sam    | Good     | 2 - 12            |
 
+Main staining - 2,4,6,8
+
+Alternate staining - 1,3,5,7
 
 
 
@@ -42,7 +45,7 @@ Thursday & Friday.(8th/9th October)
 	15 mins 
 	During 3rd wash prepare permeabilisation solution  
 	
-- [ ] **Permeabilisation preparation**
+- [x] **Permeabilisation preparation**
 	For 10ml of 0.5% TritonX-100:
 		10X PBS           1ml
 		TritonX-100     50 µl (for pipetting triton cut the tip of pipette tip)
@@ -54,7 +57,7 @@ Thursday & Friday.(8th/9th October)
 		15µl TritonX-100
 		2685µl MQ water 
 		First add PBS and then TritonX, then add MQ
-- [ ] **Permeabilisation**
+- [x] **Permeabilisation**
 	In a 24 well plate, permeabilise the slice with 250 µl 0.5% TritonX-100 in PBS for 15 min
 	15 mins 
 	
@@ -77,11 +80,16 @@ Thursday & Friday.(8th/9th October)
 	
 - [ ] **Primary Anti-body preparation** 
 	Prepare antibody solution in blocking solution (10% goat serum + 0.2% TritonX-100), make it for N+1!
-		Rabbit - anti Iba-1 (1:1500) no. 5  (.33µl / 500µl)
-		Chicken - anti vGAT (1:1000) no. 18  (.5µl / 500µl)
+		Rabbit - anti Iba-1 (1:1500) no. 5  
+		Chicken - anti vGAT (1:1000) no. 18  
 		~~Guinea pig - anti vGLUT (1:500)~~
-		Mouse - anti Gephyrin (1:1000) + 1:500 secondary! no. 3  (.5µl / 500µl)
-		Rat - anti CD68 (1:200) no. 44  (2.5µl / 500µl)
+		Mouse - anti Gephyrin (1:1000) + 1:500 secondary! no. 3  
+		Rat - anti CD68 (1:200) no. 44  
+		
+		Rabbit - anti Iba-1 (1:1500) no. 5  
+		Chicken - anti vGAT (1:1000) no. 18  
+		Mouse - anti Gephyrin (1:1000) no. 3  
+		Rat - anti CD68 (1:200) no. 44
 	All of it in blocking solution 
 	Alternate conc
 		Rabbit - anti Iba-1 (1:1000)  (.5µl / 500µl)
