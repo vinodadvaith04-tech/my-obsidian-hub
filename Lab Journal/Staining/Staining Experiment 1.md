@@ -12,8 +12,24 @@ Trying to do a VGAT, VGLUT, Iba-1 and CD-68 staining on mouse hippocampal slices
 	*Iba - 1*
 	*CD - 68*
 
-Thursday & Friday.(8th/9th October)
 
+| Slice  | DoB      | Slice Day | DIV | Gender | Slicer | Comments | Plate & Slice no. |
+| ------ | -------- | --------- | --- | ------ | ------ | -------- | ----------------- |
+| **1**  | 21-09-26 | 29-09-26  | 9   | Male   | Helena | Damaged  | 1 - 10            |
+| **2**  | 21-09-26 | 29-09-26  | 9   | Male   | Helena | Damaged  | 1 - 11            |
+| **3**  | 21-09-26 | 29-09-26  | 9   | Male   | Helena | Damaged  | 1 - 12            |
+| **4**  | 08-09-26 | 15-09-26  | 23  | Female | Helena | Good     | 6 - 10            |
+| **5**  | 08-09-26 | 15-09-26  | 23  | Female | Helena | Good     | 6 - 11            |
+| **6**  | 08-09-26 | 15-09-26  | 23  | Female | Helena | Good     | 6 - 12            |
+| **7**  |          |           |     | Female | Troy   | Good     | 5                 |
+| **8**  |          |           |     |        |        |          |                   |
+| **9**  |          |           |     |        |        |          |                   |
+| **10** |          |           |     |        |        |          |                   |
+
+
+
+
+Thursday & Friday.(8th/9th October)
 #### 8th October 2026 (Thursday morning)
 - [ ] **Fixation step**
 	Fix the slices with 4% PFA (in PBS)  for 30 min at RT.
