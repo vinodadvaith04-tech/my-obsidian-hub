@@ -119,7 +119,7 @@ Thursday & Friday.(8th/9th October)
 	Wash 3x with 1x PBS 
 	3 x 10 mins 
 	
-- [ ] **Secondary Anti-body preparation** 
+- [x] **Secondary Anti-body preparation** 
 	Prepare in blocking solution (10% goat serum + 0.2% TritonX-100)
 	*respectively*
 	All in 3000µl
