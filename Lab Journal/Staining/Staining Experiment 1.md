@@ -124,9 +124,9 @@ Thursday & Friday.(8th/9th October)
 	*respectively*
 	All in 3000µl
 		~~Goat - anti rabbit 568 (1:1000) = 3µl in 3000µl    Box 3~~ 
-		Goat - anti chicken 488 (1:1000) = 3µl in 3000µl    Box 3
+		~~Goat - anti chicken 488 (1:1000) = 3µl in 3000µl    Box 3~~
 		~~Goat - anti guinea pig 647~~
-		Goat - anti mouse 647 1:500 secondary = 6µl in 3000µl   -80 rack 1
+		~~Goat - anti mouse 647 1:500 secondary = 6µl in 3000µl   -80 rack 1~~
 		Goat - anti rat 405 (1:1000) = 3µl in 3000µl   Box 5
 		
 	
