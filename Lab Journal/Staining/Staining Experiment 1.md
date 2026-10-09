@@ -132,6 +132,7 @@ Thursday & Friday.(8th/9th October)
 	
 - [ ] **Incubate with secondary antibodies**
 	3-4 hours on shaker 
+	Covered
 	3 hours
 	
 - [ ] **Washing step**
