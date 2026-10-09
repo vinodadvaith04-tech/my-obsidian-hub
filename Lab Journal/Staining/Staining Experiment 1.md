@@ -65,7 +65,7 @@ Thursday & Friday.(8th/9th October)
 	3 x 10 mins 
 	30 mins 
 	
-- [ ] **Blocking** 
+- [x] **Blocking** 
 		Prepare blocking solution (10% goat serum + 0.2% TritonX-100 in 1x PBS), make it for N+1! Keep on ice.
 		For **10ml of blocking solution**:
 		10X PBS                             1ml
@@ -74,11 +74,11 @@ Thursday & Friday.(8th/9th October)
 		MQ water                          7980 µl
 		First add PBS and then TritonX, then add MQ.
 	
-- [ ] **Add 250 µl of Blocking Solution** per slice at room temperature 
+- [x] **Add 250 µl of Blocking Solution** per slice at room temperature 
 	1h 
 	On the shaker 
 	
-- [ ] **Primary Anti-body preparation** 
+- [x] **Primary Anti-body preparation** 
 	Prepare antibody solution in blocking solution (10% goat serum + 0.2% TritonX-100), make it for N+1!
 	**<u>Main concentration</u>**
 		Rabbit - anti Iba-1 (1:1500) no. 5  
@@ -106,7 +106,7 @@ Thursday & Friday.(8th/9th October)
 		~~Mouse - anti Gephyrin (1:1000)  1.5µl in 1500µl~~
 		~~Rat - anti CD68 (1:100)  15µl in 1500µl~~
 	
-- [ ] **Primary antibody addition**
+- [x] **Primary antibody addition**
 	Add it but leave one as a negative control 
 	Keep it in 4C overnight 
 
@@ -127,13 +127,13 @@ Thursday & Friday.(8th/9th October)
 		~~Goat - anti chicken 488 (1:1000) = 3µl in 3000µl    Box 3~~
 		~~Goat - anti guinea pig 647~~
 		~~Goat - anti mouse 647 1:500 secondary = 6µl in 3000µl   -80 rack 1~~
-		Goat - anti rat 405 (1:1000) = 3µl in 3000µl   Box 5
+		~~Goat - anti rat 405 (1:1000) = 3µl in 3000µl   Box 5~~
 		
 	
 - [ ] **Incubate with secondary antibodies**
 	3-4 hours on shaker 
 	Covered
-	3 hours
+	4 hours
 	
 - [ ] **Washing step**
 	Wash 3x with 1x PBS (for at least 10 min)
