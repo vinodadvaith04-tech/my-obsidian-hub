@@ -41,7 +41,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true,
+                "autoReveal": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "84e089d99f77e17c",

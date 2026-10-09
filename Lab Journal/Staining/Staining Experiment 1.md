@@ -86,7 +86,8 @@ Thursday & Friday.(8th/9th October)
 		~~Guinea pig - anti vGLUT (1:500)~~
 		Mouse - anti Gephyrin (1:1000) + 1:500 secondary! no. 3  
 		Rat - anti CD68 (1:200) no. 44  
-		
+		.
+		Concentrations used.
 		~~Rabbit - anti Iba-1 (1:1500) no. 5   1µl in 1500µl~~
 		~~Chicken - anti vGAT (1:1000) no. 18   1.5µl in 1500µl~~
 		~~Mouse - anti Gephyrin (1:1000) no. 3   1.5µl in 1500µl~~
@@ -98,7 +99,8 @@ Thursday & Friday.(8th/9th October)
 		~~Guinea pig - anti vGLUT (1:1000)~~
 		Mouse - anti Gephyrin (1:1000) + 1:500 secondary! no. 3  (.5µl / 500µl)
 		Rat - anti CD68 (1:100)  (5µl / 500µl)
-		
+		.
+		Concentrations used 
 		~~Rabbit - anti Iba-1 (1:1000)  1.5µl in 1500µl~~
 		~~Chicken - anti vGAT (1:500)  3µl in 1500µl~~
 		~~Mouse - anti Gephyrin (1:1000)  1.5µl in 1500µl~~
@@ -120,11 +122,13 @@ Thursday & Friday.(8th/9th October)
 - [ ] **Secondary Anti-body preparation** 
 	Prepare in blocking solution (10% goat serum + 0.2% TritonX-100)
 	*respectively*
-		Goat - anti rabbit 568 
-		Goat - anti chicken 488
+	All in 3000µl
+		Goat - anti rabbit 568 (1:1000) = 3µl in 3000µl
+		Goat - anti chicken 488 (1:1000) = 3µl in 3000µl
 		~~Goat - anti guinea pig 647~~
-		Goat - anti rat 405 
-		Donkey - mouse 647 1:500 secondary
+		Donkey - anti mouse 647 1:500 secondary = 6µl in 3000µl
+		Goat - anti rat 405 (1:1000) = 3µl in 3000µl
+		
 	
 - [ ] **Incubate with secondary antibodies**
 	3-4 hours on shaker 
