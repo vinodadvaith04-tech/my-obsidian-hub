@@ -115,7 +115,7 @@ Thursday & Friday.(8th/9th October)
 
 
 #### 9th October 2026 (Wednesday morning)
-- [ ] **Washing step** 
+- [x] **Washing step** 
 	Wash 3x with 1x PBS 
 	3 x 10 mins 
 	
@@ -123,7 +123,7 @@ Thursday & Friday.(8th/9th October)
 	Prepare in blocking solution (10% goat serum + 0.2% TritonX-100)
 	*respectively*
 	All in 3000µl
-		Goat - anti rabbit 568 (1:1000) = 3µl in 3000µl    Box 3 
+		~~Goat - anti rabbit 568 (1:1000) = 3µl in 3000µl    Box 3~~ 
 		Goat - anti chicken 488 (1:1000) = 3µl in 3000µl    Box 3
 		~~Goat - anti guinea pig 647~~
 		Goat - anti mouse 647 1:500 secondary = 6µl in 3000µl   -80 rack 1
