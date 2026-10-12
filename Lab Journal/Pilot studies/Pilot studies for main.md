@@ -16,3 +16,5 @@ gbazine - GABA
 rest 
 
 
+Start collecting staining slices. 
+
