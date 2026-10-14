@@ -21,7 +21,7 @@ Trying 47.7 and 47.8
 Notes: Good cell. Same wave pattern as you get to the upper limit of spiking. 
 Older slice so perhaps epcs ipcs are reduced. 
 All at 60mV holding. 
-At 50mV holding epsc ampitude is reduced anf some IPSCs are seen. Perhaps doable??
+At 50mV holding epsc ampitude is reduced and some IPSCs are seen. Perhaps doable??
 Trying 55mV holding next to see if there is a compromise
 At 55mV few EPSCs and IPSCs can be seen. Maybe something worth looking at. 
 Lastly trying 0mV before unpatching
