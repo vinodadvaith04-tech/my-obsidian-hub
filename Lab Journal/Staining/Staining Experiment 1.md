@@ -30,6 +30,7 @@ Trying to do a VGAT, VGLUT, Iba-1 and CD-68 staining on mouse hippocampal slices
 
 #### **Alternate staining - 1,3,5,7**
 
+Was not able to do this batch, instead did vgat, gephyrin, iba-1, cd-68
 
 
 Thursday & Friday.(8th/9th October)
