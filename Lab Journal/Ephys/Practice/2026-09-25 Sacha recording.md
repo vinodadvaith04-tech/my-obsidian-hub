@@ -94,9 +94,11 @@ Notes:
 Great patch, but it has a higher membrane potential that usual. Access resistance spiked towards the end of the recording so not sure how reliable it is in the end. 
 
 -60mV think there were a lot of EPSCs, need to double check.
+-60
 -55mV Nothing much, get it double checked. Maybe bad recording cause of high access resistance. 
+-55
 -50mV Nothing resembling an ipsc yet. Maybe internal change??
-
+-50
 
 #### Cell 5
 

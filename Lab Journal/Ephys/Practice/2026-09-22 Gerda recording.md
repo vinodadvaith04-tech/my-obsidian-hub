@@ -47,19 +47,8 @@ At -65 Much better EPSCs reading, IPSCs are almost disappeared.
 Trying -50 next. 
 At -50 already IPSCs are much higher in amplitude. 
 Need to account for LJP because at -60 I am getting equal amplitude of both E/I
+45
 
-
-#### Cell 3
-
-| Protocol       | Pipette resistance | Membrane Capacitance | Membrane Resistance | Axis Resistance | Membrane potential |
-| -------------- | ------------------ | -------------------- | ------------------- | --------------- | ------------------ |
-| Manual check 1 | 4.5                |                      |                     |                 |                    |
-| Manual check 2 |                    |                      |                     |                 |                    |
-| Manual check 3 |                    |                      |                     |                 |                    |
-| Manual check 4 |                    |                      |                     |                 |                    |
-| Manual check 5 |                    |                      |                     |                 |                    |
-|                |                    |                      |                     |                 |                    |
-Notes:  
 
 
 ### Patching protocol###
