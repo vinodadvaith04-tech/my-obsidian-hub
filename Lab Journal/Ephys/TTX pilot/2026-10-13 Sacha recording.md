@@ -46,9 +46,7 @@ Manual check 2
 5. -50 - 
 6. -40 - 
 Manual check 3 - losing the cell here, stopped recording. 
-7. -40
-8. -50
-9. -60
+
 
 
 #### Cell 2
@@ -68,7 +66,7 @@ Manual check 2
 4. -50 - Still epsc dominate. 
 5. -40 - 
 6. -60 - 
-Manual check 3  - Bad values, stopped recording. 
+Manual check 3
 7. -60
 8. -40 - Huge ipsc was seen. Double check. 
 9. -50
@@ -142,8 +140,7 @@ Manual check 2
 Manual check 3 
 7. -60 note much in this recording
 8. -50 lost the cell after this. 
-9. -40
-Manual check 4
+
 
 #### Cell 6
 
@@ -168,28 +165,5 @@ Manual check 3
 9. -50
 Manual check 4 Ra was 27 at the end of recording. 
 
-
-#### Cell 7
-
-| Protocol       | Pipette resistance (MΩ) | Membrane Capacitance (pF) | Membrane Resistance (MΩ) | Access Resistance (MΩ) | Membrane potential (mV) |
-| -------------- | ----------------------- | ------------------------- | ------------------------ | ---------------------- | ----------------------- |
-| Manual check 1 |                         |                           |                          |                        |                         |
-| Manual check 2 |                         |                           |                          |                        |                         |
-| Manual check 3 |                         |                           |                          |                        |                         |
-| Manual check 4 |                         |                           |                          |                        |                         |
-Notes: 
-Manual check 1
-1. -40
-2. -60
-3. -50
-Manual check 2
-4. -60
-5. -40
-6. -50
-Manual check 3
-7. -50
-8. -40
-9. -60
-Manual check 4
 
 

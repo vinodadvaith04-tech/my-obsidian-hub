@@ -42,9 +42,6 @@ Manual check 2
 5. -50 - Larger IPSCs seen. EPSCs? Barely there, are small downward deflections. 
 6. -40 - Larger IPSCs
 Manual check 3 - losing the cell here, stopped recording. 
-7. -40
-8. -50
-9. -60
 
 
 #### Cell 2
@@ -65,10 +62,7 @@ Manual check 2
 5. -40 - weird downward deflections, not sure if they are EPSCs. Also was losing the cell towards the end. 
 6. -60 - Last recordings before TTX. 
 Manual check 3  - Bad values, stopped recording. 
-7. -60
-8. -40
-9. -50
-Manual check 4
+
 
 
 #### Started TTX wash - 7min
@@ -134,56 +128,4 @@ Manual check 2
 5. -60
 6. -50
 Manual check 3 Lost the cell after this
-7. -60
-8. -50
-9. -40
-Manual check 4
-
-#### Cell 6
-
-| Protocol       | Pipette resistance (MΩ) | Membrane Capacitance (pF) | Membrane Resistance (MΩ) | Access Resistance (MΩ) | Membrane potential (mV) |
-| -------------- | ----------------------- | ------------------------- | ------------------------ | ---------------------- | ----------------------- |
-| Manual check 1 |                         |                           |                          |                        |                         |
-| Manual check 2 |                         |                           |                          |                        |                         |
-| Manual check 3 |                         |                           |                          |                        |                         |
-| Manual check 4 |                         |                           |                          |                        |                         |
-Notes: 
-Manual check 1
-1. -50
-2. -40
-3. -60
-Manual check 2
-4. -50
-5. -60
-6. -40
-Manual check 3
-7. -40
-8. -60
-9. -50
-Manual check 4
-
-
-#### Cell 7
-
-| Protocol       | Pipette resistance (MΩ) | Membrane Capacitance (pF) | Membrane Resistance (MΩ) | Access Resistance (MΩ) | Membrane potential (mV) |
-| -------------- | ----------------------- | ------------------------- | ------------------------ | ---------------------- | ----------------------- |
-| Manual check 1 |                         |                           |                          |                        |                         |
-| Manual check 2 |                         |                           |                          |                        |                         |
-| Manual check 3 |                         |                           |                          |                        |                         |
-| Manual check 4 |                         |                           |                          |                        |                         |
-Notes: 
-Manual check 1
-1. -40
-2. -60
-3. -50
-Manual check 2
-4. -60
-5. -40
-6. -50
-Manual check 3
-7. -50
-8. -40
-9. -60
-Manual check 4
-
 
