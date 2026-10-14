@@ -36,11 +36,12 @@
   },
   "To do": "LiClock",
   "Programming": "LiComputer",
-  "Maths": "➖",
   "Biology": "LiBiohazard",
   "BSc Psychology": "LiBrain",
   "Temp": "LiAlertCircle",
   "MSc Cognitive Neuroscience": "LiBrainCircuit",
   "Lab Journal": "🥼",
-  "Internship": "✍"
+  "Internship": "✍",
+  "PhD?": "LiGraduationCap",
+  "Miscellaneous": "LiArchive"
 }
