@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vault guide.md",
+                "file": "Lab Journal/Ephys/Practice/2026-10-07 Sacha recording.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vault guide"
+              "title": "2026-10-07 Sacha recording"
             }
           }
         ]
@@ -189,13 +189,14 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
-    "Lab Journal/Pilot studies/Pilot studies for main.md",
+    "Lab Journal/Ephys/Practice/2026-10-08 Sacha recording.md",
     "Internship/Corette Meetings/2026-10-15.md",
+    "Vault guide.md",
+    "Lab Journal/Pilot studies/Pilot studies for main.md",
     "Lab Journal/Staining/Protocols/Organotypic slices protocol.md",
     "Lab Journal/Staining/Staining Experiment 1.md",
     "Lab Journal/Ephys/Practice/2026-09-29 Gerda recording.md",
     "Lab Journal/Staining/Protocols",
-    "Lab Journal/Ephys/Practice/2026-10-08 Sacha recording.md",
     "Lab Journal/Ephys/TTX pilot/2026-10-12 Sacha recording.md",
     "Lab Journal/Ephys/TTX pilot/2026-10-13 Sacha recording.md",
     "Lab Journal/Ephys/Practice/2026-09-18 Gerda recording.md",
@@ -217,7 +218,6 @@
     "Programming/Matlab.md",
     "Programming/Java.md",
     "Temp/Neuroscience mind map.md",
-    "Temp/Neurogenetics project.md",
     "Programming/Python/restructure_vault.py",
     "Programming/Python",
     "z_Attachments/Pasted image 20251124103852.png",
