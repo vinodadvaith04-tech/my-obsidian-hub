@@ -1,3 +1,5 @@
+##### Practice
+
 ##### Current internal 0 and -60mV holding
 Was not working too well. At 0mV the cell is too unstable to see any recordings. Maybe with a Caesium internal it would be better. However holding the cell at 0 gave IPSCs once, but not consistently. 
 ##### Using current internal intermediate holding
