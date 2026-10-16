@@ -16,7 +16,6 @@ Need to try
 
 
 ##### Using current internal and using blockers 
-<Yet to be decided>
 
 blockers 
 DNQX - ampa
