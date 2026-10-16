@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lab Journal/Staining/Protocols/Organotypic slices protocol.md",
+                "file": "Lab Journal/Pilot studies/Pilot studies for main.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Organotypic slices protocol"
+              "title": "Pilot studies for main"
             }
           }
         ]
@@ -189,6 +189,8 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
+    "Lab Journal/Staining/Protocols/Organotypic slices protocol.md",
+    "Lab Journal/Staining/Protocols/Immunofluorescence staining protocol.md",
     "Internship/Corette Meetings/2026-10-15.md",
     "Internship/Sam Meetings/2026-10-11 Sam meeting.md",
     "Lab Journal/Ephys/Practice/2026-10-07 Sacha recording.md",
@@ -206,7 +208,6 @@
     "Lab Journal/Ephys/Practice/2026-09-21 Sacha recording.md",
     "Vault guide.md",
     "Lab Journal/Pilot studies/Pilot studies for main.md",
-    "Lab Journal/Staining/Protocols/Organotypic slices protocol.md",
     "Lab Journal/Staining/Staining Experiment 1.md",
     "Lab Journal/Staining/Protocols",
     "Lab Journal/Ephys/Practice",
@@ -217,7 +218,6 @@
     "PhD/PhD positions.md",
     "PhD/PhD ideas.md",
     "Programming/Matlab.md",
-    "Programming/Java.md",
     "Programming/Python/restructure_vault.py",
     "Programming/Python",
     "z_Attachments/Pasted image 20251124103852.png",
