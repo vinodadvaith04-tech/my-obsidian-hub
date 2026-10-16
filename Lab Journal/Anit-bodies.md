@@ -39,3 +39,10 @@
 | 8   | Goat       | Alexa 488    | Donkey | -80, rack 1 |          |
 | 9   | Goat       | Alexa 647    | Donkey | -80, rack 1 |          |
 | 10  | Rat        | Alexa 647    | Donkey | -80, rack 1 |          |
+
+
+## Pairs
+Chicken - VGAT -----Chicken 408
+Mouse - Gephyrin -----
+Rabbit - Iba-1 ----- 
+Goat - CD68 ----- Chicken 657 ()
