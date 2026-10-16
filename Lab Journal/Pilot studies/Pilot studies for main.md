@@ -6,6 +6,10 @@ Using the current K gluconate internal, I was able to experiment with different 
 ##### Using current internal + TTX
 Tried 2 pilots of TTX in aCSF to see miniature E/IPSCs. Recorded at -40, -50 and -60 for each cell with TTX. Each recording is 2min, and aimed to do 3 2min recordings per holding per cell. The order at which I chose the holdings were randomized to control for any other effects. If the cell still stays stable after all the recordings, do a current injection protocol to see if spikes are occurring. Most cells did not survive for an entire 3 x 3 x 2min session, some had to be stopped earlier due to access resistance changes. Not sure if it is cause of the voltage clamp (which the cell doesn't like to begin with, current clamp better), different holdings being a switched every 2 minutes, or the recording is going for too long, or the patch was not good to begin with. Also observed cell shrinkage in almost all the cells that I patched. Might have to discuss and try again. 
 
+
+##### Using current internal and glutamate and gaba blocker + TTX?
+Need to try 
+
 ##### Using Caesium internal
 
 

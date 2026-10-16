@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lab Journal/Ephys/Run down pilot/2026-10-16 Run-down pilot protocol.md",
+                "file": "Internship/Sam Meetings/2026-10-19.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-10-16 Run-down pilot protocol"
+              "title": "2026-10-19"
             }
           }
         ]
@@ -189,15 +189,20 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
+    "Internship/Sam Meetings/2026-10-12 Sam meeting.md",
+    "Internship/Sam Meetings/2026-10-19.md",
+    "Internship/Sam Meetings/2026-10-05 Sam meeting.md",
+    "Lab Journal/Pilot studies/Pilot studies for main.md",
+    "Internship/Research.md",
+    "Internship/patch.md",
+    "Lab Journal/Ephys/Run down pilot/2026-10-16 Run-down pilot protocol.md",
+    "Internship/Sam Meetings/2026-09-21 Sam meeting.md",
     "Lab Journal/Ephys/TTX pilot/2026-10-13 Sacha recording.md",
     "Lab Journal/Ephys/2026-10-16 Run-down pilot protocol.md",
-    "Lab Journal/Pilot studies/Pilot studies for main.md",
-    "Lab Journal/Ephys/Run down pilot/2026-10-16 Run-down pilot protocol.md",
     "Lab Journal/Ephys/Run down pilot",
     "Lab Journal/Staining/Protocols/Organotypic slices protocol.md",
     "Lab Journal/Staining/Protocols/Immunofluorescence staining protocol.md",
     "Internship/Corette Meetings/2026-10-15.md",
-    "Internship/Sam Meetings/2026-10-11 Sam meeting.md",
     "Lab Journal/Ephys/Practice/2026-10-07 Sacha recording.md",
     "Lab Journal/Ephys/Practice/2026-10-08 Sacha recording.md",
     "Lab Journal/Ephys/Practice/2026-09-29 Gerda recording.md",
@@ -211,14 +216,9 @@
     "Lab Journal/Ephys/Practice/2026-09-18 Gerda recording.md",
     "Lab Journal/Ephys/Practice/2026-09-21 Sacha recording.md",
     "Vault guide.md",
-    "Lab Journal/Staining/Staining Experiment 1.md",
     "Lab Journal/Staining/Protocols",
     "Lab Journal/Ephys/Practice",
     "Lab Journal/Ephys",
-    "Miscellaneous/Gate Prep.md",
-    "Miscellaneous/Email format.md",
-    "Miscellaneous/CV update 09-26.md",
-    "PhD/PhD positions.md",
     "Programming/Python/restructure_vault.py",
     "Programming/Python",
     "z_Attachments/Pasted image 20251124103852.png",
