@@ -58,9 +58,4 @@ Manual check 11   Rs ___  Rm ___  Cm ___
 - Stop and note the time if Rs changes by more than about 20% from Manual check 1, or if the holding current drifts a lot
 - Note any solution or flow change, bubbles, or noise bursts
 
-## Analysis
-- Plot Rs, Rm, Cm against time per cell
-- Per 2 min recording: sEPSC and sIPSC frequency and amplitude
-- Compare recordings 1-2 with 9-10. Run-down if frequency or amplitude drops more than about 20%
-- Write down the time point where the cell stops being usable (Rs drift over 20% or events clearly declining). Use that as the cutoff for future experiments.
-- If run-down is small over 25 min, the randomised holding order is less critical. If it is large, keep the balanced randomisation.
+
