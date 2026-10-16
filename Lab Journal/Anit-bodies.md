@@ -12,7 +12,11 @@
 | 44  | Rat        | CD68     | Box 4 (-20) |            |
 | 45  | Chicken    | VGAT     | Box 4 (-20) |            |
 | DCN |            |          |             |            |
-|     | Mouse      | VG       |             |            |
+|     | Mouse      | VGLUT    |             |            |
+|     |            | PSD-95   |             |            |
+|     | Goat       | PSD-95   |             |            |
+|     | Rabbit     | PSD-95   |             |            |
+|     |            |          |             |            |
 
 ## 2* antibody
 
