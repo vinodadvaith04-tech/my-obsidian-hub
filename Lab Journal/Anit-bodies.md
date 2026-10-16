@@ -13,7 +13,7 @@
 | 45  | Chicken    | VGAT     | Box 4 (-20) |            |
 | DCN |            |          |             |            |
 |     | Mouse      | VGLUT    |             |            |
-|     |            | PSD-95   |             |            |
+|     | Mouse      | PSD-95   |             |            |
 |     | Goat       | PSD-95   |             |            |
 |     | Rabbit     | PSD-95   |             |            |
 |     |            |          |             |            |
