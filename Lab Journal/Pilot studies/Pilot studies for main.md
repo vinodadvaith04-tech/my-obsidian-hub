@@ -11,16 +11,41 @@ Tried 2 pilots of TTX in aCSF to see miniature E/IPSCs. Recorded at -40, -50 and
 
 ##### Using current internal and glutamate and gaba blocker + TTX?
 Need to try 
-
-##### Using Caesium internal
-
-
-##### Using current internal and using blockers 
-
-blockers 
+blockers:
 DNQX - ampa
 AP 5 - nmda
 gabazine - GABA
 
+Since washout is very hard after gabazine, we need to do a slice wise study. Multiple cells within the same slice. We could do single cell recording, however that would take too long for each holding. Else we decide on a holding right now and stick with that throughout the experiment. Although the right holding might change when we use Caesium internal. 
 
-Start collecting staining slices. 
+Solution A -> ASCF normal 
+Solution B -> ASCF + DNQX + AP5
+Solution C -> ASCF+ gabazine 
+
+Slice 1 
+	Solution A 
+		2 Cells 
+		-40mV, -50mV, -60mV **(2 x 2min each)**
+	Solution B for 5-10 mins 
+		2 Cells 
+		-40mV, -50mV, -60mV
+	Solution B + C for 5-10 mins 
+		1 Cells 
+		-40mV, -50mV, -60mV
+
+Slice 2
+	Solution A 
+		2 Cells 
+		-40mV, -50mV, -60mV
+	Solution C for 5-10 mins 
+		2 Cells 
+		-40mV, -50mV, -60mV
+	Solution C + B for 5-10 mins 
+		1 Cells 
+		-40mV, -50mV, -60mV
+
+
+##### Using Caesium internal
+
+
+
