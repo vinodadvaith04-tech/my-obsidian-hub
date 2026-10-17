@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lab Journal/Anit-bodies.md",
+                "file": "Programming/Python/Ephys analysis guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Anit-bodies"
+              "title": "Ephys analysis guide"
             }
           }
         ]
@@ -189,8 +189,11 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
-    "Lab Journal/Staining/Staining Experiment 1.md",
+    "Programming/Java.md",
+    "Programming/Python.md",
+    "Programming/Python/Ephys analysis guide.md",
     "Lab Journal/Anit-bodies.md",
+    "Lab Journal/Staining/Staining Experiment 1.md",
     "Lab Journal/Pilot studies/Pilot studies for main.md",
     "Lab Journal/Ephys/2. TTX pilot/2026-10-13 Sacha recording.md",
     "Lab Journal/Ephys/1. Practice/2026-09-25 Sacha recording.md",
@@ -213,9 +216,6 @@
     "Lab Journal/Staining/Protocols/Immunofluorescence staining protocol.md",
     "Internship/Corette Meetings/2026-10-15.md",
     "Lab Journal/Ephys/1. Practice/2026-10-07 Sacha recording.md",
-    "Lab Journal/Ephys/1. Practice/2026-10-08 Sacha recording.md",
-    "Lab Journal/Ephys/1. Practice/2026-10-06 Gerda recording.md",
-    "Lab Journal/Ephys/2. TTX pilot/2026-10-12 Sacha recording.md",
     "Lab Journal/Staining/Protocols",
     "Lab Journal/Ephys/1. Practice",
     "Lab Journal/Ephys",
