@@ -8,7 +8,6 @@ Trying 47.7 and 47.8 for resistance first
 Trying to correct for liquid junction potential as well.
 +16.5mV 
 
-
 Problem with the recording electrode??
 try again
 Switching of and resetting devices 
