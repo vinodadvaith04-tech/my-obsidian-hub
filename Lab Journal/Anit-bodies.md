@@ -42,7 +42,13 @@
 
 
 ## Pairs
-Chicken - VGAT -----Chicken 408
-Mouse - Gephyrin -----
-Rabbit - Iba-1 ----- 
-Goat - CD68 ----- Chicken 657 ()
+Chicken - VGAT ----- Chicken 488 (donkey)
+Mouse - Gephyrin ----- Mouse 405
+Rabbit - Iba-1 ----- Rabbit 568
+Goat - CD68 ----- Goat 657 (donkey)
+
+GP - VLGUT ----- GP 647
+Mouse PSD-95 -----  M 407
+Rabbit - Iba-1 ----- Rabbit 568
+Goat - CD68 ----- Goat 488 (donkey)
+
