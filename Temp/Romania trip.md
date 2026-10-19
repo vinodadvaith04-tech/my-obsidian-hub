@@ -1,0 +1,21 @@
+
+- [ ] Nijmegen central - Eindhoven central 
+      NS - 25/10/26
+- [ ] Eindhoven central - Eindhoven airport 
+      Bus - 25/10/26
+- [ ] Eindhoven airport - Cluj airport 
+      Flight - 25/10/26
+- [ ] Cluj airport - Hotel 
+      Uber - 25/10/26
+- [ ] Hotel - UMF Cluj x 5
+      Walk
+	- [ ] 5x3 meals 
+	      Eat if the organisers provide. Get from places that provide a receipt. 
+- [ ] Hotel - Cluj airport 
+      Uber
+- [ ] Cluj airport - Eindhoven airport 
+      Flight 
+- [ ] Eindhoven airport - Eindhoven central 
+      Bus
+- [ ] Eindhoven central - Nijmegen central 
+      NS
