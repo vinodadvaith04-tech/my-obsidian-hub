@@ -26,3 +26,6 @@ Test the intermediate holdings till you chose one holding.
 Test out the intermediate holding with blockers. 
 
 
+Pilot for microglia activation. 
+Start slicing/staining/patching. Keep in mind the right schedule. 
+
