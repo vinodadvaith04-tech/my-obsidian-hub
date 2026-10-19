@@ -4,7 +4,7 @@
 - [ ] Eindhoven central - Eindhoven airport 
       Bus - 25/10/26 - 5
 - [ ] Eindhoven airport - Cluj airport 
-      Flight - 25/10/26 - 180
+      Flight - 25/10/26 - 150
 - [ ] Cluj airport - Hotel 
       Uber - 25/10/26
 - [ ] Hotel 
@@ -16,7 +16,7 @@
 - [ ] Hotel - Cluj airport 
       Uber - 31/10/26
 - [ ] Cluj airport - Eindhoven airport 
-      Flight - 31/10/26
+      Flight - 31/10/26 - 150 
 - [ ] Eindhoven airport - Eindhoven central 
       Bus - 31/10/26 - 5
 - [ ] Eindhoven central - Nijmegen central 
