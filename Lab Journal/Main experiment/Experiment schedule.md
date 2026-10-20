@@ -33,17 +33,18 @@ If slicing on Tuesday
 
 If slicing on Wednesday
 
-|     | M           | T         | W                                       | T                                                                     | F                                     | S          | S     |     |
-| --- | ----------- | --------- | --------------------------------------- | --------------------------------------------------------------------- | ------------------------------------- | ---------- | ----- | --- |
-| W1  |             |           | DIV0<br><font color="#00b0f0">NM</font> | DIV1<br><font color="#c0504d">T                                       | DIV2<br>MC                            | DIV3 <br>  | DIV4  |     |
-| W2  | DIV5<br>MC  | DIV6<br>  | DIV7                                    | DIV8<br><font color="#4f81bd">P - 1S<br><font color="#f79646">F - 4S  | DIV9<br><font color="#4f81bd">P - 1S  | DIV10 <br> | DIV11 |     |
-| W3  | DIV12<br>MC | DIV13<br> | DIV14                                   | DIV15<br><font color="#4f81bd">P - 1S<br><font color="#f79646">F - 4S | DIV16<br><font color="#4f81bd">P - 1S | DIV17 <br> |       |     |
+|     | M                                        | T         | W                                        | T                                                                     | F                                                                 | S          | S     |
+| --- | ---------------------------------------- | --------- | ---------------------------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------- | ---------- | ----- |
+| W1  |                                          |           | DIV0<br><font color="#00b0f0">NM</font>  | DIV1<br><font color="#c0504d">T                                       | DIV2<br><font color="#9bbb59">MC                                  | DIV3 <br>  | DIV4  |
+| W2  | DIV5<br><font color="#9bbb59">MC</font>  | DIV6<br>  | DIV7<br><font color="#9bbb59">MC</font>  | DIV8<br><font color="#4f81bd">P - 1S<br><font color="#f79646">F - 4S  | DIV9<br><font color="#9bbb59">MC<br><font color="#4f81bd">P - 1S  | DIV10 <br> | DIV11 |
+| W3  | DIV12<br><font color="#9bbb59">MC</font> | DIV13<br> | DIV14<br><font color="#9bbb59">MC</font> | DIV15<br><font color="#4f81bd">P - 1S<br><font color="#f79646">F - 4S | DIV16<br><font color="#9bbb59">MC<br><font color="#4f81bd">P - 1S | DIV17 <br> |       |
+
 
 
 If slicing on Thursday
 
-|     | M   | T   | W   | T   | F   | S   | S   |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| W1  |     |     |     |     |     |     |     |
-| W2  |     |     |     |     |     |     |     |
-| W3  |     |     |     |     |     |     |     |
+|     | M                                        | T     | W                                        | T                                       | F                                                                                                        | S         | S          |
+| --- | ---------------------------------------- | ----- | ---------------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------- | --------- | ---------- |
+| W1  |                                          |       |                                          | DIV0<br><font color="#00b0f0">NM</font> | DIV1<br><font color="#c0504d">T                                                                          | DIV2      | DIV3 <br>  |
+| W2  | DIV4<br><font color="#9bbb59">MC</font>  | DIV5  | DIV6<br><font color="#9bbb59">MC</font>  | DIV7                                    | DIV8<br><font color="#9bbb59">MC</font><br><font color="#4f81bd">P - 1S<br><font color="#f79646">F - 4S  | DIV9<br>  | DIV10 <br> |
+| W3  | DIV11<br><font color="#9bbb59">MC</font> | DIV12 | DIV13<br><font color="#9bbb59">MC</font> | DIV14                                   | DIV15<br><font color="#9bbb59">MC</font><br><font color="#4f81bd">P - 1S<br><font color="#f79646">F - 4S | DIV16<br> | DIV17<br>  |
