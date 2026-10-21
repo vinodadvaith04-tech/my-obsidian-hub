@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lab Journal/Main experiment/Experiment schedule.md",
+                "file": "Lab Journal/Ephys/Longer recordings/2026-10-19.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Experiment schedule"
+              "title": "2026-10-19"
             }
           }
         ]
@@ -189,8 +189,8 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
-    "Temp/Romania trip.md",
     "Lab Journal/Main experiment/Experiment schedule.md",
+    "Temp/Romania trip.md",
     "Lab Journal/Ephys/Longer recordings/2026-10-19.md",
     "Lab Journal/Staining/Staining Experiment 1.md",
     "Lab Journal/Main experiment",
