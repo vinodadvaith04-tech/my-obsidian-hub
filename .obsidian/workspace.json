@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lab Journal/Ephys/Longer recordings/2026-10-19.md",
+                "file": "Lab Journal/Thesis/Outline.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-10-19"
+              "title": "Outline"
             }
           }
         ]
@@ -189,9 +189,11 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
+    "Lab Journal/Ephys/Longer recordings/2026-10-19.md",
+    "Lab Journal/Thesis/Outline.md",
+    "Lab Journal/Thesis",
     "Lab Journal/Main experiment/Experiment schedule.md",
     "Temp/Romania trip.md",
-    "Lab Journal/Ephys/Longer recordings/2026-10-19.md",
     "Lab Journal/Staining/Staining Experiment 1.md",
     "Lab Journal/Main experiment",
     "Lab Journal/Staining/Protocols/Immunofluorescence staining protocol.md",
@@ -217,7 +219,6 @@
     "Lab Journal/Ephys/1. Practice/2026-10-02 Gerda recording.md",
     "Internship/patch.md",
     "Internship/Sam Meetings/2026-10-05 Sam meeting.md",
-    "Internship/Research.md",
     "Lab Journal/Ephys/Longer recordings",
     "Lab Journal/Staining/Protocols",
     "Lab Journal/Ephys/1. Practice",
@@ -226,7 +227,6 @@
     "Programming/Python",
     "z_Attachments/Pasted image 20251124103852.png",
     "Lab Journal/Pilot studies",
-    "Untitled",
     "z_Attachments/Pasted image 20251124085034.png",
     "z_Attachments/Pasted image 20260605091213.png",
     "z_Attachments/Pasted image 20260605090408.png",
