@@ -184,13 +184,14 @@
       "bases:Create new base": false,
       "omnisearch:Omnisearch": false,
       "obsidian-git:Open Git source control": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "webpage-html-export:Export as HTML": false
     }
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
-    "Lab Journal/Ephys/Longer recordings/2026-10-21.md",
     "Lab Journal/Ephys/Sam Experiment/2026-10-22.md",
+    "Lab Journal/Ephys/Longer recordings/2026-10-21.md",
     "Lab Journal/Ephys/Sam Experiment",
     "Lab Journal/Ephys/Longer recordings/2026-10-19.md",
     "Lab Journal/Thesis/Outline.md",
