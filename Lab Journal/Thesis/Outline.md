@@ -22,19 +22,28 @@ E/I balance being associated with disorders including ASD
 Rational/Significance
 
 ## Methods 
-#### Animal 
-
-
-#### Hippocampal slice preparation
-
-
-#### Sex hormone treatment
-
-
-#### Electrophysiology
-
-#### Immunohistochemsitry
-
+Animal 
+	
+	
+Hippocampal slice preparation
+	
+	
+Sex hormone treatment
+	
+	
+Electrophysiology
+	
+	
+Immunofluorescence staining
+	
+	
+2D image analysis 
+	
+	
+3D image analysis
+	
+	
+Statistical analysis
 ## Results 
 
 
