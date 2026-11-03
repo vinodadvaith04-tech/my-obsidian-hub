@@ -7,7 +7,15 @@ ADV, S.No, Sex, DIV, T.Code
 eg. ADV_12_female_15_2B123_001.abf
 
 **On the 24 well plate (fixing)**
-Date of fixing, PFA or PBS, Serial
+Date of fixing, PFA or PBS, Serial number. 
+eg
+	18/12
+	PFA
+	16
+or
+	5/11
+	PBS
+	21
 
 **On the 24 well plate (staining)**
 Serial number 
