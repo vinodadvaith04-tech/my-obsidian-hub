@@ -1,6 +1,6 @@
 **On the 6 well plate (incubation and treatment)**
 Slice date, plate number, well number, slice number, treatment code. 
-eg 3/11 #2   -    1,2,3,4.    -    1,2,.....,12.      -      1A1&2
+eg 3/11 #2   -      1,2,.....,12.      -      1A1&2
 
 **While patching**
 ADV, S.No, Sex, DIV, T.Code 

@@ -1,6 +1,5 @@
 
 
-
 | Legend |                   |
 | ------ | ----------------- |
 | DoB    | Date of birth     |
