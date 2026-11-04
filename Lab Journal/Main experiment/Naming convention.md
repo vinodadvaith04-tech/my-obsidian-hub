@@ -5,7 +5,7 @@ eg 3/11 #2   -      1,2,.....,12.      -      1A1&2
 **File while patching**
 ADV, S.No, Sex, DIV, T.Code 
 eg. Adv_12_female_15_2B123_001.abf
-
+20261104_
 **On the 24 well plate (fixing)**
 Date of fixing, PFA or PBS, Serial number. 
 eg
@@ -14,7 +14,6 @@ eg
 	16
 or
 	5/11
-	PBS
 	21
 
 **On the 24 well plate (staining)**
