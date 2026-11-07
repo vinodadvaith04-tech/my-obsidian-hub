@@ -15,15 +15,15 @@ Abs - 3
 Shoulders - 2 
 
 
-| Day       | Morning HW | Evening W             | Exercises                                                                                       |
-| --------- | ---------- | --------------------- | ----------------------------------------------------------------------------------------------- |
-| Friday    |            | Chest shoulder        | Incline bench, press machine, pec deck, lateral raises, cable lateral raise, cable reverse fly. |
-| Saturday  | Rest       | Rest                  |                                                                                                 |
-| Sunday    | Abs        | Back bicep            |                                                                                                 |
-| Monday    | Chest tri  | Shoulder forearms     |                                                                                                 |
-| Tuesday   | Rest       | Swimming              |                                                                                                 |
-| Wednesday | Abs        | Back                  |                                                                                                 |
-| Thursday  | Chest tri  | Shoulder tricep bicep |                                                                                                 |
-| Friday    | Abs        |                       |                                                                                                 |
-| Saturday  |            |                       |                                                                                                 |
+| Day       | Morning HW | Evening W      | Exercises                                                                                       |
+| --------- | ---------- | -------------- | ----------------------------------------------------------------------------------------------- |
+| Friday    |            | Chest shoulder | Incline bench, press machine, pec deck, lateral raises, cable lateral raise, cable reverse fly. |
+| Saturday  | Rest       | Rest           |                                                                                                 |
+| Sunday    | Abs        | Back bicep     |                                                                                                 |
+| Monday    | Chest tri  | Shoulder       |                                                                                                 |
+| Tuesday   | Rest       | Swimming       |                                                                                                 |
+| Wednesday | Abs        | Back           |                                                                                                 |
+| Thursday  | Chest tri  | Tricep bicep   |                                                                                                 |
+| Friday    | Abs        |                |                                                                                                 |
+| Saturday  |            |                |                                                                                                 |
 
