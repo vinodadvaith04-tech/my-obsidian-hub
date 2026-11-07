@@ -19,10 +19,10 @@ Shoulders - 2
 | --------- | ------------- | ------------------ | ----------------------------------------------------------------------------------------------- |
 | Friday    |               | Chest 3 shoulder 3 | Incline bench, press machine, pec deck, lateral raises, cable lateral raise, cable reverse fly. |
 | Saturday  | Rest          | Rest               |                                                                                                 |
-| Sunday    | Abs 3         | Back 3 bicep 3     | Lat pull down, reverse fly, hyperextensions, barbell curls,                                     |
+| Sunday    | Abs 3         | Back 3 bicep 3     | Lat pull down, reverse fly, hyperextensions, barbell curls, hammer curl,                        |
 | Monday    | Chest 1 tri 1 | Shoulder 5         | Shoulder press, lateral raises, cable reverse fly, front raises, cable lateral raises           |
 | Tuesday   | Abs 3 (rest)  | Swimming           |                                                                                                 |
-| Wednesday | Rest          | Tricep 3 bicep 3   | Push down, overhear extension                                                                   |
+| Wednesday | Rest          | Tricep 3 bicep 3   | Push down, overhear extension, single push down, curls, preacher curls,                         |
 | Thursday  | Chest 1 tri 1 | Back 6             |                                                                                                 |
 | Friday    | Abs 3         | Chest 3 shoulder 3 |                                                                                                 |
 | Saturday  |               |                    |                                                                                                 |
