@@ -20,10 +20,10 @@ Shoulders - 2
 | Friday    |            | Chest shoulder    | Incline bench, press machine, pec deck, |
 | Saturday  | Rest       | Rest              |                                         |
 | Sunday    | Abs        | Back bicep        |                                         |
-| Monday    | Abs        | Shoulder forearms |                                         |
-| Tuesday   | Chest tri  | Swimming          |                                         |
-| Wednesday | Abs        |                   |                                         |
-| Thursday  |            |                   |                                         |
+| Monday    | Chest tri  | Shoulder forearms |                                         |
+| Tuesday   | Rest       | Swimming          |                                         |
+| Wednesday | Abs        | Back              |                                         |
+| Thursday  | Chest tri  |                   |                                         |
 | Friday    | Abs        |                   |                                         |
 | Saturday  |            |                   |                                         |
 
