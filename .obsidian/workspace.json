@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lab Journal/Ephys/IPSC recordings/2026-11-06.md",
+                "file": "Temp/Misc.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-11-06"
+              "title": "Misc"
             }
           }
         ]
@@ -190,8 +190,9 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
-    "Lab Journal/Ephys/Longer recordings/2026-11-06.md",
     "Lab Journal/Ephys/IPSC recordings/2026-11-06.md",
+    "Temp/Misc.md",
+    "Lab Journal/Ephys/Longer recordings/2026-11-06.md",
     "Lab Journal/Ephys/3. Cs internal pilot/2026-11-06.md",
     "Lab Journal/Ephys/Longer recordings/2026-10-21.md",
     "Lab Journal/Ephys/3. Cs internal pilot/2026-11-05.md",
@@ -216,7 +217,6 @@
     "Lab Journal/Ephys/1. Practice/2026-09-21 Sacha recording.md",
     "Lab Journal/Ephys/1. Practice/2026-09-29 Gerda recording.md",
     "Lab Journal/Ephys/1. Practice/2026-09-28 Gerda recording.md",
-    "Lab Journal/Ephys/1. Practice/2026-10-02 Gerda recording.md",
     "Lab Journal/Ephys/Sam Experiment",
     "Lab Journal/Thesis",
     "Lab Journal/Main experiment",
