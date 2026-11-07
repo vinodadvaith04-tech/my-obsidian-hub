@@ -5,18 +5,23 @@ At least hit every muscle group 2 times a week.
 
 
 **Muscles** 
-Back
-Chest
-Legs 
+Back - 2
+Chest - 2
+Legs - 0.5
+Bicep - 2
+Tricep - 2
+Forearms - 3
+Abs - 3
+Shoulders - 2 
 
 
-| Day       | Muscle | Exercises |     |
-| --------- | ------ | --------- | --- |
-| Sunday    |        |           |     |
-| Monday    |        |           |     |
-| Tuesday   |        |           |     |
-| Wednesday |        |           |     |
-| Thursday  |        |           |     |
-| Friday    |        |           |     |
-| Saturday  |        |           |     |
+| Day       | Muscles | Exercises | Home workout |
+| --------- | ------- | --------- | ------------ |
+| Sunday    |         |           |              |
+| Monday    |         |           | Abs          |
+| Tuesday   |         |           | Chest tri    |
+| Wednesday |         |           | Abs          |
+| Thursday  |         |           |              |
+| Friday    |         |           | Abs          |
+| Saturday  |         |           |              |
 
