@@ -22,7 +22,7 @@ Shoulders - 2
 | Sunday    | Abs 3         | Back 3 bicep 3     | Lat pull down, reverse fly, hyperextensions, barbell curls,                                     |
 | Monday    | Chest 1 tri 1 | Shoulder 5         | Shoulder press, lateral raises, cable reverse fly, front raises, cable lateral raises           |
 | Tuesday   | Abs 3 (rest)  | Swimming           |                                                                                                 |
-| Wednesday | Rest          | Tricep 3 bicep 3   |                                                                                                 |
+| Wednesday | Rest          | Tricep 3 bicep 3   | Push down, overhear extension                                                                   |
 | Thursday  | Chest 1 tri 1 | Back 6             |                                                                                                 |
 | Friday    | Abs 3         | Chest 3 shoulder 3 |                                                                                                 |
 | Saturday  |               |                    |                                                                                                 |
