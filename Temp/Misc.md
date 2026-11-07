@@ -15,15 +15,15 @@ Abs - 3
 Shoulders - 2 
 
 
-| Day       | Muscles           | Exercises | Home workout |
-| --------- | ----------------- | --------- | ------------ |
-| Friday    | Chest shoulder    |           |              |
-| Saturday  |                   |           |              |
-| Sunday    | Back bicep        |           |              |
-| Monday    | Shoulder forearms |           | Abs          |
-| Tuesday   |                   |           | Chest tri    |
-| Wednesday |                   |           | Abs          |
-| Thursday  |                   |           |              |
-| Friday    |                   |           | Abs          |
-| Saturday  |                   |           |              |
+| Day       | Morning HW | Evening W         | Exercises                               |
+| --------- | ---------- | ----------------- | --------------------------------------- |
+| Friday    |            | Chest shoulder    | Incline bench, press machine, pec deck, |
+| Saturday  | Rest       | Rest              |                                         |
+| Sunday    | Abs        | Back bicep        |                                         |
+| Monday    | Abs        | Shoulder forearms |                                         |
+| Tuesday   | Chest tri  | Swimming          |                                         |
+| Wednesday | Abs        |                   |                                         |
+| Thursday  |            |                   |                                         |
+| Friday    | Abs        |                   |                                         |
+| Saturday  |            |                   |                                         |
 
