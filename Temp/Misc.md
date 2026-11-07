@@ -15,13 +15,15 @@ Abs - 3
 Shoulders - 2 
 
 
-| Day       | Muscles | Exercises | Home workout |
-| --------- | ------- | --------- | ------------ |
-| Sunday    |         |           |              |
-| Monday    |         |           | Abs          |
-| Tuesday   |         |           | Chest tri    |
-| Wednesday |         |           | Abs          |
-| Thursday  |         |           |              |
-| Friday    |         |           | Abs          |
-| Saturday  |         |           |              |
+| Day       | Muscles           | Exercises | Home workout |
+| --------- | ----------------- | --------- | ------------ |
+| Friday    | Chest shoulder    |           |              |
+| Saturday  |                   |           |              |
+| Sunday    | Back bicep        |           |              |
+| Monday    | Shoulder forearms |           | Abs          |
+| Tuesday   |                   |           | Chest tri    |
+| Wednesday |                   |           | Abs          |
+| Thursday  |                   |           |              |
+| Friday    |                   |           | Abs          |
+| Saturday  |                   |           |              |
 
