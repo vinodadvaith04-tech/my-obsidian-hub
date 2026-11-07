@@ -19,7 +19,7 @@ Shoulders - 2
 | --------- | ---------- | -------------- | ----------------------------------------------------------------------------------------------- |
 | Friday    |            | Chest shoulder | Incline bench, press machine, pec deck, lateral raises, cable lateral raise, cable reverse fly. |
 | Saturday  | Rest       | Rest           |                                                                                                 |
-| Sunday    | Abs        | Back bicep     |                                                                                                 |
+| Sunday    | Abs        | Back bicep     | Lat pull down, reverse fly, hyperextensions, barbell curls,                                     |
 | Monday    | Chest tri  | Shoulder       |                                                                                                 |
 | Tuesday   | Rest       | Swimming       |                                                                                                 |
 | Wednesday | Abs        | Back           |                                                                                                 |
