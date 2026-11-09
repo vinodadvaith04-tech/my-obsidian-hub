@@ -7,6 +7,7 @@ Both male and female pups will be used. Looking at using 5 pups for each sex (n=
 Now for the staining. There will be 2 staining panels being used. This would then force us to use a higher n. We would need 10 pups (5 male, 5 female) for staining panel 1 and 10 pups for staining panel 2. What are staining panel 1 and 2. 
 1 would be Iba-1, CD-68, Vgat, and gephyrin. This is to see how inhibitory synapses change based on the treatment. How it changes the microglia and its morphology/activation. And also how the microglia prune these inhibitory synapses. 
 2 would be Iba-1, CD-68, Vglut and psd-95. This would do the same thing but for excitatory synapses. 
-Now for imaging, we will be using confocal imaging, choosing 3 ROIs in each slice in the CA1 region, and doing a z stack which would be 46 stack, with 0.3 mu metres
+Now for imaging, we will be using confocal imaging, choosing 3 ROIs in each slice in the CA1 region, and doing a z stack which would be 46 stack, with 0.3 mu metres as the z distance. It would have a resolution of 2048x2048 pixels which takes about 28mins per ROI for a confocal scan. 
+For patch clamping I will be patching 3-4 cells per slice. I shall be using a low chloride caesium internal which would let us record EPSC and IPSC within the same cell to get a true E/I ratio. I will not be using TTX. I will record at -80mV, 10mV and -40mV. 3 2 minute gap free recordings per cell. 
 
 
