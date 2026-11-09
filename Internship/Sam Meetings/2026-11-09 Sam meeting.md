@@ -1,5 +1,10 @@
 Treatment change on Monday, fix 4 slices on Wednesday morning. Stop treatment for first animal. 
 Slicing on Tuesday: New treatment on Wednesday. 
+New pup 
+27-10 slicing. 
+
+3-11 normal slices
+10-11 normal slices
 
 Discuss next treatment, blinding needed. Aliquot when necessary. 
 No patching this week
