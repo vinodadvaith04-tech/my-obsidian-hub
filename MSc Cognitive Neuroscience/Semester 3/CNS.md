@@ -8,3 +8,7 @@ A =
 
 ![[Screenshot 2026-11-09 at 15.46.04.png]]
 
+
+
+![[Screenshot 2026-11-09 at 15.53.23.png]]
+
