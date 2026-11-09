@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Plan.md",
+                "file": "MSc Cognitive Neuroscience/Semester 3/Computational Neuroscience.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Plan"
+              "title": "Computational Neuroscience"
             }
           }
         ]
@@ -190,8 +190,11 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
-    "Vault guide.md",
+    "MSc Cognitive Neuroscience/Semester 3/Molecular and Cellular Neurobiology.md",
+    "MSc Cognitive Neuroscience/Semester 3/Computational Neuroscience.md",
     "Plan.md",
+    "MSc Cognitive Neuroscience/Semester 3/Untitled",
+    "Vault guide.md",
     "Internship/Sam Meetings/2026-11-09 Sam meeting.md",
     "Lab Journal/Ephys/3. Cs internal pilot/2026-11-04.md",
     "Lab Journal/Ephys/3. Cs internal pilot/2026-11-06.md",
@@ -214,8 +217,6 @@
     "Lab Journal/Ephys/Sam Experiment/2026-10-22.md",
     "Lab Journal/Ephys/IPSC recordings/2026-10-22.md",
     "Internship/Corette Meetings/2026-11-05.md",
-    "Internship/Sam Meetings/2026-11-02.md",
-    "Internship/Sam Meetings/2026-10-19 Sam Meeting.md",
     "Lab Journal/Ephys/3. Cs internal pilot",
     "Lab Journal/Ephys/Sam Experiment",
     "Lab Journal/Thesis",
@@ -226,7 +227,6 @@
     "Lab Journal/Staining/Protocols",
     "Lab Journal/Ephys/1. Practice",
     "Lab Journal/Ephys",
-    "Programming/Python/restructure_vault.py",
     "z_Attachments/Pasted image 20251124103852.png",
     "z_Attachments/Pasted image 20251124085034.png",
     "z_Attachments/Pasted image 20260605091213.png",
