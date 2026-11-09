@@ -15,3 +15,15 @@ Shifted LAS course to March.
 The staining to be done? Pilot the new anti bodies. 
 Figured a way for >10 slices per week for imaging? More slices per slide, choose areas, and sleep. 
 
+
+
+2 min wait
+cap check at -60 
+-80 2x2 mins
+-75 2x2 mins 
+
+-40 2x2 mins 
+-35 2x2 mins 
+
+10 2x2 mins 
+15 2x2 mins 
