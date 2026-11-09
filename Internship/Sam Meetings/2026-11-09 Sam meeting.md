@@ -27,3 +27,9 @@ cap check at -60
 
 10 2x2 mins 
 15 2x2 mins 
+
+Comparing EPSC only for new internal with old Kglu recordings
+Comparing IPSC only for new internal with old KCl recordings 
+Comparing both at intermediate holding with our new E/I ration with new internal 
+
+N = 3 slices, 2-3 cells per slice. 
