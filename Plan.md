@@ -3,5 +3,10 @@ Firstly to start, my main aim is to see the effect of sex hormones on a developi
 For this I shall be using a model organism mice. And specifically I will be using organotypic slices of the mice hippocampus. These organotypic mice hippocampal slices come from mice that are of age 4-7 days old. At 4-7 day old they are sacrificed, 12 sliced from each pup and they are kept on confetti membrane that is kept membrane inserts and then stored with cell culture medium. This is DIV0. At DIV 1 I treat them with sex hormones. The dosage that I am treating them with is 10 nano molar. The hormonal conditions are control, Testosterone propinate, estradiol(e2), and estradiol + letrozole. 
 They receive this treatment for 7 days, with the treatment medium being refreshed every 2-3 days (3 times a week). At DIV 7 the treatment stops. 
 Now since there are 12 slices, and 4 conditions, each condition gets 3 slices. However one slice is fixed immediately in pfa for confocal imaging. This is an acute treatment effect arm to see the immediate changes due to the treatment. 1 slice is transfered to plain cell culture medium and fixed at DIV 14 to see a long term effect due. The last slice is taken to patch clamp electrophysiology at DIV 14. 
+Both male and female pups will be used. Looking at using 5 pups for each sex (n=5) and each pup will give 12 slices with each slice being one condition in this nesting that I have mentioned. 
+Now for the staining. There will be 2 staining panels being used. This would then force us to use a higher n. We would need 10 pups (5 male, 5 female) for staining panel 1 and 10 pups for staining panel 2. What are staining panel 1 and 2. 
+1 would be Iba-1, CD-68, Vgat, and gephyrin. This is to see how inhibitory synapses change based on the treatment. How it changes the microglia and its morphology/activation. And also how the microglia prune these inhibitory synapses. 
+2 would be Iba-1, CD-68, Vglut and psd-95. This would do the same thing but for excitatory synapses. 
+Now for imaging, we will be using confocal imaging, choosing 3 ROIs in each slice in the CA1 region, and doing a z stack which would be 46 stack, with 0.3 mu metres
 
 
