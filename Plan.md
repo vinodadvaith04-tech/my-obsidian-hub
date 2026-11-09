@@ -1,5 +1,7 @@
 So here is my final masters thesis plan that I will be doing. You may go through other chats for context as I have discussed things with you, also you have done literature searches for this project and hence take information from there where necessary however you may use the internet for more papers wherever you see fit. 
 Firstly to start, my main aim is to see the effect of sex hormones on a developing brain. 
-For this I shall be using a model organism mice. And specifically I will be using organotypic slices of the mice hippocampus. These organotypic mice hippocampal slices come from 
+For this I shall be using a model organism mice. And specifically I will be using organotypic slices of the mice hippocampus. These organotypic mice hippocampal slices come from mice that are of age 4-7 days old. At 4-7 day old they are sacrificed, 12 sliced from each pup and they are kept on confetti membrane that is kept membrane inserts and then stored with cell culture medium. This is DIV0. At DIV 1 I treat them with sex hormones. The dosage that I am treating them with is 10 nano molar. The hormonal conditions are control, Testosterone propinate, estradiol(e2), and estradiol + letrozole. 
+They receive this treatment for 7 days, with the treatment medium being refreshed every 2-3 days (3 times a week). At DIV 7 the treatment stops. 
+Now since there are 12 slices, and 4 conditions, each condition gets 3 slices. However one slice is fixed immediated in pfa for confocal imaging. This is an acute treatment effect arm to se
 
 
