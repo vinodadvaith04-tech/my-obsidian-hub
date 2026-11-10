@@ -10,6 +10,6 @@ Now for the staining. There will be 2 staining panels being used. This would the
 Now for imaging, we will be using confocal imaging, choosing 3 ROIs in each slice in the CA1 region, and doing a z stack which would be 46 stack, with 0.3 mu metres as the z distance. It would have a resolution of 2048x2048 pixels which takes about 28mins per ROI for a confocal scan. 
 For patch clamping I will be patching 3-4 cells per slice. I shall be using a low chloride caesium internal which would let us record EPSC and IPSC within the same cell to get a true E/I ratio. I will not be using TTX. I will record at -80mV, 10mV and -40mV. 3 2 minute gap free recordings per cell. 
 
-These are the instructions for now, if you want any more context or have questions and think there are gaps that you arents sure about ask, I will clarify and give you more
+This is the plan for now, if you want any more context or have questions and think there are gaps that you arents sure about ask, I will clarify and give you more information. I will also send in more context, for now ask me if you have any questions about the overall plan and need more. However dont assume that something is being done ask me explicitly. 
 
 
