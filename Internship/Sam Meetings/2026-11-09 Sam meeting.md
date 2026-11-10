@@ -21,12 +21,13 @@ Figured a way for >10 slices per week for imaging? More slices per slide, choose
 cap check at -60 
 -80 2x2 mins
 -75 2x2 mins 
-
+cap check 
 -40 2x2 mins 
 -35 2x2 mins 
-
+cap check
 10 2x2 mins 
 15 2x2 mins 
+cap check
 
 Comparing EPSC only for new internal with old Kglu recordings
 Comparing IPSC only for new internal with old KCl recordings 
