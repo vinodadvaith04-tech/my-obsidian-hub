@@ -6,24 +6,12 @@ Will do a 0mV and -60mV holding to check if the cell is stable and has recording
 Calculate LJP for both internals and correct for it. 
 
 Check both 0mV and -60mV, try finding an intermediate holding as well. All LJP corrected. 
-Pipette offset correction or 
+Pipette offset correction
+
+LJP correction is +10. 
+-50 here is actually -40 command etc..
 
 
-LJP calculation  
-
-	+16.6 -> +15  For KGlu
-	
-	+10.06 -> +10 For KCl
-
-
-| Potential you want | Potential you must keep(KGlu) | Potential you must keep(KCl) |
-| ------------------ | ----------------------------- | ---------------------------- |
-| 0                  | +15                           | +10                          |
-| -45                | -30                           |                              |
-| -50                | -35                           |                              |
-| -55                | -40                           | -45                          |
-| -60                | -45                           | -50                          |
-| -70                | -55                           | -60                          |
 47.7 cold - 5.2 MΩ
 47.7 hot - 3.3 MΩ
 47.8 hot - 4.3 MΩ  

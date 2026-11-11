@@ -5,25 +5,8 @@ The holdings voltages are -40, -50, -60 mV.
 Will be randomizing the order at which I do the recordings for any background effects due to the cell dying. 
 
 
-Calculate LJP correcting for it. 
-
-LJP calculation  
-
-	+16.6 -> +15  For KGlu
-	
-
-| Potential you want | Potential you must keep(KGlu) |
-| ------------------ | ----------------------------- |
-| 0                  | +15                           |
-| -45                | -30                           |
-| -50                | -35                           |
-| -55                | -40                           |
-| -60                | -45                           |
-| -70                | -55                           |
-47.7 cold - 
-47.7 hot - 
-47.8 hot - 
-### Slice 1
+LJP correction is +10. 
+-50 here is actually -40 command etc..
 #### Cell 1 
 
 | Protocol       | Pipette resistance (MΩ) | Membrane Capacitance (pF) | Membrane Resistance (MΩ) | Access Resistance (MΩ) | Membrane potential (mV) |

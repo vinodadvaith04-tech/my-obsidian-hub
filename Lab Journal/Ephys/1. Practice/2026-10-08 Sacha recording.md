@@ -1,7 +1,9 @@
 Supposed to try TTX pilot 1
 But didnt, instead trying intermediate holdings. 
 Only 50, 60, 70
-With LJP correction. 
+
+LJP correction is +10. 
+-50 here is actually -40 command etc..
 
 ### Slice 1
 

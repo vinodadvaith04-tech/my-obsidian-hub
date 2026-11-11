@@ -11,23 +11,8 @@ Pipette offset correction or
 
 Female DIV 21 - day 28 mice. 
 
-Check pipette first
-
-**For KCl internal** 
-47.9 - 5.9MΩ
-Using 47.8 - 
-
-**For KGlu internal** 
-47.7 -  4.5-4.9 
-47.8 -  don't need 
-
-
-LJP calculation  
-
-	+16.6 -> +15  For KGlu
-	
-	+10.06 -> +10 For KCl
-
+LJP correction is +15. 
+-50 here is actually -35 command etc..
 
 | Potential you want | Potential you must keep(KGlu) | Potential you must keep(KCl) |
 | ------------------ | ----------------------------- | ---------------------------- |
