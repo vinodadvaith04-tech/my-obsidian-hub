@@ -13,7 +13,8 @@ No LJP correction for the below.
 | Manual check 4 |                         | 131                       | 140                      | 21                     | -73                     |
 | Manual check 4 |                         |                           |                          |                        |                         |
 |                |                         |                           |                          |                        |                         |
-Notes: Got IPSCs at -0mV - Good recordings 
+Notes: Got IPSCs at
+2 recordings at 0mV - Good recordings 
 2 recordings with - 60mV
 
 

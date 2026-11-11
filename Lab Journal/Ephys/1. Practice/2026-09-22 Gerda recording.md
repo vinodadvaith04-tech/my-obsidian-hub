@@ -39,6 +39,14 @@ Not sure what im looking at for 0mV clamp free recording.
 | Manual check 5 |                    | 68                   | 175                 | 26              | 54                 |
 |                |                    |                      |                     |                 |                    |
 Notes:  Good cell, didnt see much activity for clamp free check. 
+-60
+-55
+-60
+-65
+-50
+-45
+
+just extra note!
 First holding of -60
 However at holding of -55mV I could see decent IPSCs. EPCS?? Trying -60 and -65 next
 at 55mV Pretty good ipscs, smaller epscs

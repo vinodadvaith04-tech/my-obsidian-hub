@@ -75,6 +75,7 @@ Losing the cell towards the end.
 | Manual check 5 |                         | 80                        | 160                      | 29                     | -60                     |
 Notes: 
 -70mV lot of EPSCs. Larger amplitude. 
+-70mV
 -60mV Still a lot of EPSCs but a few IPSCs are also seen. 
 -50mV Few EPSCs however IPSCs are more frequent now. 
 -45mV very unstable, still recording. 
@@ -110,7 +111,6 @@ Notes:
 | Manual check 5 |                         |                           |                          |                        |                         |
 Notes: Not a great cell. Depolarizing. Probably dying. 
 -70mV very noisy but EPSCs seen. 
--70mV 
 Not a good recording. Losing the cell. 
 
 ### Cell 6

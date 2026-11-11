@@ -69,7 +69,6 @@ Manual check 2
 Manual check 3
 7. -50
 8. -40
-9. -60 Lost the cell after this so last recording might not be accurate. 
 Manual check 4
 
 #### Cell 4
