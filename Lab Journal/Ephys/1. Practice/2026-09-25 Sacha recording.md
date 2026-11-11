@@ -5,8 +5,6 @@ Trying 47.7 and 47.8 for resistance first
 47.7 - 3.8
 *47.8 - 5.3
 
-Trying to correct for liquid junction potential as well.
-+15 everywhere!
 
 Problem with the recording electrode??
 try again
