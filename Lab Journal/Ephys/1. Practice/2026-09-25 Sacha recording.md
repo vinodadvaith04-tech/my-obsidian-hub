@@ -50,6 +50,7 @@ Thought of still recording regardless because recordings looked good.
 -45 mV - Expected IPSCs but nothing, cell started having higher access resistance by this time. 
 -65 mV - Nothing, could be due to me losing the cell. 
 -70 mv - Nothing
+-60
 
 
 #### Cell 3
@@ -114,8 +115,8 @@ Notes: Good cell. Was pretty easy to patch. Didnt have to adjust the access. Gre
 -45mV - 1-2 IPSCs seen. Still high amplitude EPSCs seen
 -40mV  - Still large EPSCs
 -35mV - Access started to get bad so dont know how reliable it is. Hard to see anything, just action potentials. Large upwards deflections see but dont know what it is. Could just be a cell with lesser Inhibitory?
-Tried 0mV. As expected EPSC has disappeared. 
-
+0mV. As expected EPSC has disappeared. 
+0mV
 
 #### Cell 6
 

@@ -58,6 +58,7 @@ Action potenial as well.
 -45mV - Noisy recordings but EPSCs and IPSCs are still present. 
 -75mV Trying to remove all the IPSCs Only EPSCs are present. 
 Losing the cell towards the end. 
+-75mV
 
 
 
