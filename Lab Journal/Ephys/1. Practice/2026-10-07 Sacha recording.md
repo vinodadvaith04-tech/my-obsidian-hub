@@ -130,13 +130,3 @@ Notes: decently stable cell. Membrane capacitance is lowish?
 -40mV 
 
 
-### Cell 7
-
-| Protocol       | Pipette resistance (MΩ) | Membrane Capacitance (pF) | Membrane Resistance (MΩ) | Access Resistance (MΩ) | Membrane potential (mV) |
-| -------------- | ----------------------- | ------------------------- | ------------------------ | ---------------------- | ----------------------- |
-| Manual check 1 | 5.9                     |                           |                          |                        |                         |
-| Manual check 2 |                         |                           |                          |                        |                         |
-| Manual check 3 |                         |                           |                          |                        |                         |
-| Manual check 4 |                         |                           |                          |                        |                         |
-| Manual check 5 |                         |                           |                          |                        |                         |
-Notes:
