@@ -101,7 +101,6 @@ Manual check 2
 Manual check 3
 7. -60
 8. -50 Noisy recording, might not be the best. 
-9. -40 lost the cell before I could do this. 
 Lost the cell. 
 
 #### Cell 5
@@ -123,7 +122,7 @@ Manual check 2
 6. -60
 Manual check 3 
 7. -60 note much in this recording
-8. -50 lost the cell after this. 
+
 
 
 #### Cell 6
