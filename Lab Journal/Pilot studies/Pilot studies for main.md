@@ -45,5 +45,5 @@ Slice 2
 
 
 ##### Using Caesium internal
-First do 2 sessions of holding at 0 and -70mV. Remember to control for LJP. 
-Also in the same cell measure it at -55mV. Check to make sure if the ratio matches with 0 and -70 separately. 
+First do 2 sessions of holding at 10 and -80mV.
+Also in the same cell measure it at -35 or -40mV. Check to make sure if the ratio matches with 0 and -70 separately. 
