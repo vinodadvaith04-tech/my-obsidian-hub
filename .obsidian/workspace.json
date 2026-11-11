@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lab Journal/Main experiment/Master table.md",
+                "file": "Lab Journal/Pilot studies/Pilot studies for main.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Master table"
+              "title": "Pilot studies for main"
             }
           }
         ]
@@ -190,6 +190,7 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
+    "Lab Journal/Main experiment/Master table.md",
     "Lab Journal/Thesis/Outline.md",
     "Lab Journal/Pilot studies/Pilot studies for main.md",
     "Internship/Sam Meetings/2026-11-09 Sam meeting.md",
@@ -198,7 +199,6 @@
     "Lab Journal/Main experiment/Naming convention.md",
     "Lab Journal/Main experiment/Analysis nesting.md",
     "Lab Journal/Daily journal/3. November/Week 2 9-11 to 13-11.md",
-    "Lab Journal/Main experiment/Master table.md",
     "Lab Journal/Staining/Protocols/Immunofluorescence staining protocol.md",
     "Lab Journal/Daily journal/1. September/Week 1 31-08 to 4-09.md",
     "Lab Journal/Daily journal/4. December",
