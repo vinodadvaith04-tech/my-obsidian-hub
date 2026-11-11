@@ -27,9 +27,7 @@ Manual check 1
 3. -40 - 
 Manual check 2
 4. -60 - 
-5. -50 - 
-6. -40 - 
-Manual check 3 - losing the cell here, stopped recording. 
+
 
 
 
