@@ -26,7 +26,12 @@ def ids(s):
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--audit", type=Path, required=True)
     a = ap.parse_args()
-    lab = pd.read_csv(a.audit / "audit_labels.csv", dtype=str)
+    xl = a.audit / "audit_labels.xlsx"
+    if xl.exists(): lab = pd.read_excel(xl, sheet_name="audit_labels", dtype=str)
+    else: lab = pd.read_csv(a.audit / "audit_labels.csv", dtype=str, sep=None, engine="python")
+    lab = lab.fillna("")
+    lab["miniML_missed"] = lab["miniML_missed"].astype(str).str.replace(r"\.0$", "", regex=True)
+    lab["old_missed"] = lab["old_missed"].astype(str).str.replace(r"\.0$", "", regex=True)
     win = pd.read_csv(a.audit / "audit_windows.csv")
     key = pd.read_csv(a.audit / "audit_events_key.csv")
     done = lab[(lab[["miniML_false_ids", "old_false_ids", "miniML_missed", "old_missed"]].notna()

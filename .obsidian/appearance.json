@@ -5,5 +5,6 @@
   "interfaceFontFamily": "Comic Sans MS",
   "textFontFamily": "Comic Sans MS",
   "monospaceFontFamily": "Monaco",
-  "translucency": true
+  "translucency": true,
+  "showRibbon": true
 }
