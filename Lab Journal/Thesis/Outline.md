@@ -2,11 +2,19 @@
 
 ## Background
 ASD
-	
+	Stats and facts about ASD. 
+	Causes of ASD
+		Genetic
+		Environmental
+		Sex difference in ASD
+		Chromosome & hormones
 Hormonal exposure causing ASD
-	
+	History of extreme male brain hypothesis
+	How much of it is still true. 
+	What is known right now about hormonal exposure causing ASD
 Effect of sex hormone on Neurons 
-	
+	How do hormones effect neurons. 
+	Receptor count 
 Microglia 
 	
 Effect of sex hormones on microglia 
