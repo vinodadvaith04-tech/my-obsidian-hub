@@ -75,6 +75,7 @@ KCl internal
 | Manual check 5 |                         |                           |                          |                        |                         |
 |                |                         |                           |                          |                        |                         |
 Notes: Good cell.
+all at -60mV
 
 ### Cell 4
 KGlu internal 
