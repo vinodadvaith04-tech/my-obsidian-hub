@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lab Journal/Anit-bodies.md",
+                "file": "Lab Journal/Thesis/Outline.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Anit-bodies"
+              "title": "Outline"
             }
           }
         ]
@@ -190,8 +190,8 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
-    "Lab Journal/Thesis/Outline.md",
     "Lab Journal/Anit-bodies.md",
+    "Lab Journal/Thesis/Outline.md",
     "Programming/Python/csv_to_xlsx.py",
     "Lab Journal/Ephys/3. Cs internal pilot/2026-11-12.md",
     "Lab Journal/Ephys/3. Cs internal pilot/2026-11-06.md",
