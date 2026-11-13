@@ -16,7 +16,7 @@
 |     | Mouse      | PSD-95   |             |            |
 |     | Goat       | PSD-95   |             |            |
 |     | Rabbit     | PSD-95   |             |            |
-|     |            |          |             |            |
+|     | Rabbit     | PSD-95   |             |            |
 
 ## 2* antibody
 
@@ -51,4 +51,11 @@ GP - VLGUT ----- GP 647
 Mouse PSD-95 -----  M 407
 Rabbit - Iba-1 ----- Rabbit 568
 Goat - CD68 ----- Goat 488 (donkey)
+
+
+Later: 
+Vgat
+Vglut
+Iba-1
+CD68
 
