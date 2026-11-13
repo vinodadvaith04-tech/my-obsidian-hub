@@ -88,18 +88,55 @@ META_COLS = ["new_name", "session", "date_header", "T.Code", "sex", "slice", "ce
 # --------------------------------------------------------------------------
 # master table / file lookup
 # --------------------------------------------------------------------------
-def default_directions(row) -> str:
-    """Event directions to run when the master table has no 'miniML_directions'.
+# Direction rule by COMMAND holding (set with Advaith, 12 Nov 2026):
+#   KCl internal                      -> negative only (Cl- currents are inward; downward events = IPSCs)
+#   holding >= 0 mV (0, 5, 10, 15)    -> positive only (outward IPSCs)
+#   -50 ... -35 mV                    -> both directions (EPSCs inward + IPSCs outward expected)
+#   <= -60 mV                         -> negative only (EPSCs)
+#   -55 mV (gap)                      -> negative only (decided with Advaith, 12 Nov: few/no IPSCs expected)
+#   -30 mV (gap)                      -> both directions (decided with Advaith, 12 Nov)
+#   any other value in a gap          -> both directions (nothing lost); see GAP_OVERRIDES
+BOTH_RANGE = (-50.0, -35.0)
+NEG_ONLY_AT_OR_BELOW = -60.0
+POS_ONLY_AT_OR_ABOVE = 0.0
+GAP_RULE = "both"                   # fallback for any gap value not listed below
+GAP_OVERRIDES = {-55.0: "negative", -30.0: "negative,positive"}
 
-    KCl internal: Cl- currents are INWARD at -60 mV command, so IPSCs are negative too.
-    KGlu / Cs-gluconate at intermediate or depolarised holdings: IPSCs are outward.
-    """
-    c = str(row.get("psc_content", "") or "")
-    if c.startswith("EPSC"):
+
+def directions_from_holding(holding, internal: str = "") -> str:
+    if str(internal) == "KCl":
         return "negative"
-    if c.startswith("IPSC") or "KCl" in c:
+    try:
+        h = float(holding)
+    except (TypeError, ValueError):
+        return "negative,positive"          # unknown holding: be safe, run both
+    if np.isnan(h):
+        return "negative,positive"
+    if h >= POS_ONLY_AT_OR_ABOVE:
+        return "positive"
+    if BOTH_RANGE[0] <= h <= BOTH_RANGE[1]:
+        return "negative,positive"
+    if h <= NEG_ONLY_AT_OR_BELOW:
         return "negative"
-    return "negative,positive"
+    if h in GAP_OVERRIDES:
+        return GAP_OVERRIDES[h]
+    if GAP_RULE == "both":
+        return "negative,positive"
+    return "negative" if h < np.mean([BOTH_RANGE[0], NEG_ONLY_AT_OR_BELOW]) + 1e-9 else "positive"
+
+
+def default_directions(row) -> str:
+    """Used only when the master table has no 'miniML_directions' value for a row."""
+    return directions_from_holding(row.get("holding_command_mV"), row.get("internal", ""))
+
+
+def assumed_event_type(direction: str, internal: str) -> str:
+    """Working label from polarity: KCl -> downward = IPSC; otherwise downward = EPSC, upward = IPSC.
+    This is an ASSUMPTION from the holding design, not a measurement (unblocked KCl recordings
+    also contain EPSCs)."""
+    if str(internal) == "KCl":
+        return "IPSC" if direction == "negative" else "?"
+    return "EPSC" if direction == "negative" else "IPSC"
 
 
 def load_master(path: Path) -> pd.DataFrame:
@@ -213,6 +250,10 @@ def process(row, path: Path, direction: str, model, P: dict, outdir: Path, h: st
         det.save_to_pickle(filename=str(outdir / f"{stem}.pickle"),
                            include_prediction=False, include_data=False)
     s = summarise(ev, trace, direction)
+    sig = np.asarray(trace.data, dtype=float)
+    s["noise_hf_pA"] = float(1.4826 * np.median(np.abs(np.diff(sig) - np.median(np.diff(sig)))) / np.sqrt(2))   # robust sample-to-sample noise SD
+    s["noise_mad_pA"] = float(1.4826 * np.median(np.abs(sig - np.median(sig))))                                  # robust SD incl. slow fluctuation
+    s["hold_current_median_pA"] = float(np.median(sig))
     s.update(new_name=row["new_name"], params_hash=h, status="ok" if len(ev) else "ok_no_events",
              processed_at=time.strftime("%Y-%m-%d %H:%M:%S"))
     done.write_text(json.dumps(s, default=float))
@@ -234,6 +275,7 @@ def aggregate(master: pd.DataFrame, results: Path, h: str):
     lead = ["new_name", "recording_name", "recording_index", "direction"]
     s = s[lead + [c for c in meta if c not in lead] +
           [c for c in s.columns if c not in lead + meta]]
+    s.insert(4, "event_type_assumed", [assumed_event_type(d, i) for d, i in zip(s["direction"], s["internal"])])
     s.to_csv(results / "miniML_file_summary.csv", index=False)
 
     parts = []
@@ -249,6 +291,7 @@ def aggregate(master: pd.DataFrame, results: Path, h: str):
     em = master[["new_name", "recording_name", "holding_command_mV", "holding_flag",
                  "internal", "psc_content", "sex", "T.Code", "date_header", "cell"]]
     ev = ev.merge(em, on="new_name", how="left")
+    ev.insert(2, "event_type_assumed", [assumed_event_type(d, i) for d, i in zip(ev["direction"], ev["internal"])])
     ev.to_csv(results / "miniML_events_all.csv", index=False)
 
     g = s.groupby(["recording_name", "holding_command_mV", "direction"], dropna=False)
@@ -258,6 +301,7 @@ def aggregate(master: pd.DataFrame, results: Path, h: str):
                  sex=("sex", "first"), T_code=("T.Code", "first"), internal=("internal", "first"),
                  psc_content=("psc_content", "first"), holding_flag=("holding_flag", "first")).reset_index()
     cell["frequency_Hz"] = cell["n_events"] / cell["valid_time_s"]
+    cell.insert(3, "event_type_assumed", [assumed_event_type(d, i) for d, i in zip(cell["direction"], cell["internal"])])
     if len(ev):
         a = (ev.groupby(["recording_name", "holding_command_mV", "direction"], dropna=False)
                ["amplitude_abs"].agg(amplitude_abs_mean="mean", amplitude_abs_median="median").reset_index())
@@ -285,7 +329,9 @@ def main():
     ap.add_argument("--miniml-core", type=Path, help="folder containing miniML.py (miniML-main/core)")
     ap.add_argument("--model", type=Path, help="path to GC_lstm_model.h5 (or a transfer-learned model)")
     ap.add_argument("--only", help="process only recordings whose name contains this text (e.g. a date or cell key)")
+    ap.add_argument("--names", help="comma-separated new_name values to process (testing a few recordings)")
     ap.add_argument("--limit", type=int, help="process at most N recordings (testing)")
+    ap.add_argument("--max-hours", type=float, help="stop cleanly after this many hours (resume later by re-running the same command)")
     ap.add_argument("--dry-run", action="store_true", help="check master vs files, do not run miniML")
     ap.add_argument("--aggregate-only", action="store_true", help="rebuild the summary CSVs from existing per-file results")
     ap.add_argument("--update-master", action="store_true", help="also write <master>_with_detection.xlsx (a copy)")
@@ -294,6 +340,13 @@ def main():
     master = load_master(a.master)
     if a.only:
         master = master[master["new_name"].str.contains(a.only, regex=False)].reset_index(drop=True)
+    if a.names:
+        wanted = [n.strip() for n in a.names.split(",") if n.strip()]
+        master = master[master["new_name"].isin(wanted)].reset_index(drop=True)
+    # newest recordings first (reverse date, then reverse per-day counter)
+    master = (master.assign(_ci=pd.to_numeric(master["recording_index"], errors="coerce"))
+                    .sort_values(["date_header", "_ci"], ascending=False)
+                    .drop(columns="_ci").reset_index(drop=True))
     if a.limit:
         master = master.head(a.limit)
     idx, dups = index_abf(a.data_root)
@@ -333,7 +386,14 @@ def main():
         model = tf.keras.models.load_model(str(a.model))
         todo = [(r, idx[r["new_name"]], d.strip()) for _, r in master[found].iterrows()
                 for d in str(r["miniML_directions"]).split(",")]
+        t_start = time.time()
         for i, (r, path, d) in enumerate(todo, 1):
+            if (results / "STOP").exists():
+                print("STOP file found -> stopping cleanly after the last finished run. Delete the STOP file and re-run to resume.", flush=True)
+                break
+            if a.max_hours and (time.time() - t_start) > a.max_hours * 3600:
+                print(f"--max-hours {a.max_hours} reached -> stopping cleanly; re-run the same command to resume.", flush=True)
+                break
             t0 = time.time()
             try:
                 st = process(r, path, d, model, PARAMS, results / "per_file", h)

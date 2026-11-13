@@ -30,6 +30,7 @@ def main():
     if xl.exists(): lab = pd.read_excel(xl, sheet_name="audit_labels", dtype=str)
     else: lab = pd.read_csv(a.audit / "audit_labels.csv", dtype=str, sep=None, engine="python")
     lab = lab.fillna("")
+    lab = lab[[c for c in ["window", "page", "file", "start_s", "miniML_false_ids", "miniML_missed", "old_false_ids", "old_missed", "missed_times_s", "unsure_ids", "note"] if c in lab.columns]]
     lab["miniML_missed"] = lab["miniML_missed"].astype(str).str.replace(r"\.0$", "", regex=True)
     lab["old_missed"] = lab["old_missed"].astype(str).str.replace(r"\.0$", "", regex=True)
     win = pd.read_csv(a.audit / "audit_windows.csv")
