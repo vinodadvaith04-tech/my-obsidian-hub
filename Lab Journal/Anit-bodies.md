@@ -43,8 +43,8 @@
 
 **Main**
 Vgat--Chicken----------anti-Chicken--488(donkey)
-Vglut--Guinea pig-------anti-GP--647(goat)
-Iba-1--Rabbit-----------anti-Rabbit--568(goat)
+Vglut--mouse-------anti-mouse--594(donkey)
+Iba-1--Rabbit-----------anti-Rabbit--647(donkey)
 CD68--Goat-------------anti-Goat--405(donkey)
 Using horse serum 
 
