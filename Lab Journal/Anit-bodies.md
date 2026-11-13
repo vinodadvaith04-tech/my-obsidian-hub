@@ -53,7 +53,7 @@ Rabbit - Iba-1 ----- Rabbit 568
 Goat - CD68 ----- Goat 488 (donkey)
 
 
-Later: 
+This will be main, do the other two pairs later. 
 Vgat
 Vglut
 Iba-1
