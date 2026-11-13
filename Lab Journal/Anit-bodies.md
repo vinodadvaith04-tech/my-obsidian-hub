@@ -53,9 +53,9 @@ Rabbit - Iba-1 ----- Rabbit 568
 Goat - CD68 ----- Goat 488 (donkey)
 
 
-This will be main, do the other two pairs later. 
-Vgat
-Vglut
-Iba-1
-CD68
+This will be main, do the other two pairs later.
+Vgat--Chicken --------- anti-Chicken--488(donkey)
+Vglut--Guinea pig ------- anti-GP--
+Iba-1--Rabbit ---------- anti-Rabbit
+CD68--Rat ----------- anti-Rat
 
