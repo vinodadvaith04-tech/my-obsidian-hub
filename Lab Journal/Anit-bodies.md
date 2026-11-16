@@ -52,6 +52,7 @@ Using horse serum
 
 Try second panel with guinea pig. 
 
+Plan different conc to confirm new anti-bodies
 
 ## Pairs
 Chicken - VGAT ----- Chicken 488 (donkey)
