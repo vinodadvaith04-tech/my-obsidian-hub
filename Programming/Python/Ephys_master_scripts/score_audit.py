@@ -28,7 +28,7 @@ def main():
     a = ap.parse_args()
     xl = a.audit / "audit_labels.xlsx"
     lab = pd.read_excel(xl, sheet_name="audit_labels", dtype=str).fillna("")
-    keep = ["window", "page", "batch", "file", "start_s", "miniML_false_ids", "miniML_missed", "old_false_ids", "old_missed", "missed_times_s", "unsure_ids", "note"]
+    keep = ["window", "page", "batch", "file", "start_s", "miniML_false_ids", "miniML_missed", "miniML_missed_up", "old_false_ids", "old_missed", "old_missed_up", "missed_times_s", "unsure_ids", "note"]
     lab = lab[[c for c in keep if c in lab.columns]]
     lab["miniML_missed"] = lab["miniML_missed"].astype(str).str.replace(r"\.0$", "", regex=True)
     lab["old_missed"] = lab["old_missed"].astype(str).str.replace(r"\.0$", "", regex=True)
@@ -63,6 +63,14 @@ def main():
     for det in ("miniML", "old detector"):
         kk = k[k["detector"] == det]; mm = int(miss[det].sum())
         out.append(line(det + " - overall", kk, mm))
+        upcol = {"miniML": "miniML_missed_up", "old detector": "old_missed_up"}[det]
+        if upcol in done.columns:   # recall split by direction, only over windows where the split was filled in
+            d2 = done.copy(); d2["_m"] = miss[det].reindex(d2["window"]).values
+            d2["_u"] = pd.to_numeric(d2[upcol], errors="coerce")
+            ok = d2[(d2["_m"] == 0) | d2["_u"].notna()].copy(); ok["_u"] = ok["_u"].fillna(0)
+            for pol, nm, mmv in [("up", "upward events (IPSC-like)", ok["_u"].sum()), ("down", "downward events (EPSC-like)", (ok["_m"] - ok["_u"]).sum())]:
+                g = kk[(kk["polarity"] == pol) & kk["window"].isin(ok["window"])]
+                out.append(line(f"   {det} - {nm}, {len(ok)} windows with a split", g, int(mmv)))
         for s, g in kk.groupby("internal"):
             w = done.merge(win[["window", "internal"]], on="window")
             wi = w[w["internal"] == s]["window"]

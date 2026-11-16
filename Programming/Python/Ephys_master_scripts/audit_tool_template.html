@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ephys audit tool</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--bg:#f6f6f4;--ink:#1c1c1c;--mut:#6b6b6b;--line:#d9d9d4;--down:#d6001c;--up:#1f5fbf;--ok:#1a8f4a;--amb:#d98500;--gt:#0a9b5c}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;font:13px/1.4 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+#app{display:flex;flex-direction:column;height:100vh}
+#top{background:#fff;border-bottom:1px solid var(--line);padding:6px 12px}
+#row1{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+#title{font-size:15px;font-weight:600}
+#sub{color:var(--mut)}
+#prog{margin-left:auto;color:var(--mut)}
+#strip{display:flex;flex-wrap:wrap;gap:2px;margin:6px 0 2px}
+#strip i{width:9px;height:9px;border-radius:2px;background:#d5d5d0;cursor:pointer;display:block}
+#strip i.done{background:var(--ok)} #strip i.skip{background:var(--amb)} #strip i.draft{background:#8db4f0}
+#strip i.cur{outline:2px solid #000;outline-offset:1px}
+#row3{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:4px}
+button{font:inherit;border:1px solid #bdbdb7;background:#fff;border-radius:5px;padding:3px 9px;cursor:pointer}
+button:hover{background:#efefea} button.pri{background:#1c1c1c;color:#fff;border-color:#1c1c1c}
+button.pri:hover{background:#333}
+input[type=text]{font:inherit;border:1px solid #bdbdb7;border-radius:5px;padding:3px 7px;min-width:260px}
+select{font:inherit;padding:2px 4px}
+#wrap{flex:1;min-height:0;position:relative;background:#fff}
+canvas{position:absolute;inset:0;width:100%;height:100%;cursor:crosshair;display:block}
+#foot{background:#fff;border-top:1px solid var(--line);padding:6px 12px;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.cnt b{font-weight:600} .mut{color:var(--mut)}
+.dn{color:var(--down)} .upc{color:var(--up)}
+#toast{position:absolute;left:50%;top:10px;transform:translateX(-50%);background:#1c1c1c;color:#fff;padding:5px 12px;border-radius:6px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:5}
+#toast.on{opacity:.93}
+#warn{display:none;background:#fde8e8;color:#8a0b0b;padding:5px 12px;border-bottom:1px solid #f1b9b9}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.35);display:none;align-items:flex-start;justify-content:center;padding:40px 16px;z-index:10;overflow:auto}
+.ov.on{display:flex}
+.card{background:#fff;border-radius:8px;padding:16px 20px;max-width:980px;width:100%;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.card h3{margin:0 0 8px} .card table{border-collapse:collapse;width:100%;font-size:12px}
+.card td,.card th{border-bottom:1px solid #eee;padding:3px 6px;text-align:left} .card th{background:#f3f3ef;position:sticky;top:0}
+kbd{background:#eee;border:1px solid #ccc;border-bottom-width:2px;border-radius:4px;padding:0 5px;font:12px monospace}
+.legend span{white-space:nowrap}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="warn"></div>
+  <div id="top">
+    <div id="row1"><span id="title"></span><span id="sub"></span><span id="prog"></span></div>
+    <div id="strip" title="click a square to jump to that window. grey = not done, green = done, amber = skipped, blue = started"></div>
+    <div id="row3">
+      <button id="bPrev">&larr; prev</button><button id="bNext">next &rarr;</button>
+      <button id="bDone" class="pri">Done &amp; next <kbd style="color:#000">Space</kbd></button>
+      <button id="bSkip">Skip window <kbd>S</kbd></button>
+      <button id="bUndo">Undo <kbd>Z</kbd></button>
+      <button id="bReset">Reset zoom <kbd>0</kbd></button>
+      <label class="mut">new missed events:
+        <select id="mode"><option value="auto">direction auto</option><option value="up">always up</option><option value="down">always down</option></select></label>
+      <input id="note" type="text" placeholder="note for this window (N to jump here)">
+      <span style="flex:1"></span>
+      <button id="bSum">Summary</button><button id="bExp">Export clicks (JSON)</button>
+      <button id="bImp">Import JSON</button><button id="bHelp">?</button>
+      <input id="file" type="file" accept=".json,application/json" style="display:none">
+    </div>
+  </div>
+  <div id="wrap"><canvas id="cv"></canvas><div id="toast"></div></div>
+  <div id="foot">
+    <span class="cnt" id="cM"></span><span class="cnt" id="cO"></span>
+    <span class="legend mut"><span><b class="dn">&#9660;</b> down</span> &nbsp;<span><b class="upc">&#9650;</b> up</span> &nbsp;
+      <span><b>click marker</b> = false</span> &nbsp;<span><b>shift+click marker</b> = unsure</span> &nbsp;
+      <span><b>click empty trace</b> = missed event</span> &nbsp;<span><b>wheel</b> zoom, <b>drag</b> pan</span></span>
+    <span class="mut" id="hover" style="margin-left:auto"></span>
+  </div>
+</div>
+
+<div class="ov" id="ovHelp"><div class="card">
+  <h3>How this works</h3>
+  <p>Every window shows the same 3 s trace twice: <b>miniML</b> (top, markers M1&hellip;) and the <b>second detector</b> (bottom, O1&hellip;).
+  Markers are <b>real by default</b>. You only touch what is wrong.</p>
+  <table>
+   <tr><td><b>Click a marker</b></td><td>mark it as <b>false</b> (grey cross). Click again to undo.</td></tr>
+   <tr><td><b>Shift+click a marker</b></td><td>mark it as <b>unsure</b> (amber ?). Excluded from precision/recall and from the truth list.</td></tr>
+   <tr><td><b>Click an empty spot on the trace</b></td><td>add a <b>missed event</b>. It snaps to the nearest peak (within about 8 ms) and takes its direction from the sign of that peak
+     (or the direction you force in the drop-down). Click the green diamond again to remove it.</td></tr>
+   <tr><td><b>Two markers on one event</b></td><td>mark the extra one <b>false</b> (a double detection is not a second event).
+     Otherwise the other detector is counted as having missed a "second" event.</td></tr>
+   <tr><td><b>Event only one detector found</b></td><td>you do not click it: if the other panel's marker is real, the detector without a marker is counted as having missed it (green ring).
+     Clicking a spot that the other detector already marked just tells you so.</td></tr>
+   <tr><td><kbd>Space</kbd> / <kbd>Enter</kbd></td><td>window finished ("all fine" is a valid result: no clicks, then Space). Only finished windows are exported as audited.</td></tr>
+   <tr><td><kbd>S</kbd></td><td>skip an unusable window (writes "skip" into the note).</td></tr>
+   <tr><td><kbd>&larr;</kbd> <kbd>&rarr;</kbd> / <kbd>J</kbd></td><td>previous / next window, J = next window not done yet.</td></tr>
+   <tr><td><kbd>Z</kbd> / <kbd>Backspace</kbd></td><td>undo the last click in this window.</td></tr>
+   <tr><td>wheel, drag, <kbd>0</kbd>, <kbd>Y</kbd></td><td>zoom time around the cursor, pan, reset view, fit the y-axis to what is on screen.</td></tr>
+   <tr><td><kbd>A</kbd> <kbd>U</kbd> <kbd>D</kbd></td><td>click direction: auto / up / down.</td></tr>
+  </table>
+  <p><b>Saving.</b> Progress is saved in this browser automatically after every click. It is only kept for this browser and this file location, so press <b>Export clicks</b>
+  at the end of each session (and every so often) and keep the JSON. <b>Import JSON</b> restores it, also on another computer.
+  Then run <code>import_audit_clicks.py</code> to copy the result into <code>audit_labels.xlsx</code>.</p>
+  <p class="mut">Two markers closer than <span id="tolTxt"></span> ms count as the same event. Traces: 3 kHz low-pass, slow baseline removed, same as page_XX.png.</p>
+  <button onclick="document.getElementById('ovHelp').classList.remove('on')" class="pri">Close</button>
+</div></div>
+<div class="ov" id="ovSum"><div class="card"><h3>Summary of finished windows</h3><div id="sumBody"></div><br>
+  <button onclick="document.getElementById('ovSum').classList.remove('on')" class="pri">Close</button></div></div>
+
+<script id="data" type="application/json">/*__DATA__*/</script>
+<script>
+"use strict";
+const D = JSON.parse(document.getElementById('data').textContent);
+const W = D.windows, TOL = D.tol, LSKEY = 'ephys_audit_v1';
+const byId = {}; W.forEach((w, i) => { w.i = i; byId[w.id] = w; });
+document.getElementById('tolTxt').textContent = Math.round(TOL * 1000);
+
+// ---------------------------------------------------------------- state
+let S = {}, cur = 0, dirty = 0, lsOK = true, hist = {}, mode = 'auto';
+function loadState() {
+  try { S = JSON.parse(localStorage.getItem(LSKEY) || '{}'); } catch (e) { S = {}; }
+  let dropped = 0;
+  for (const id of Object.keys(S)) {
+    const w = byId[id];
+    if (!w || w.file !== S[id].file || Math.abs(w.start - S[id].start) > 0.002) { delete S[id]; dropped++; }
+  }
+  if (dropped) toast(dropped + ' stored window(s) no longer match this build and were dropped');
+}
+function saveState() {
+  try { localStorage.setItem(LSKEY, JSON.stringify(S)); } catch (e) { lsOK = false; showWarn(); }
+}
+function showWarn() {
+  const el = document.getElementById('warn');
+  if (!lsOK) { el.style.display = 'block'; el.textContent = 'This browser cannot store progress automatically. Press "Export clicks (JSON)" regularly, or you lose your work when the tab closes.'; }
+}
+function st(id) {
+  const w = byId[id];
+  if (!S[id]) S[id] = { status: '', file: w.file, start: w.start, f: [], u: [], m: [], note: '', ts: 0 };
+  return S[id];
+}
+function snapshot(id) { (hist[id] = hist[id] || []).push(JSON.stringify(S[id] || null)); if (hist[id].length > 200) hist[id].shift(); }
+function touch(id) { st(id).ts = Date.now(); dirty++; saveState(); refreshUI(); }
+function undo() {
+  const w = W[cur], h = hist[w.id];
+  if (!h || !h.length) { toast('nothing to undo'); return; }
+  const prev = JSON.parse(h.pop());
+  if (prev) S[w.id] = prev; else delete S[w.id];
+  dirty++; saveState(); refreshUI(); draw();
+}
+
+// ---------------------------------------------------------------- events logic (same rules as import_audit_clicks.py)
+function compute(w) {
+  const s = S[w.id] || { f: [], u: [], m: [] };
+  const fl = new Set(s.f), un = new Set(s.u);
+  const real = d => w.markers.filter(m => m.det === d && !fl.has(m.id) && !un.has(m.id));
+  const ev = real('M').map(m => ({ t: m.t, pol: m.pol, y: m.yv, src: { M: m.id } }));
+  for (const m of real('O').slice().sort((a, b) => a.t - b.t)) {
+    let best = null, bd = 1e9;
+    for (const e of ev) {
+      if (e.src.O || !e.src.M) continue;
+      const d = Math.abs(e.t - m.t);
+      if (d <= TOL && d < bd) { bd = d; best = e; }
+    }
+    if (best) best.src.O = m.id; else ev.push({ t: m.t, pol: m.pol, y: m.yv, src: { O: m.id } });
+  }
+  for (const c of s.m) {
+    let best = null, bd = 1e9;
+    for (const e of ev) { const d = Math.abs(e.t - c.t); if (d <= TOL && d < bd) { bd = d; best = e; } }
+    if (best) best.src.C = 1; else ev.push({ t: c.t, pol: c.pol, y: c.y, src: { C: 1 } });
+  }
+  ev.sort((a, b) => a.t - b.t);
+  const res = { ev };
+  for (const d of ['M', 'O']) {
+    const um = w.markers.filter(m => m.det === d && un.has(m.id));
+    let miss = 0, up = 0; const missT = [];
+    for (const e of ev) {
+      if (e.src[d]) continue;
+      if (um.some(m => Math.abs(m.t - e.t) <= TOL)) { e['unc' + d] = true; continue; }
+      e['miss' + d] = true; miss++; if (e.pol === 'up') up++; missT.push(e.t);
+    }
+    const mk = w.markers.filter(m => m.det === d);
+    res[d] = { n: mk.length, false: mk.filter(m => fl.has(m.id)).length, unsure: um.length, miss, up, missT };
+  }
+  return res;
+}
+
+// ---------------------------------------------------------------- trace
+function getTrace(w) {
+  if (w._y) return w._y;
+  const bin = atob(w.y), u = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+  const q = new Int16Array(u.buffer), f = new Float32Array(q.length);
+  for (let i = 0; i < q.length; i++) f[i] = q[i] * w.scale;
+  w._y = f; w.y = null; return f;
+}
+
+// ---------------------------------------------------------------- view / drawing
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+let V = { x0: 0, x1: 1, ylo: 0, yhi: 1 }, geo = null, hoverX = null, hoverP = null, raf = 0;
+function resetView() { const w = W[cur]; V = { x0: w.start, x1: w.end, ylo: w.ylo, yhi: w.yhi }; }
+function fitY() {
+  const w = W[cur], y = getTrace(w), i0 = Math.max(0, Math.floor((V.x0 - w.t0) / w.dt)), i1 = Math.min(y.length, Math.ceil((V.x1 - w.t0) / w.dt));
+  if (i1 - i0 < 3) return;
+  const a = Array.from(y.subarray(i0, i1)).sort((p, q) => p - q);
+  let lo = a[Math.floor(0.002 * (a.length - 1))], hi = a[Math.floor(0.998 * (a.length - 1))];
+  const ex = w.markers.map(m => m.yv).filter((v, k) => w.markers[k].t >= V.x0 && w.markers[k].t <= V.x1);
+  if (ex.length) { lo = Math.min(lo, ...ex); hi = Math.max(hi, ...ex); }
+  const pad = 0.25 * Math.max(hi - lo, 10); V.ylo = lo - pad; V.yhi = hi + pad;
+}
+function layout() {
+  const r = cv.parentElement.getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
+  cv.width = Math.round(r.width * dpr); cv.height = Math.round(r.height * dpr);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  const Wd = r.width, H = r.height, L = 62, R = 14, T = 30, B = 34, gap = 30, ph = (H - T - B - gap) / 2;
+  geo = { W: Wd, H, L, R, pw: Wd - L - R, panels: [
+    { d: 'M', y0: T, h: ph, name: 'miniML' },
+    { d: 'O', y0: T + ph + gap, h: ph, name: 'second detector (matched filter)' } ] };
+}
+const X = t => geo.L + (t - V.x0) / (V.x1 - V.x0) * geo.pw;
+const T_ = px => V.x0 + (px - geo.L) / geo.pw * (V.x1 - V.x0);
+const Y = (p, v) => p.y0 + p.h * (1 - (v - V.ylo) / (V.yhi - V.ylo));
+const V_ = (p, py) => V.ylo + (1 - (py - p.y0) / p.h) * (V.yhi - V.ylo);
+function niceStep(span, target) {
+  const raw = span / target, p = Math.pow(10, Math.floor(Math.log10(raw))), f = raw / p;
+  return (f < 1.5 ? 1 : f < 3.5 ? 2 : f < 7.5 ? 5 : 10) * p;
+}
+function draw() {
+  raf = 0; if (!geo) layout();
+  const w = W[cur], y = getTrace(w), c = compute(w), s = S[w.id] || { f: [], u: [], m: [] };
+  const fl = new Set(s.f), un = new Set(s.u);
+  ctx.clearRect(0, 0, geo.W, geo.H); ctx.font = '11px -apple-system,Helvetica,Arial,sans-serif';
+  const xs = niceStep(V.x1 - V.x0, 10);
+  for (const p of geo.panels) {
+    // frame + grid
+    ctx.strokeStyle = '#e4e4df'; ctx.lineWidth = 1; ctx.fillStyle = '#6b6b6b';
+    ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+    const ys = niceStep(V.yhi - V.ylo, 5);
+    for (let v = Math.ceil(V.ylo / ys) * ys; v <= V.yhi; v += ys) {
+      const py = Y(p, v); ctx.beginPath(); ctx.moveTo(geo.L, py); ctx.lineTo(geo.L + geo.pw, py); ctx.strokeStyle = Math.abs(v) < 1e-9 ? '#bdbdb7' : '#efefea'; ctx.stroke();
+      ctx.fillText(String(Math.round(v * 10) / 10), geo.L - 6, py);
+    }
+    ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+    for (let t = Math.ceil(V.x0 / xs) * xs; t <= V.x1 + 1e-9; t += xs) {
+      const px = X(t); ctx.beginPath(); ctx.moveTo(px, p.y0); ctx.lineTo(px, p.y0 + p.h); ctx.strokeStyle = '#f2f2ee'; ctx.stroke();
+      if (p.d === 'O') ctx.fillText((Math.round(t * 1e4) / 1e4).toString(), px, p.y0 + p.h + 4);
+    }
+    ctx.strokeStyle = '#bdbdb7'; ctx.strokeRect(geo.L + .5, p.y0 + .5, geo.pw, p.h);
+    ctx.save(); ctx.translate(14, p.y0 + p.h / 2); ctx.rotate(-Math.PI / 2); ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#444';
+    ctx.fillText(p.name + ' (pA)', 0, 0); ctx.restore();
+    if (p.d === 'O') { ctx.textAlign = 'center'; ctx.fillStyle = '#6b6b6b'; ctx.fillText('time in recording (s)', geo.L + geo.pw / 2, p.y0 + p.h + 18); }
+    // trace
+    ctx.save(); ctx.beginPath(); ctx.rect(geo.L, p.y0, geo.pw, p.h); ctx.clip();
+    ctx.strokeStyle = '#111'; ctx.lineWidth = 1; ctx.beginPath();
+    const i0 = Math.max(0, Math.floor((V.x0 - w.t0) / w.dt) - 1), i1 = Math.min(y.length - 1, Math.ceil((V.x1 - w.t0) / w.dt) + 1);
+    const spp = (i1 - i0) / geo.pw;
+    if (spp <= 2) { for (let i = i0; i <= i1; i++) { const px = X(w.t0 + i * w.dt), py = Y(p, y[i]); i === i0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py); } }
+    else {
+      for (let col = 0; col < geo.pw; col++) {
+        const a = i0 + Math.floor(col * spp), b = Math.min(i1, i0 + Math.floor((col + 1) * spp));
+        let mn = 1e9, mx = -1e9; for (let i = a; i <= b; i++) { const v = y[i]; if (v < mn) mn = v; if (v > mx) mx = v; }
+        const px = geo.L + col + .5; ctx.moveTo(px, Y(p, mn)); ctx.lineTo(px, Y(p, mx));
+      }
+    }
+    ctx.stroke();
+    // ground-truth events (clicked) and misses by this detector
+    for (const e of c.ev) {
+      const px = X(e.t); if (px < geo.L - 10 || px > geo.L + geo.pw + 10) continue;
+      const py = Y(p, e.y);
+      if (e.src.C) { ctx.fillStyle = '#0a9b5c'; ctx.strokeStyle = '#073'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(px, py - 7); ctx.lineTo(px + 6, py); ctx.lineTo(px, py + 7); ctx.lineTo(px - 6, py); ctx.closePath(); ctx.fill(); ctx.stroke(); }
+      if (e['miss' + p.d]) { ctx.strokeStyle = '#0a9b5c'; ctx.lineWidth = 2; ctx.setLineDash([3, 2]); ctx.beginPath(); ctx.arc(px, py, 11, 0, 7); ctx.stroke(); ctx.setLineDash([]); }
+    }
+    // markers
+    const mk = w.markers.filter(m => m.det === p.d); let k = 0;
+    for (const m of mk) {
+      const px = X(m.t); k++; if (px < geo.L - 10 || px > geo.L + geo.pw + 10) continue;
+      const py = Y(p, m.yv), isF = fl.has(m.id), isU = un.has(m.id), col = m.pol === 'down' ? '#d6001c' : '#1f5fbf';
+      if (isF) { ctx.strokeStyle = '#777'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(px - 6, py - 6); ctx.lineTo(px + 6, py + 6); ctx.moveTo(px + 6, py - 6); ctx.lineTo(px - 6, py + 6); ctx.stroke(); }
+      else {
+        ctx.fillStyle = isU ? '#fff' : col; ctx.strokeStyle = isU ? '#d98500' : '#000'; ctx.lineWidth = isU ? 2 : 0.6;
+        ctx.beginPath();
+        if (m.pol === 'down') { ctx.moveTo(px - 6, py - 7); ctx.lineTo(px + 6, py - 7); ctx.lineTo(px, py + 5); } else { ctx.moveTo(px - 6, py + 7); ctx.lineTo(px + 6, py + 7); ctx.lineTo(px, py - 5); }
+        ctx.closePath(); ctx.fill(); ctx.stroke();
+        if (isU) { ctx.fillStyle = '#d98500'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.font = 'bold 11px sans-serif'; ctx.fillText('?', px, py + (m.pol === 'down' ? -2 : 2)); ctx.font = '11px -apple-system,Helvetica,Arial,sans-serif'; }
+      }
+    }
+    ctx.restore();
+    // marker labels in two rows above the panel (like the PNG pages)
+    mk.forEach((m, j) => {
+      const px = X(m.t); if (px < geo.L || px > geo.L + geo.pw) return;
+      ctx.fillStyle = fl.has(m.id) ? '#999' : (m.pol === 'down' ? '#d6001c' : '#1f5fbf'); ctx.textAlign = 'center'; ctx.textBaseline = 'bottom';
+      ctx.font = (un.has(m.id) ? 'bold ' : '') + '10px -apple-system,Helvetica,Arial,sans-serif';
+      ctx.fillText(m.id, px, p.y0 - 2 - (j % 2) * 11);
+    });
+    ctx.font = '11px -apple-system,Helvetica,Arial,sans-serif';
+  }
+  // ghost ticks: where the OTHER detector has a marker (small, at the bottom of each panel)
+  for (const p of geo.panels) {
+    for (const m of w.markers) {
+      if (m.det === p.d) continue; const px = X(m.t); if (px < geo.L || px > geo.L + geo.pw) continue;
+      ctx.strokeStyle = fl.has(m.id) ? '#ccc' : '#8a8a8a'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(px, p.y0 + p.h - 1); ctx.lineTo(px, p.y0 + p.h - 9); ctx.stroke();
+    }
+  }
+  if (hoverX != null) {
+    ctx.strokeStyle = 'rgba(0,0,0,.35)'; ctx.lineWidth = 1; ctx.setLineDash([4, 3]);
+    for (const p of geo.panels) { ctx.beginPath(); ctx.moveTo(hoverX, p.y0); ctx.lineTo(hoverX, p.y0 + p.h); ctx.stroke(); }
+    ctx.setLineDash([]);
+  }
+}
+function redraw() { if (!raf) raf = requestAnimationFrame(draw); }
+
+// ---------------------------------------------------------------- interaction
+function toast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(toast.h); toast.h = setTimeout(() => t.classList.remove('on'), 2600); }
+function panelAt(py) { return geo.panels.find(p => py >= p.y0 - 14 && py <= p.y0 + p.h + 2); }
+let drag = null;
+cv.addEventListener('mousedown', e => { drag = { x: e.offsetX, y: e.offsetY, x0: V.x0, x1: V.x1, moved: false }; });
+window.addEventListener('mouseup', e => {
+  if (!drag) return; const d = drag; drag = null;
+  if (d.moved) return;
+  const r = cv.getBoundingClientRect(), px = e.clientX - r.left, py = e.clientY - r.top;
+  if (px >= 0 && py >= 0 && px <= r.width && py <= r.height) onClick(px, py, e.shiftKey);
+});
+cv.addEventListener('mousemove', e => {
+  if (drag) {
+    const dx = e.offsetX - drag.x;
+    if (Math.abs(dx) > 4 || Math.abs(e.offsetY - drag.y) > 4) drag.moved = true;
+    if (drag.moved) { const sp = (drag.x1 - drag.x0) / geo.pw; let a = drag.x0 - dx * sp, b = drag.x1 - dx * sp; const w = W[cur];
+      if (a < w.start - 0.05) { b += w.start - 0.05 - a; a = w.start - 0.05; } if (b > w.end + 0.05) { a -= b - w.end - 0.05; b = w.end + 0.05; }
+      V.x0 = a; V.x1 = b; }
+  }
+  hoverX = e.offsetX; hoverP = panelAt(e.offsetY);
+  const t = T_(e.offsetX); let txt = 't = ' + t.toFixed(4) + ' s';
+  if (hoverP) txt += '   ' + V_(hoverP, e.offsetY).toFixed(1) + ' pA';
+  document.getElementById('hover').textContent = txt; redraw();
+});
+cv.addEventListener('mouseleave', () => { hoverX = null; document.getElementById('hover').textContent = ''; redraw(); });
+cv.addEventListener('wheel', e => {
+  e.preventDefault(); const w = W[cur], t = T_(e.offsetX), f = e.deltaY < 0 ? 0.8 : 1.25;
+  let a = t - (t - V.x0) * f, b = t + (V.x1 - t) * f;
+  const span = Math.max(0.02, Math.min(b - a, (w.end - w.start) + 0.1)); const mid = (a + b) / 2; a = mid - span / 2; b = mid + span / 2;
+  V.x0 = a; V.x1 = b; redraw();
+}, { passive: false });
+cv.addEventListener('dblclick', e => { resetView(); redraw(); });
+
+function onClick(px, py, shift) {
+  const w = W[cur], p = panelAt(py); if (!p) return;
+  // 1) marker hit (same panel)
+  let best = null, bd = 14;
+  for (const m of w.markers) { if (m.det !== p.d) continue; const dx = X(m.t) - px, dy = (Y(p, m.yv) - py) * 0.6, d = Math.hypot(dx, dy); if (d < bd) { bd = d; best = m; } }
+  if (best) {
+    const s = st(w.id); snapshot(w.id);
+    const rm = (arr, v) => { const k = arr.indexOf(v); if (k >= 0) { arr.splice(k, 1); return true; } return false; };
+    if (shift) { if (!rm(s.u, best.id)) { s.u.push(best.id); rm(s.f, best.id); } }
+    else { if (!rm(s.f, best.id)) { s.f.push(best.id); rm(s.u, best.id); } }
+    touch(w.id); draw(); return;
+  }
+  // 2) existing ground-truth event nearby? (clicked diamond = remove)
+  const c = compute(w), tClick = T_(px), pxTol = Math.max(TOL, 8 / geo.pw * (V.x1 - V.x0));
+  const s0 = S[w.id];
+  if (s0) {
+    let kBest = -1, kd = 1e9;
+    s0.m.forEach((q, k) => { const d = Math.abs(q.t - tClick); if (d < kd) { kd = d; kBest = k; } });
+    if (kBest >= 0 && kd <= pxTol) { snapshot(w.id); s0.m.splice(kBest, 1); touch(w.id); draw(); toast('missed event removed'); return; }
+  }
+  // 3) snap to the nearest peak and add a missed event
+  const y = getTrace(w), rad = Math.max(0.008, 7 / geo.pw * (V.x1 - V.x0));
+  const a = Math.max(0, Math.floor((tClick - rad - w.t0) / w.dt)), b = Math.min(y.length - 1, Math.ceil((tClick + rad - w.t0) / w.dt));
+  if (b <= a) return;
+  let bi = -1, bv = -1;
+  for (let i = a; i <= b; i++) {
+    const v = mode === 'up' ? y[i] : mode === 'down' ? -y[i] : Math.abs(y[i]);
+    if (v > bv) { bv = v; bi = i; }
+  }
+  const t = w.t0 + bi * w.dt, pol = y[bi] >= 0 ? 'up' : 'down';
+  if (t < w.start || t > w.end) { toast('outside the window'); return; }
+  for (const e of c.ev) {
+    if (Math.abs(e.t - t) <= TOL) {
+      const who = e.src.M && e.src.O ? 'M and O' : e.src.M ? e.src.M : e.src.O ? e.src.O : 'a missed event';
+      toast('already an event (' + who + ')' + (e.src.M && !e.src.O ? ': counted as missed by the second detector' : e.src.O && !e.src.M ? ': counted as missed by miniML' : ''));
+      return;
+    }
+  }
+  const s = st(w.id); snapshot(w.id);
+  s.m.push({ t: Math.round(t * 1e5) / 1e5, pol, y: Math.round(y[bi] * 100) / 100 });
+  touch(w.id); draw();
+}
+
+// ---------------------------------------------------------------- navigation / buttons
+function go(i) {
+  if (i < 0 || i >= W.length) return; cur = i; resetView();
+  document.getElementById('note').value = (S[W[cur].id] || {}).note || '';
+  refreshUI(); redraw();
+}
+function nextOpen(from) { for (let k = 1; k <= W.length; k++) { const i = (from + k) % W.length, s = S[W[i].id]; if (!s || (s.status !== 'done' && s.status !== 'skip')) return i; } return -1; }
+function finish() {
+  const w = W[cur], s = st(w.id); snapshot(w.id); s.status = 'done'; if (s.note === 'skip') s.note = ''; touch(w.id);
+  const n = nextOpen(cur); if (n >= 0) go(n); else { toast('all windows done - export your clicks'); draw(); }
+}
+function skip() {
+  const w = W[cur], s = st(w.id); snapshot(w.id);
+  if (s.status === 'skip') { s.status = ''; if (s.note === 'skip') s.note = ''; } else { s.status = 'skip'; if (!s.note) s.note = 'skip'; }
+  touch(w.id); document.getElementById('note').value = s.note;
+  if (s.status === 'skip') { const n = nextOpen(cur); if (n >= 0) go(n); }
+}
+document.getElementById('bPrev').onclick = () => go(cur - 1);
+document.getElementById('bNext').onclick = () => go(cur + 1);
+document.getElementById('bDone').onclick = finish;
+document.getElementById('bSkip').onclick = skip;
+document.getElementById('bUndo').onclick = undo;
+document.getElementById('bReset').onclick = () => { resetView(); redraw(); };
+document.getElementById('mode').onchange = e => { mode = e.target.value; e.target.blur(); };
+document.getElementById('bHelp').onclick = () => document.getElementById('ovHelp').classList.add('on');
+document.getElementById('note').addEventListener('input', e => { const s = st(W[cur].id); s.note = e.target.value; s.ts = Date.now(); dirty++; saveState(); });
+document.getElementById('note').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === 'Escape') e.target.blur(); e.stopPropagation(); });
+window.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' && e.target.type === 'text') return;
+  if (document.querySelector('.ov.on')) { if (e.key === 'Escape') document.querySelectorAll('.ov').forEach(o => o.classList.remove('on')); return; }
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const k = e.key;
+  if (k === ' ' || k === 'Enter') { e.preventDefault(); finish(); }
+  else if (k === 'ArrowRight' || k === 'PageDown') { e.preventDefault(); go(cur + 1); }
+  else if (k === 'ArrowLeft' || k === 'PageUp') { e.preventDefault(); go(cur - 1); }
+  else if (k === 'j' || k === 'J') { const n = nextOpen(cur); if (n >= 0) go(n); else toast('no open windows left'); }
+  else if (k === 's' || k === 'S') skip();
+  else if (k === 'z' || k === 'Z' || k === 'Backspace') { e.preventDefault(); undo(); }
+  else if (k === '0') { resetView(); redraw(); }
+  else if (k === 'y' || k === 'Y') { fitY(); redraw(); }
+  else if (k === 'n' || k === 'N') { e.preventDefault(); document.getElementById('note').focus(); }
+  else if (k === 'a' || k === 'u' || k === 'd') { mode = k === 'a' ? 'auto' : k === 'u' ? 'up' : 'down'; document.getElementById('mode').value = mode; toast('new missed events: ' + (mode === 'auto' ? 'direction auto' : 'always ' + mode)); }
+  else if (k === '?') document.getElementById('ovHelp').classList.add('on');
+});
+window.addEventListener('resize', () => { layout(); redraw(); });
+
+// ---------------------------------------------------------------- UI refresh
+function fmt(d, label) {
+  const f = d.false ? ` &middot; <b>${d.false}</b> false` : ' &middot; 0 false', u = d.unsure ? ` &middot; ${d.unsure} unsure` : '';
+  const m = d.miss ? `<b>${d.miss}</b> missed (<span class="upc">&#9650;${d.up}</span> <span class="dn">&#9660;${d.miss - d.up}</span>)` : '0 missed';
+  return `<b>${label}</b>: ${d.n} markers${f}${u} &middot; ${m}`;
+}
+function refreshUI() {
+  const w = W[cur], s = S[w.id];
+  document.getElementById('title').textContent = w.id + '  ·  page ' + w.page;
+  document.getElementById('sub').textContent = w.file + '  ·  t ' + w.start.toFixed(1) + '–' + w.end.toFixed(1) + ' s  ·  holding ' + w.holding + ' mV  ·  ' + w.internal + '  ·  ' + w.drug + '  ·  [' + w.why + ']';
+  let nd = 0, ns = 0; for (const x of W) { const q = S[x.id]; if (q && q.status === 'done') nd++; else if (q && q.status === 'skip') ns++; }
+  document.getElementById('prog').textContent = nd + ' done, ' + ns + ' skipped, ' + (W.length - nd - ns) + ' to do  ·  ' + dirty + ' change(s) since last export';
+  const strip = document.getElementById('strip');
+  if (strip.childElementCount !== W.length) { strip.innerHTML = ''; W.forEach((x, i) => { const el = document.createElement('i'); el.title = x.id; el.onclick = () => go(i); strip.appendChild(el); }); }
+  W.forEach((x, i) => { const q = S[x.id], el = strip.children[i]; let c = ''; if (q && q.status === 'done') c = 'done'; else if (q && q.status === 'skip') c = 'skip'; else if (q && (q.f.length || q.u.length || q.m.length)) c = 'draft'; if (i === cur) c += ' cur'; el.className = c; });
+  const c = compute(w);
+  document.getElementById('cM').innerHTML = fmt(c.M, 'miniML'); document.getElementById('cO').innerHTML = fmt(c.O, 'second detector');
+  const bd = document.getElementById('bDone'); bd.textContent = (s && s.status === 'done') ? 'Done ✓ (next)' : 'Done & next';
+}
+
+// ---------------------------------------------------------------- export / import / summary
+function windowExport(w) {
+  const s = S[w.id]; if (!s || (!s.status && !s.f.length && !s.u.length && !s.m.length && !s.note)) return null;
+  const c = compute(w), cnt = d => ({ markers: c[d].n, false: c[d].false, unsure: c[d].unsure, missed: c[d].miss, missed_up: c[d].up });
+  return { status: s.status || 'draft', file: w.file, start_s: w.start, false: s.f.slice(), unsure: s.u.slice(),
+    missed: s.m.map(q => ({ t: q.t, pol: q.pol, y: q.y })), note: s.note || '', ts: s.ts, counts: { miniML: cnt('M'), old: cnt('O') } };
+}
+function stamp() { const d = new Date(), p = n => String(n).padStart(2, '0'); return d.getFullYear() + p(d.getMonth() + 1) + p(d.getDate()) + '_' + p(d.getHours()) + p(d.getMinutes()); }
+document.getElementById('bExp').onclick = () => {
+  const out = { tool: 'audit_tool.html', version: D.version, tol_s: TOL, built: D.built, exported: new Date().toISOString(), windows: {} };
+  for (const w of W) { const e = windowExport(w); if (e) out.windows[w.id] = e; }
+  const blob = new Blob([JSON.stringify(out, null, 1)], { type: 'application/json' }), a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'audit_clicks_' + stamp() + '.json'; document.body.appendChild(a); a.click(); a.remove();
+  dirty = 0; refreshUI(); toast('exported ' + Object.keys(out.windows).length + ' windows - keep this file in the audit folder');
+};
+document.getElementById('bImp').onclick = () => document.getElementById('file').click();
+document.getElementById('file').addEventListener('change', async e => {
+  const f = e.target.files[0]; if (!f) return;
+  try {
+    const j = JSON.parse(await f.text()); let n = 0, kept = 0, bad = 0;
+    for (const [id, x] of Object.entries(j.windows || {})) {
+      const w = byId[id]; if (!w || w.file !== x.file || Math.abs(w.start - x.start_s) > 0.002) { bad++; continue; }
+      const cur_ = S[id]; if (cur_ && (cur_.ts || 0) > (x.ts || 0)) { kept++; continue; }
+      S[id] = { status: x.status === 'draft' ? '' : x.status, file: x.file, start: x.start_s, f: x.false.slice(), u: x.unsure.slice(), m: x.missed.map(q => ({ t: q.t, pol: q.pol, y: (compute_y(w, q.t)) })), note: x.note || '', ts: x.ts || Date.now() }; n++;
+    }
+    saveState(); refreshUI(); draw(); toast(n + ' window(s) imported' + (kept ? ', ' + kept + ' newer local kept' : '') + (bad ? ', ' + bad + ' did not match this build' : ''));
+  } catch (err) { toast('could not read that file: ' + err.message); }
+  e.target.value = '';
+});
+function compute_y(w, t) { const y = getTrace(w), i = Math.max(0, Math.min(y.length - 1, Math.round((t - w.t0) / w.dt))); return Math.round(y[i] * 100) / 100; }
+document.getElementById('bSum').onclick = () => {
+  let h = '<table><tr><th>window</th><th>status</th><th>miniML false</th><th>missed (up)</th><th>2nd false</th><th>missed (up)</th><th>unsure</th><th>note</th></tr>';
+  const tot = { mf: 0, mm: 0, mu: 0, of: 0, om: 0, ou: 0, un: 0, n: 0 };
+  for (const w of W) { const s = S[w.id]; if (!s || (s.status !== 'done' && s.status !== 'skip')) continue; const c = compute(w); tot.n++;
+    if (s.status === 'done') { tot.mf += c.M.false; tot.mm += c.M.miss; tot.mu += c.M.up; tot.of += c.O.false; tot.om += c.O.miss; tot.ou += c.O.up; tot.un += c.M.unsure + c.O.unsure; }
+    h += `<tr><td>${w.id}</td><td>${s.status}</td><td>${c.M.false}/${c.M.n}</td><td>${c.M.miss} (${c.M.up})</td><td>${c.O.false}/${c.O.n}</td><td>${c.O.miss} (${c.O.up})</td><td>${c.M.unsure + c.O.unsure}</td><td>${(s.note || '').replace(/</g, '&lt;')}</td></tr>`; }
+  h += `<tr><th>total (${tot.n})</th><th></th><th>${tot.mf}</th><th>${tot.mm} (${tot.mu})</th><th>${tot.of}</th><th>${tot.om} (${tot.ou})</th><th>${tot.un}</th><th></th></tr></table>`;
+  document.getElementById('sumBody').innerHTML = tot.n ? h : '<p>No finished windows yet.</p>'; document.getElementById('ovSum').classList.add('on');
+};
+
+// test hook (also handy in the console): window.__audit.export()
+window.__audit = { S: () => S, compute: id => compute(byId[id]), go, cur: () => cur, W, view: () => V, finish, skip, undo, X: t => X(t), Yp: (d, v) => Y(geo.panels.find(p => p.d === d), v), geo: () => geo };
+
+loadState();
+try { localStorage.setItem(LSKEY + '_t', '1'); localStorage.removeItem(LSKEY + '_t'); } catch (e) { lsOK = false; showWarn(); }
+layout(); go(Math.max(0, nextOpen(-1) < 0 ? 0 : nextOpen(-1)));
+</script>
+</body>
+</html>

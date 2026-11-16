@@ -217,10 +217,18 @@ def upsert(path: Path, name: str, new: pd.DataFrame, key: list[str] | None = Non
 
 
 # ---------------------------------------------------------------- shared analysis helpers
-def assumed_event_type(direction: str, internal: str) -> str:
-    """Working label from polarity: KCl -> downward = IPSC; otherwise downward = EPSC, upward = IPSC.
-    This is an ASSUMPTION from the holding design, not a measurement."""
+BLOCKER_WORDS = ("dnqx", "ap5", "nbqx", "cnqx")
+
+
+def assumed_event_type(direction: str, internal: str, drug="") -> str:
+    """Working label from polarity (an ASSUMPTION from the holding/internal design, not a measurement):
+    low-Cl internals (K-gluconate, Cs-gluconate): downward = EPSC, upward = IPSC.
+    KCl internal: downward = IPSC ONLY when glutamate receptors are blocked (DNQX/AP5 in the drug column);
+    KCl without a blocker cannot separate E from I, so the events stay 'event (unresolved)'."""
     if str(internal) == "KCl":
+        blocked = any(w in str(drug).lower() for w in BLOCKER_WORDS)
+        if not blocked:
+            return "event (unresolved)"
         return "IPSC" if direction == "negative" else "?"
     return "EPSC" if direction == "negative" else "IPSC"
 
@@ -235,9 +243,10 @@ def cell_holding_table(per_file: pd.DataFrame, events: pd.DataFrame) -> pd.DataF
                  valid_time_s=("valid_time_s", "sum"),
                  session=("session", "first"), date_header=("date_header", "first"),
                  sex=("sex", "first"), T_code=("T.Code", "first"), internal=("internal", "first"),
-                 psc_content=("psc_content", "first"), holding_flag=("holding_flag", "first")).reset_index()
+                 psc_content=("psc_content", "first"), holding_flag=("holding_flag", "first"),
+                 drug=("drug", "first")).reset_index()
     cell["frequency_Hz"] = cell["n_events"] / cell["valid_time_s"]
-    cell.insert(4, "event_type_assumed", [assumed_event_type(d, i) for d, i in zip(cell["direction"], cell["internal"])])
+    cell.insert(4, "event_type_assumed", [assumed_event_type(d, i, g_) for d, i, g_ in zip(cell["direction"], cell["internal"], cell["drug"])])
     if len(events):
         a = (events.groupby(keys, dropna=False)["amplitude_abs"]
              .agg(amplitude_abs_mean="mean", amplitude_abs_median="median").reset_index())
@@ -251,7 +260,7 @@ def cell_holding_table(per_file: pd.DataFrame, events: pd.DataFrame) -> pd.DataF
 # ---------------------------------------------------------------- metadata attached to every result row
 META = ["session", "date_header", "T.Code", "sex", "slice", "cell", "internal", "psc_content", "drug",
         "holding_command_mV", "holding_flag", "ljp_in_note", "duration_s", "miniML_directions"]
-EV_META = ["recording_name", "holding_command_mV", "holding_flag", "internal", "psc_content", "sex", "T.Code",
+EV_META = ["recording_name", "holding_command_mV", "holding_flag", "internal", "psc_content", "drug", "sex", "T.Code",
            "date_header", "cell"]
 
 
@@ -272,7 +281,7 @@ def with_meta_per_file(res: pd.DataFrame, fm: pd.DataFrame) -> pd.DataFrame:
     drop = ["recording_name", "recording_index", "event_type_assumed"] + META
     res_cols = [c for c in res.columns if c not in drop + ["new_name", "direction"]]
     out = res[["new_name", "direction"] + res_cols].merge(fm, left_on="new_name", right_index=True, how="left")
-    out.insert(4, "event_type_assumed", [assumed_event_type(d, i) for d, i in zip(out.direction, out.internal)])
+    out.insert(4, "event_type_assumed", [assumed_event_type(d, i, g_) for d, i, g_ in zip(out.direction, out.internal, out["drug"])])
     lead = ["new_name", "recording_name", "recording_index", "direction", "event_type_assumed"] + \
            [c for c in META if c in out.columns]
     return out[lead + [c for c in out.columns if c not in lead]]
@@ -281,5 +290,5 @@ def with_meta_per_file(res: pd.DataFrame, fm: pd.DataFrame) -> pd.DataFrame:
 def with_meta_events(ev: pd.DataFrame, fm: pd.DataFrame) -> pd.DataFrame:
     keep = [c for c in ev.columns if c not in EV_META + ["event_type_assumed"]]
     out = ev[keep].merge(fm[[c for c in EV_META if c in fm.columns]], left_on="new_name", right_index=True, how="left")
-    out.insert(2, "event_type_assumed", [assumed_event_type(d, i) for d, i in zip(out.direction, out.internal)])
+    out.insert(2, "event_type_assumed", [assumed_event_type(d, i, g_) for d, i, g_ in zip(out.direction, out.internal, out["drug"])])
     return out[[c for c in out.columns if c not in EV_META] + [c for c in EV_META if c in out.columns]]

@@ -34,12 +34,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ephys_master as em
 
 WIN, TOL, PER_PAGE = 3.0, 0.010, 4
-LABEL_COLS = ["miniML_false_ids", "miniML_missed", "old_false_ids", "old_missed", "missed_times_s", "unsure_ids", "note"]
+LABEL_COLS = ["miniML_false_ids", "miniML_missed", "miniML_missed_up", "old_false_ids", "old_missed", "old_missed_up", "missed_times_s", "unsure_ids", "note"]
 INFO_COLS = ["window", "page", "batch", "holding_mV", "internal", "drug", "why_chosen", "n_miniML", "n_old", "file", "start_s"]
 HOW_TO = [
     "Fill the pink columns, one row per window (page_XX.png has the 4 windows of that page, W-numbers in the panel titles).",
     "miniML_false_ids / old_false_ids: numbers of markers that are NOT real events, e.g. 3;7 (leave empty if none).",
     "miniML_missed / old_missed: number of real events that have no marker in that panel. Write 0 if none.",
+    "miniML_missed_up / old_missed_up: of those missed events, how many are UPWARD (IPSC-like). Leave empty if you did not split them (only needed when missed > 0). The rest are counted as downward (EPSC-like).",
     "unsure_ids: markers you cannot call, with prefix, e.g. M3;O2.",
     "Unusable window: leave the counts empty and write 'skip' in note.",
     "A row with all four id/count columns empty counts as not audited.",
