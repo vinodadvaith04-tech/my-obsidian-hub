@@ -50,6 +50,8 @@ Using horse serum
 **Backup**
 ~~CD68--Rat---------------anti-Rat--405(goat)~~
 
+Try second panel with guinea pig. 
+
 
 ## Pairs
 Chicken - VGAT ----- Chicken 488 (donkey)
