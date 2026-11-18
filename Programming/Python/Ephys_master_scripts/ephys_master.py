@@ -7,7 +7,8 @@ place. One sheet per kind of table; filter the sheets in Excel to choose what to
 Sheets (see the README sheet inside the workbook for the column guide):
   README, runs, files, cells, rename_log, manual_qc,
   miniML_per_file, miniML_events, miniML_per_cell_holding,
-  alt_det_per_file, alt_det_events
+  alt_det_per_file, alt_det_events,
+  sam_EPSC_control_cells, sam_EPSC_per_recording   (Sam's processed EPSC results, imported)
 
 Rules the helpers follow:
   * results are ADDED (upsert by key); a result is only replaced when the same key is produced again
@@ -32,7 +33,8 @@ from openpyxl.utils import get_column_letter
 MASTER_NAME = "Ephys_master.xlsx"
 SHEET_ORDER = ["README", "runs", "files", "cells", "rename_log", "manual_qc",
                "miniML_per_file", "miniML_events", "miniML_per_cell_holding",
-               "alt_det_per_file", "alt_det_events"]
+               "alt_det_per_file", "alt_det_events",
+               "sam_EPSC_control_cells", "sam_EPSC_per_recording"]
 KEYS = {
     "files": ["new_name", "old_name"],                       # new_name is empty for ignored files -> old_name
     "cells": ["date", "session", "slice", "cell_new"],
@@ -42,6 +44,8 @@ KEYS = {
     "miniML_per_cell_holding": ["recording_name", "holding_command_mV", "direction", "params_hash"],
     "alt_det_per_file": ["new_name"],
     "alt_det_events": ["new_name"],
+    "sam_EPSC_control_cells": ["cell_id"],
+    "sam_EPSC_per_recording": ["cell_id", "recording_index"],
 }
 HEADER_FILL = PatternFill("solid", fgColor="D9D9D9")
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lab Journal/Ephys/3. Cs internal pilot/2026-11-17.md",
+                "file": "Lab Journal/Main experiment/Master table.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-11-17"
+              "title": "Master table"
             }
           }
         ]
@@ -190,8 +190,8 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
-    "Lab Journal/Main experiment/Master table.md",
     "Lab Journal/Ephys/3. Cs internal pilot/2026-11-17.md",
+    "Lab Journal/Main experiment/Master table.md",
     "Lab Journal/Pilot studies/Protocol.md",
     "Lab Journal/Anit-bodies.md",
     "Temp/Study.md",
