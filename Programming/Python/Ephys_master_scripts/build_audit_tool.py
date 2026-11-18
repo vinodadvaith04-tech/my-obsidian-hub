@@ -12,9 +12,12 @@ Re-run it whenever build_audit.py has appended new windows; your clicks are kept
 browser and in the JSON you export). Only windows whose file and start time are unchanged keep their clicks.
 
 Usage:  python scripts/build_audit_tool.py --data-root <folder with the .abf files> [--audit-dir <audit folder>] [--out audit_tool.html]
+        add  --base-html audit/audit_tool.html  to REUSE the traces already stored in an earlier build (same window id, file,
+        start time and number of markers) and read the .abf files only for the new windows. Handy when only some recordings
+        are on this computer.
 Needs: pyabf scipy numpy pandas openpyxl
 """
-import argparse, base64, json, sys, time
+import argparse, base64, json, re, sys, time
 from pathlib import Path
 import numpy as np, pandas as pd, pyabf
 from scipy.signal import butter, sosfiltfilt
@@ -47,17 +50,32 @@ def main():
     ap.add_argument("--data-root", type=Path, required=True, help="folder that contains the .abf files (searched recursively)")
     ap.add_argument("--out", type=Path, default=None)
     ap.add_argument("--template", type=Path, default=here / "audit_tool_template.html")
+    ap.add_argument("--base-html", type=Path, default=None, help="earlier audit_tool.html whose windows are reused when unchanged")
     a = ap.parse_args()
     xl = a.audit_dir / "audit_labels.xlsx"
     win = pd.read_excel(xl, sheet_name="audit_windows")
     key = pd.read_excel(xl, sheet_name="audit_events_key")
     paths = {p.name: p for p in a.data_root.rglob("*.abf") if p.is_file()}
-    miss = sorted(set(win["file"]) - set(paths))
+    base = {}
+    if a.base_html:
+        txt = a.base_html.read_text(encoding="utf-8")
+        mm = re.search(r'<script id="data" type="application/json">(.*?)</script>', txt, re.S)
+        base = {w["id"]: w for w in json.loads(mm.group(1))["windows"]}
+    def reusable(r):
+        w = base.get(r.window)
+        n_key = int((key["window"] == r.window).sum())
+        return (w is not None and w["file"] == r.file and abs(w["start"] - float(r.start_s)) < 1e-6
+                and abs(w["end"] - float(r.end_s)) < 1e-6 and len(w["markers"]) == n_key
+                and w["batch"] == str(r.batch) and w["page"] == int(r.page))
+    miss = sorted({r.file for r in win.itertuples() if not reusable(r)} - set(paths))
     if miss:
         sys.exit(f"{len(miss)} recordings not found under {a.data_root}: {miss[:5]} ...")
 
     out_w = []
+    n_reused = 0
     for r in win.itertuples():
+        if reusable(r):
+            out_w.append(base[r.window]); n_reused += 1; continue
         st, en = float(r.start_s), float(r.end_s); L = en - st
         fs, i0, lo, lp_d, sl = window_trace(paths[r.file], st, L)
         mk = key[key["window"] == r.window].copy()
@@ -91,7 +109,7 @@ def main():
     html = a.template.read_text(encoding="utf-8").replace("/*__DATA__*/", json.dumps(data, separators=(",", ":")))
     out = a.out or (a.audit_dir / "audit_tool.html")
     out.write_text(html, encoding="utf-8")
-    print(f"wrote {out}  ({out.stat().st_size / 1e6:.1f} MB, {len(out_w)} windows)")
+    print(f"wrote {out}  ({out.stat().st_size / 1e6:.1f} MB, {len(out_w)} windows, {n_reused} reused from the earlier build)")
 
 
 if __name__ == "__main__":

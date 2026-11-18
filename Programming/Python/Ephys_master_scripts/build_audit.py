@@ -46,6 +46,8 @@ HOW_TO = [
     "A row with all four id/count columns empty counts as not audited.",
     "'old' in the column names = the second detector (matched filter), shown in the bottom panel. Top panel = miniML (M-ids).",
     "Keep the file name audit_labels.xlsx and close it in Excel before running build_audit.py or score_audit.py.",
+    "INTERACTIVE ALTERNATIVE: open audit_tool.html (same windows), click false markers / missed events, press Export clicks, then run scripts/import_audit_clicks.py - it fills these pink columns for you.",
+    "Rows filled by the importer are logged in the sheet audit_tool_import; anything you type by hand is never overwritten by the importer.",
     "batch = which build added the window. New windows are appended to the end; your labels are never touched.",
 ]
 
@@ -56,7 +58,9 @@ def hold_class(h):
     return "negative holding (<= -55 mV)"
 
 
-def drug_tag(d):
+def drug_tag(d, psc_content=""):
+    if "not confirmed" in str(psc_content).lower() and not isinstance(d, str):
+        return "blockers not confirmed"          # e.g. Helena's KCl recordings: bath drugs unknown, not the same as "no blocker"
     d = str(d if isinstance(d, str) else "").lower()
     if "gabazine" in d or "sr95531" in d: return "gabazine"
     if "dnqx" in d or "ap5" in d: return "DNQX+AP5"
@@ -65,7 +69,7 @@ def drug_tag(d):
 
 
 # ---------------------------------------------------------------- workbook of the audit
-def _write_audit(path: Path, labels, windows, key):
+def _write_audit(path: Path, labels, windows, key, extra=None, old_howto=None):
     wb = Workbook(); ws = wb.active; ws.title = "audit_labels"
     head_fill = PatternFill("solid", fgColor="730E04"); pink = PatternFill("solid", fgColor="FDECEA")
 
@@ -87,8 +91,12 @@ def _write_audit(path: Path, labels, windows, key):
     put(wb.create_sheet("audit_windows"), windows)
     put(wb.create_sheet("audit_events_key"), key)
     h = wb.create_sheet("how_to")
-    for t in HOW_TO: h.append([t])
+    seen = set()
+    for t in list(HOW_TO) + [t for t in (old_howto or []) if t not in HOW_TO]:     # keep lines added by import_audit_clicks.py
+        if t not in seen: h.append([t]); seen.add(t)
     h.column_dimensions["A"].width = 125
+    for name, df in (extra or {}).items():                                         # sheets made by import_audit_clicks.py are kept
+        put(wb.create_sheet(name), df)
     tmp = path.with_suffix(".tmp.xlsx")
     wb.save(tmp); tmp.replace(path)
 
@@ -97,7 +105,10 @@ def _read_audit(path: Path):
     if not path.exists():
         return None
     x = pd.ExcelFile(path)
-    return {s: x.parse(s, dtype=object) for s in ("audit_labels", "audit_windows", "audit_events_key")}
+    out = {s: x.parse(s, dtype=object) for s in ("audit_labels", "audit_windows", "audit_events_key")}
+    out["_howto"] = [str(v) for v in x.parse("how_to", header=None).iloc[:, 0].dropna()] if "how_to" in x.sheet_names else []
+    out["_extra"] = {s: x.parse(s, dtype=object) for s in x.sheet_names if s not in ("audit_labels", "audit_windows", "audit_events_key", "how_to")}
+    return out
 
 
 def main():
@@ -142,7 +153,7 @@ def main():
         rec = rec[rec.duration_s > a.min_duration]
         if a.select_prefix: rec = rec[rec.new_name.str.startswith(a.select_prefix)]
         if a.holdings: rec = rec[rec.holding_command_mV.isin(a.holdings)]
-    rec["drug_tag"] = rec["drug"].map(drug_tag)
+    rec["drug_tag"] = [drug_tag(d, pc) for d, pc in zip(rec["drug"], rec["psc_content"] if "psc_content" in rec else [""] * len(rec))]
     rec["dirs"] = rec["miniML_directions"]
     rec["stratum"] = [f"{r.internal} | {r.drug_tag} | {hold_class(r.holding_command_mV)}" if a.stratum_by == "class"
                       else f"{r.internal} | {r.holding_command_mV:g} mV" for r in rec.itertuples()]
@@ -277,7 +288,7 @@ def main():
             if c not in ol_.columns: ol_[c] = None
         nw = pd.concat([ow_, nw], ignore_index=True); nk = pd.concat([ok_, nk], ignore_index=True)
         nl = pd.concat([ol_[[c for c in INFO_COLS + LABEL_COLS if c in ol_.columns]], nl], ignore_index=True)
-    _write_audit(xl, nl, nw, nk)
+    _write_audit(xl, nl, nw, nk, extra=(old or {}).get('_extra'), old_howto=(old or {}).get('_howto'))
     print(f"audit workbook: {len(nl)} windows, {len(nk)} markers in the key, pages up to {n_p + npages}")
 
 
