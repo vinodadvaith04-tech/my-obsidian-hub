@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lab Journal/Daily journal/3. November/Week 3 16-11 to 20-11.md",
+                "file": "Lab Journal/Ephys/3. Cs internal pilot/2026-11-04.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 3 16-11 to 20-11"
+              "title": "2026-11-04"
             }
           }
         ]
@@ -190,6 +190,10 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
+    "Lab Journal/Ephys/_Main Experiment/2026-11-18.md",
+    "Lab Journal/Ephys/_Main Experiment/2026-11-19.md",
+    "Lab Journal/Ephys/Sam Experiment/2026-10-22.md",
+    "Lab Journal/Daily journal/3. November/Week 3 16-11 to 20-11.md",
     "Programming/Python/Ephys_master_scripts/pick_audit_round3.py",
     "Lab Journal/Ephys/xInternals/Potassium Gluconate (K-Glu).md",
     "Lab Journal/Ephys/xInternals/Potasium Chloride (KCl).md",
@@ -202,14 +206,12 @@
     "Lab Journal/Main experiment/Experiment schedule.md",
     "Lab Journal/Main experiment/Master table.md",
     "Lab Journal/Main experiment/Analysis nesting.md",
-    "Lab Journal/Daily journal/3. November/Week 3 16-11 to 20-11.md",
     "Lab Journal/Daily journal/3. November/Week 2 9-11 to 13-11.md",
     "Internship/patch.md",
     "Internship/Sam Meetings/2026-11-23 Sam meeting.md",
     "Internship/Sam Meetings/2026-11-09 Sam meeting.md",
     "Internship/Corette Meetings/2026-11-05.md",
     "Internship/Corette Meetings/2026-10-15.md",
-    "Lab Journal/Ephys/_Main Experiment/2026-11-18.md",
     "Lab Journal/Ephys/3. Cs internal pilot/2026-11-04.md",
     "Lab Journal/Ephys/_Main experiment.md",
     "Lab Journal/Ephys/_Main Experiment",
@@ -217,7 +219,6 @@
     "Lab Journal/Anit-bodies.md",
     "Temp/Study.md",
     "Lab Journal/Ephys/3. Cs internal pilot/2026-11-12.md",
-    "Programming/Python/Ephys analysis guide.md",
     "Programming/Python/Ephys_master_scripts/README.txt",
     "Programming/Python/Ephys_master_scripts/psc_detection.py",
     "Programming/Python/Ephys_master_scripts/csv_to_xlsx.py",
@@ -225,7 +226,6 @@
     "Programming/Python/Ephys_master_scripts/cs_report.py",
     "Programming/Python/Ephys_master_scripts/score_audit.py",
     "Programming/Python/Ephys_master_scripts/build_audit.py",
-    "Programming/Python/Ephys_master_scripts/add_new_recordings.py",
     "z_Attachments/Screenshot 2026-11-09 at 15.53.23.png",
     "z_Attachments/Screenshot 2026-11-09 at 15.46.04.png",
     "z_Attachments/Pasted image 20261020010633.png",
