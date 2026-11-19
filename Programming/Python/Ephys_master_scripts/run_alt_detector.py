@@ -21,6 +21,7 @@ ap.add_argument("--master", type=Path, default=em.default_master())
 ap.add_argument("--data-root", type=Path, default=None)
 ap.add_argument("--psc-dir", type=Path, default=Path(__file__).resolve().parent, help="folder holding psc_detection.py")
 ap.add_argument("--only", help="only recordings whose name contains this text")
+ap.add_argument("--names", help="comma-separated new_name values to run (used by 02_run_detection.py)")
 ap.add_argument("--max-hours", type=float)
 ap.add_argument("--redo", action="store_true")
 ap.add_argument("--dry-run", action="store_true")
@@ -31,6 +32,8 @@ files = em.read_sheet(mp, "files")
 m = files[files.use_for_miniML.astype(str).str.upper() == "Y"].copy()
 if a.only:
     m = m[m.new_name.str.contains(a.only, regex=False)]
+if a.names:
+    m = m[m.new_name.isin([n.strip() for n in a.names.split(",") if n.strip()])]
 have = set()
 if not a.redo:
     have = set(em.read_sheet(mp, "alt_det_per_file").get("new_name", pd.Series(dtype=str)).dropna())
@@ -59,8 +62,14 @@ for i, (_, r) in enumerate(m.iterrows(), 1):
     if p is None:
         print("MISSING", r.new_name); continue
     ts = time.time()
-    ab = pyabf.ABF(str(p)); ab.setSweep(0); I = np.asarray(ab.sweepY, float); fs = float(ab.dataRate)
-    ok, rej, di = P.detect(I, fs)
+    try:
+        ab = pyabf.ABF(str(p)); ab.setSweep(0); I = np.asarray(ab.sweepY, float); fs = float(ab.dataRate)
+        ok, rej, di = P.detect(I, fs)
+    except Exception as e:                      # one bad recording must not stop the others
+        import traceback
+        print(f"[{i}/{len(m)}] {r.new_name} -> ERROR {type(e).__name__}: {e}", flush=True)
+        (cache / (r.new_name[:-4] + ".old.error.txt")).write_text(traceback.format_exc())
+        continue
     ev = [dict(new_name=r.new_name, polarity=e["polarity"], peak_s=e["peak_s"], amp_pA=e["amp_pA"],
                rise1090_ms=e["rise1090_ms"], tau_decay_ms=e["td"], halfwidth_ms=e["halfwidth_ms"],
                snr=e["snr"], isolated=bool(e["isolated"])) for e in ok]

@@ -1,0 +1,8 @@
+{
+  "_comment": "Settings for 01_ingest_new_recordings.py and 02_run_detection.py. Empty values = automatic. Delete a line to use its default.",
+  "journal_dir": "/Users/advaithvinod/Downloads/Untitled/Lab Journal",
+  "miniml_core": "",
+  "miniml_model": "",
+  "python": "",
+  "min_gapfree_s": 30
+}
