@@ -190,6 +190,7 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
+    "Programming/Python/Ephys_master_scripts/pick_audit_round3.py",
     "Lab Journal/Ephys/xInternals/Potassium Gluconate (K-Glu).md",
     "Lab Journal/Ephys/xInternals/Potasium Chloride (KCl).md",
     "Lab Journal/Ephys/xInternals/Caesium Gluconate (Cs-Glu).md",
@@ -217,7 +218,6 @@
     "Temp/Study.md",
     "Lab Journal/Ephys/3. Cs internal pilot/2026-11-12.md",
     "Programming/Python/Ephys analysis guide.md",
-    "Programming/Python.md",
     "Programming/Python/Ephys_master_scripts/README.txt",
     "Programming/Python/Ephys_master_scripts/psc_detection.py",
     "Programming/Python/Ephys_master_scripts/csv_to_xlsx.py",

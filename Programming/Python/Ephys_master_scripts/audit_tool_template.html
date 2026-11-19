@@ -77,7 +77,7 @@ kbd{background:#eee;border:1px solid #ccc;border-bottom-width:2px;border-radius:
   <p>Every window shows the same 3 s trace twice: <b>miniML</b> (top, markers M1&hellip;) and the <b>second detector</b> (bottom, O1&hellip;).
   Markers are <b>real by default</b>. You only touch what is wrong.</p>
   <table>
-   <tr><td><b>Click a marker</b></td><td>mark it as <b>false</b> (grey cross). Click again to undo.</td></tr>
+   <tr><td><b>Click a marker</b></td><td>mark it as <b>false</b> (grey cross). Click again to undo. A pink ring shows which marker a click will hit (its name is in the bottom bar). You do not have to hit the symbol exactly: clicking on the trace next to it works. If several markers lie very close together, the first click zooms in; then click the one you mean.</td></tr>
    <tr><td><b>Shift+click a marker</b></td><td>mark it as <b>unsure</b> (amber ?). Excluded from precision/recall and from the truth list.</td></tr>
    <tr><td><b>Click an empty spot on the trace</b></td><td>add a <b>missed event</b>. It snaps to the nearest peak (within about 8 ms) and takes its direction from the sign of that peak
      (or the direction you force in the drop-down). Click the green diamond again to remove it.</td></tr>
@@ -105,6 +105,7 @@ kbd{background:#eee;border:1px solid #ccc;border-bottom-width:2px;border-radius:
 <script>
 "use strict";
 const D = JSON.parse(document.getElementById('data').textContent);
+const NAMEFIX = s => (typeof s === 'string' ? s.replace('_Adv3_1B12_', '_Adv6_1B12_') : s);  // 19 Nov: main-experiment files renamed Adv3 -> Adv6; old clicks/exports still match
 const W = D.windows, TOL = D.tol, LSKEY = 'ephys_audit_v1';
 const byId = {}; W.forEach((w, i) => { w.i = i; byId[w.id] = w; });
 document.getElementById('tolTxt').textContent = Math.round(TOL * 1000);
@@ -116,7 +117,7 @@ function loadState() {
   let dropped = 0;
   for (const id of Object.keys(S)) {
     const w = byId[id];
-    if (!w || w.file !== S[id].file || Math.abs(w.start - S[id].start) > 0.002) { delete S[id]; dropped++; }
+    if (!w || w.file !== NAMEFIX(S[id].file) || Math.abs(w.start - S[id].start) > 0.002) { delete S[id]; dropped++; } else S[id].file = w.file;
   }
   if (dropped) toast(dropped + ' stored window(s) no longer match this build and were dropped');
 }
@@ -190,7 +191,7 @@ function getTrace(w) {
 
 // ---------------------------------------------------------------- view / drawing
 const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
-let V = { x0: 0, x1: 1, ylo: 0, yhi: 1 }, geo = null, hoverX = null, hoverP = null, raf = 0;
+let V = { x0: 0, x1: 1, ylo: 0, yhi: 1 }, geo = null, hoverX = null, hoverP = null, hoverM = null, raf = 0;
 function resetView() { const w = W[cur]; V = { x0: w.start, x1: w.end, ylo: w.ylo, yhi: w.yhi }; }
 function fitY() {
   const w = W[cur], y = getTrace(w), i0 = Math.max(0, Math.floor((V.x0 - w.t0) / w.dt)), i1 = Math.min(y.length, Math.ceil((V.x1 - w.t0) / w.dt));
@@ -298,6 +299,7 @@ function draw() {
     ctx.strokeStyle = 'rgba(0,0,0,.35)'; ctx.lineWidth = 1; ctx.setLineDash([4, 3]);
     for (const p of geo.panels) { ctx.beginPath(); ctx.moveTo(hoverX, p.y0); ctx.lineTo(hoverX, p.y0 + p.h); ctx.stroke(); }
     ctx.setLineDash([]);
+    if (hoverM) { for (const p of geo.panels) { if (p.d !== hoverM.det) continue; ctx.beginPath(); ctx.arc(X(hoverM.t), Y(p, hoverM.yv), 11, 0, 7); ctx.strokeStyle = '#d6336c'; ctx.lineWidth = 2; ctx.stroke(); } }
   }
 }
 function redraw() { if (!raf) raf = requestAnimationFrame(draw); }
@@ -322,11 +324,13 @@ cv.addEventListener('mousemove', e => {
       V.x0 = a; V.x1 = b; }
   }
   hoverX = e.offsetX; hoverP = panelAt(e.offsetY);
+  const hc = drag ? [] : hitMarkers(e.offsetX, e.offsetY); hoverM = hc.length ? hc[0].m : null;
   const t = T_(e.offsetX); let txt = 't = ' + t.toFixed(4) + ' s';
+  if (hoverM) { const fl = (S[W[cur].id] || { f: [] }).f.includes(hoverM.id); txt = (hc.length > 1 ? hc.length + ' markers here - ' : '') + 'click = ' + (fl ? 'UNDO false on ' : 'mark false: ') + hoverM.id + '  (' + hoverM.pol + ', ' + hoverM.amp + ' pA)   ' + txt; }
   if (hoverP) txt += '   ' + V_(hoverP, e.offsetY).toFixed(1) + ' pA';
   document.getElementById('hover').textContent = txt; redraw();
 });
-cv.addEventListener('mouseleave', () => { hoverX = null; document.getElementById('hover').textContent = ''; redraw(); });
+cv.addEventListener('mouseleave', () => { hoverX = null; hoverM = null; document.getElementById('hover').textContent = ''; redraw(); });
 cv.addEventListener('wheel', e => {
   e.preventDefault(); const w = W[cur], t = T_(e.offsetX), f = e.deltaY < 0 ? 0.8 : 1.25;
   let a = t - (t - V.x0) * f, b = t + (V.x1 - t) * f;
@@ -335,11 +339,28 @@ cv.addEventListener('wheel', e => {
 }, { passive: false });
 cv.addEventListener('dblclick', e => { resetView(); redraw(); });
 
+// markers under the cursor, nearest first. The click point may be anywhere around the marker (x matters most, y only a little),
+// so a marker is easy to hit even when the click lands on the trace instead of on the symbol.
+function hitMarkers(px, py) {
+  const w = W[cur], p = panelAt(py); if (!p) return [];
+  const out = [];
+  for (const m of w.markers) { if (m.det !== p.d) continue; const dx = X(m.t) - px, dy = (Y(p, m.yv) - py) * 0.25, d = Math.hypot(dx, dy); if (d < 16) out.push({ m, d, x: X(m.t) }); }
+  return out.sort((a, b) => a.d - b.d);
+}
 function onClick(px, py, shift) {
   const w = W[cur], p = panelAt(py); if (!p) return;
-  // 1) marker hit (same panel)
-  let best = null, bd = 14;
-  for (const m of w.markers) { if (m.det !== p.d) continue; const dx = X(m.t) - px, dy = (Y(p, m.yv) - py) * 0.6, d = Math.hypot(dx, dy); if (d < bd) { bd = d; best = m; } }
+  // 1) marker hit (same panel). Several markers closer than ~9 px: zoom in first, so the click can pick the right one.
+  const cands = hitMarkers(px, py);
+  if (cands.length >= 2) {
+    const xs = cands.map(c => c.x).sort((a, b) => a - b); let gap = 1e9; for (let k = 1; k < xs.length; k++) gap = Math.min(gap, xs[k] - xs[k - 1]);
+    if (gap < 9) {
+      const ts = cands.map(c => c.m.t), tc = (Math.min(...ts) + Math.max(...ts)) / 2, spread = Math.max(...ts) - Math.min(...ts);
+      const tmin = Math.min(...[...ts].sort((a, b) => a - b).slice(1).map((t, k) => t - [...ts].sort((a, b) => a - b)[k]));
+      let span = Math.max(0.02, Math.min(V.x1 - V.x0, tmin * geo.pw / 40, Math.max(spread * 3, 0.03)));
+      V.x0 = tc - span / 2; V.x1 = tc + span / 2; redraw(); toast('several markers close together: zoomed in - click the one you mean'); return;
+    }
+  }
+  const best = cands.length ? cands[0].m : null;
   if (best) {
     const s = st(w.id); snapshot(w.id);
     const rm = (arr, v) => { const k = arr.indexOf(v); if (k >= 0) { arr.splice(k, 1); return true; } return false; };
@@ -465,9 +486,9 @@ document.getElementById('file').addEventListener('change', async e => {
   try {
     const j = JSON.parse(await f.text()); let n = 0, kept = 0, bad = 0;
     for (const [id, x] of Object.entries(j.windows || {})) {
-      const w = byId[id]; if (!w || w.file !== x.file || Math.abs(w.start - x.start_s) > 0.002) { bad++; continue; }
+      const w = byId[id]; if (!w || w.file !== NAMEFIX(x.file) || Math.abs(w.start - x.start_s) > 0.002) { bad++; continue; }
       const cur_ = S[id]; if (cur_ && (cur_.ts || 0) > (x.ts || 0)) { kept++; continue; }
-      S[id] = { status: x.status === 'draft' ? '' : x.status, file: x.file, start: x.start_s, f: x.false.slice(), u: x.unsure.slice(), m: x.missed.map(q => ({ t: q.t, pol: q.pol, y: (compute_y(w, q.t)) })), note: x.note || '', ts: x.ts || Date.now() }; n++;
+      S[id] = { status: x.status === 'draft' ? '' : x.status, file: w.file, start: x.start_s, f: x.false.slice(), u: x.unsure.slice(), m: x.missed.map(q => ({ t: q.t, pol: q.pol, y: (compute_y(w, q.t)) })), note: x.note || '', ts: x.ts || Date.now() }; n++;
     }
     saveState(); refreshUI(); draw(); toast(n + ' window(s) imported' + (kept ? ', ' + kept + ' newer local kept' : '') + (bad ? ', ' + bad + ' did not match this build' : ''));
   } catch (err) { toast('could not read that file: ' + err.message); }
