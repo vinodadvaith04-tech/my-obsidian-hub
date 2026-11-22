@@ -1,0 +1,79 @@
+DETECTOR 2 TESTS (2026-11-22). Audit truth = labels as of 2026-11-20; windows with recordings available; detection re-run on window +/-5 s segments.
+
+1) WHY detector 2 misses real audited events (2344 events in 292 windows)
+cat
+rejected: fitted amplitude below limit              877
+no stage-1 candidate (match score < 3)              664
+in masked/unstable stretch                          328
+found in re-run                                     206
+dropped: below 0.6 x amplitude limit                 99
+dropped: merged with neighbour / duplicate           70
+rejected: poor fit (residual too large)              35
+rejected: rise time outside physiological range      21
+rejected: fit amplitude disagrees with data peak     18
+rejected: fit failed / window too short              12
+rejected: decay outside physiological range           6
+dropped: rough peak on a slope                        4
+rejected: fit parameter at bound                      3
+rejected: excluded: > MAX_AMP_PA (artefact)           1
+
+2) SETTINGS TEST (120 windows, 1731 truth events)  FP = detections not matching a confirmed event (lower bound on precision for new events: you only marked events you noticed)
+configs: K3 = amplitude limit 3.0 x noise inward / 3.5 outward, min 3 pA; K2.5 = 2.5/3.0; UF4 = unstable-block factor 4 (was 2); crit2.5 = candidate score 2.5 (was 3); tmpl+ = extra templates; combo = K3+UF4+crit2.5+tmpl+
+
+== ALL
+          truth     det  recall  precision     F1     fp
+cfg                                                     
+base     1731.0   780.0   0.473      0.976  0.637   19.0
+K3       1731.0  1101.0   0.590      0.870  0.703  143.0
+K2.5     1731.0  1399.0   0.631      0.739  0.681  365.0
+UF4      1731.0   812.0   0.490      0.968  0.651   26.0
+crit2.5  1731.0   797.0   0.484      0.974  0.646   21.0
+tmpl+    1731.0   778.0   0.472      0.974  0.636   20.0
+combo    1731.0  1222.0   0.629      0.835  0.717  202.0
+
+== Cs up (IPSC-like)
+         truth    det  recall  precision     F1    fp
+cfg                                                  
+base     696.0  196.0   0.287      0.980  0.444   4.0
+K3       696.0  297.0   0.412      0.926  0.571  22.0
+K2.5     696.0  360.0   0.460      0.858  0.599  51.0
+UF4      696.0  213.0   0.316      0.977  0.478   5.0
+crit2.5  696.0  204.0   0.299      0.975  0.458   5.0
+tmpl+    696.0  198.0   0.292      0.980  0.450   4.0
+combo    696.0  343.0   0.470      0.904  0.618  33.0
+
+== Cs down
+         truth    det  recall  precision     F1     fp
+cfg                                                   
+base     142.0   79.0   0.500      0.886  0.639    9.0
+K3       142.0  167.0   0.627      0.527  0.573   79.0
+K2.5     142.0  283.0   0.690      0.343  0.458  186.0
+UF4      142.0   81.0   0.500      0.864  0.633   11.0
+crit2.5  142.0   79.0   0.500      0.886  0.639    9.0
+tmpl+    142.0   76.0   0.479      0.882  0.621    9.0
+combo    142.0  200.0   0.634      0.445  0.523  111.0
+
+== KGlu
+         truth    det  recall  precision     F1    fp
+cfg                                                  
+base     131.0   48.0   0.344      0.938  0.503   3.0
+K3       131.0   87.0   0.443      0.667  0.532  29.0
+K2.5     131.0  153.0   0.519      0.451  0.483  84.0
+UF4      131.0   50.0   0.351      0.920  0.508   4.0
+crit2.5  131.0   48.0   0.344      0.938  0.503   3.0
+tmpl+    131.0   48.0   0.336      0.917  0.492   4.0
+combo    131.0   93.0   0.450      0.634  0.527  34.0
+
+== KCl
+         truth    det  recall  precision     F1    fp
+cfg                                                  
+base     762.0  457.0   0.660      0.993  0.793   3.0
+K3       762.0  550.0   0.770      0.976  0.861  13.0
+K2.5     762.0  603.0   0.795      0.927  0.856  44.0
+UF4      762.0  468.0   0.671      0.987  0.799   6.0
+crit2.5  762.0  466.0   0.673      0.991  0.802   4.0
+tmpl+    762.0  456.0   0.659      0.993  0.792   3.0
+combo    762.0  586.0   0.804      0.959  0.875  24.0
+
+3) NOISE FALSE-POSITIVE CHECK: 14 KCl recordings (first 60 s), outward detections (KCl has ~no real outward events)
+base K 4/4.5: outward 0.07/min | K 3/3.5: 1.16/min | K 2.5/3: 1.82/min  (inward ~280-370/min)

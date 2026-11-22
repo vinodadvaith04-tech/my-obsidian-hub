@@ -8,3 +8,6 @@ CX3CR1 knockout mice
 Iba 1 + hematoxilin staining
 
 Sensome and sensome genetics 
+
+
+This pruning is tightly regulated by **"eat-me" signals** (such as complement proteins C1q/C3 and phosphatidylserine) that tag synapses for removal, and **"don't-eat-me" signals** (such as CD47 and SIRPα) that protect active synapses from being eliminated.
