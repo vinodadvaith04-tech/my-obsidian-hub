@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Internship/Research.md",
+                "file": "Lab Journal/Staining/Staining Experiment 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Research"
+              "title": "Staining Experiment 1"
             }
           }
         ]
@@ -190,6 +190,12 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
+    "Lab Journal/Staining/Protocols/Organotypic slices protocol.md",
+    "Lab Journal/Staining/Protocols/Immunofluorescence staining protocol.md",
+    "Programming/Python.md",
+    "Programming/Python/Ephys analysis guide.md",
+    "Internship/Corette Meetings/2026-11-05.md",
+    "Internship/Research.md",
     "Internship/patch.md",
     "Lab Journal/Ephys/_Main Experiment/2026-11-19.md",
     "Programming/Python/Ephys_master_scripts/pick_audit_round4.py",
@@ -212,13 +218,8 @@
     "Lab Journal/Daily journal/3. November/Week 2 9-11 to 13-11.md",
     "Internship/Sam Meetings/2026-11-23 Sam meeting.md",
     "Internship/Sam Meetings/2026-11-09 Sam meeting.md",
-    "Internship/Corette Meetings/2026-11-05.md",
     "Internship/Corette Meetings/2026-10-15.md",
-    "Lab Journal/Ephys/_Main experiment.md",
     "Lab Journal/Ephys/_Main Experiment",
-    "Lab Journal/Ephys/3. Cs internal pilot/2026-11-17.md",
-    "Lab Journal/Anit-bodies.md",
-    "Temp/Study.md",
     "Programming/Python/Ephys_master_scripts/README.txt",
     "Programming/Python/Ephys_master_scripts/psc_detection.py",
     "Programming/Python/Ephys_master_scripts/csv_to_xlsx.py",
