@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lab Journal/Staining/Staining Experiment 1.md",
+                "file": "Lab Journal/Ephys/KCl internal testing/2026-11-23.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Staining Experiment 1"
+              "title": "2026-11-23"
             }
           }
         ]
@@ -190,6 +190,10 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
+    "Lab Journal/Ephys/IPSC recordings/2026-10-22.md",
+    "Lab Journal/Ephys/KCl internal testing/2026-11-23.md",
+    "Lab Journal/Staining/Staining Experiment 1.md",
+    "Lab Journal/Ephys/KCl internal testing",
     "Lab Journal/Staining/Protocols/Organotypic slices protocol.md",
     "Lab Journal/Staining/Protocols/Immunofluorescence staining protocol.md",
     "Programming/Python.md",
@@ -216,16 +220,12 @@
     "Lab Journal/Main experiment/Master table.md",
     "Lab Journal/Main experiment/Analysis nesting.md",
     "Lab Journal/Daily journal/3. November/Week 2 9-11 to 13-11.md",
-    "Internship/Sam Meetings/2026-11-23 Sam meeting.md",
-    "Internship/Sam Meetings/2026-11-09 Sam meeting.md",
-    "Internship/Corette Meetings/2026-10-15.md",
     "Lab Journal/Ephys/_Main Experiment",
     "Programming/Python/Ephys_master_scripts/README.txt",
     "Programming/Python/Ephys_master_scripts/psc_detection.py",
     "Programming/Python/Ephys_master_scripts/csv_to_xlsx.py",
     "Programming/Python/Ephys_master_scripts/parse_qc.py",
     "Programming/Python/Ephys_master_scripts/cs_report.py",
-    "Programming/Python/Ephys_master_scripts/score_audit.py",
     "z_Attachments/Screenshot 2026-11-09 at 15.53.23.png",
     "z_Attachments/Screenshot 2026-11-09 at 15.46.04.png",
     "z_Attachments/Pasted image 20261020010633.png",
