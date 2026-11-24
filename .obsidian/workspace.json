@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Internship/Sam Meetings/2026-11-24 Sam meeting.md",
+                "file": "Lab Journal/Ephys/3. Cs internal pilot/2026-11-17.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-11-24 Sam meeting"
+              "title": "2026-11-17"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "84e089d99f77e17c",
@@ -191,8 +190,8 @@
   },
   "active": "0027c73b89a86236",
   "lastOpenFiles": [
-    "Untitled.md",
     "Internship/Sam Meetings/2026-11-24 Sam meeting.md",
+    "Untitled.md",
     "Lab Journal/Ephys/KCl internal testing/2026-11-23.md",
     "Lab Journal/Ephys/IPSC recordings/2026-10-22.md",
     "Lab Journal/Staining/Staining Experiment 1.md",
