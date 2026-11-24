@@ -30,13 +30,17 @@ IPSC
 0.07 -> 0.16 -> 0.35 
 
 **Cs-Gluconate finding the best holdings**
+210 recordings from 22 cells, 7 different pups (9 slices in total)
 Holdings: -80, -70, -60, -50, -40, -30, 0, 10
+Noise increases (2.2 -> 4.5pA)
 
 -80: 98% of events are EPSC only 2 percent is IPSC
 -70 is statistically the same, however more IPSCs are detected. 
 
 0 & 10: For both only 3% & 4% events are EPSC. +10 better than 0 (p=0.008). 
+In cells where both 0 and 10 were taken, 0 had fewer EPSC and more IPSC (sig)
 
 
 
-At -40 mV. 
+At -40 mV. 20% of EPSCs are present and 21% of IPSCs are present, however the ratios remain the same. 
+
