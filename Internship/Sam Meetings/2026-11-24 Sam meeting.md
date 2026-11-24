@@ -45,5 +45,17 @@ Reference ratio wthin cell = freq at -80/freq at 0.
 At -40 mV. 20% of EPSCs are present and 21% of IPSCs are present, however the ratios remain the same. 
 
 **Comparing Cs-Gluconate to lab standards**
-For EPSCs no significant difference ()
-DIV 9 recordings from t
+**For EPSCs no significant difference** 
+DIV 9 recordings from the paper = sig different from all others
+DIV 21 vs Cs glu - no sig difference. 
+Current lab vs Cs glu - no sig difference. 
+
+**For IPSCs sig difference**
+DIV9, DIV21 and Cs gluconate - no significant difference. 
+Lab standards vs Cs gluconate - Sig difference (<0.001) 2.78x more IPSCs found. 
+
+Issues? MiniML detector?
+For 0 and +10mV, MiniML find only 56% (audited from 21 3s windows from 12 cells). 
+For KCl + DNQX + AP5 recordings MiniML finds 94%, and has only 4% false positives. 
+
+If you extrapolate, 
