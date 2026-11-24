@@ -38,7 +38,7 @@ Noise increases (2.2 -> 4.5pA)
 -70 is statistically the same, however more IPSCs are detected. 
 
 0 & 10: For both only 3% & 4% events are EPSC. +10 better than 0 (p=0.008). 
-In cells where both 0 and 10 were taken, 0 had fewer EPSC and more IPSC (sig)
+In cells where both 0 and 10 were taken, 10 had fewer EPSC and more IPSC (sig)
 
 Reference ratio wthin cell = freq at -80/freq at 0. 
 
