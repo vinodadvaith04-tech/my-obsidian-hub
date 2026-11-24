@@ -40,7 +40,10 @@ Noise increases (2.2 -> 4.5pA)
 0 & 10: For both only 3% & 4% events are EPSC. +10 better than 0 (p=0.008). 
 In cells where both 0 and 10 were taken, 0 had fewer EPSC and more IPSC (sig)
 
-
+Reference ratio wthin cell = freq at -80/freq at 0. 
 
 At -40 mV. 20% of EPSCs are present and 21% of IPSCs are present, however the ratios remain the same. 
 
+**Comparing Cs-Gluconate to lab standards**
+For EPSCs no significant difference ()
+DIV 9 recordings from t
