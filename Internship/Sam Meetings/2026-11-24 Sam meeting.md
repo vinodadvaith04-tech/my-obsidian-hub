@@ -12,3 +12,10 @@ Event frequency(median, per cell frequency)
 -60 - 0.19
 0 - 0.37
 10 - 0.33
+
+
+k glu int 
+23 cells patched. 
+67 recordings
+
+noise 
