@@ -18,7 +18,7 @@ Event frequency(median, per cell frequency)
 23 cells patched. 
 67 recordings
 
--50, -40, -30
+Noise = -50, -40, -30 (Significant)
 
 Noise increases 2.6 -> 3.7 -> 5.2 
 Makes sense as the cell gets more unstable
@@ -29,3 +29,5 @@ EPSC
 IPSC
 0.07 -> 0.16 -> 0.35 
 
+**Cs-Gluconate finding the best holdings**
+Holdings: -80, -70, -60, -50, -40, -30, 0, 10
