@@ -1,0 +1,43 @@
+variable,measure,a,b,n_a,n_b,med_a,med_b,p,p_holm,stars,cs_pair
+frequency,E,"Past lab (paper, DIV9)","Past lab (paper, DIV21)",24,16,0.23332,0.80818,0.0,1e-05,***,False
+frequency,E,"Past lab (paper, DIV9)","Current lab (Sam + Advaith, K-Glu, -60 mV)",24,66,0.23332,0.5974,0.0,1e-05,***,False
+frequency,E,"Past lab (paper, DIV9)",Advaith Cs-Glu (-80 mV),24,16,0.23332,0.77083,0.00031,0.00126,**,True
+frequency,E,"Past lab (paper, DIV21)","Current lab (Sam + Advaith, K-Glu, -60 mV)",16,66,0.80818,0.5974,0.00205,0.00614,**,False
+frequency,E,"Past lab (paper, DIV21)",Advaith Cs-Glu (-80 mV),16,16,0.80818,0.77083,0.92493,0.92493,ns,True
+frequency,E,"Current lab (Sam + Advaith, K-Glu, -60 mV)",Advaith Cs-Glu (-80 mV),66,16,0.5974,0.77083,0.08437,0.16874,ns,True
+frequency,I,"Past lab (paper, DIV9)","Past lab (paper, DIV21)",13,20,3.50675,2.41995,0.3288,0.98641,ns,False
+frequency,I,"Past lab (paper, DIV9)","Current lab (Helena + Advaith, KCl, -60 mV)",13,24,3.50675,8.95,3e-05,0.00014,***,False
+frequency,I,"Past lab (paper, DIV9)",Advaith Cs-Glu (0 mV),13,15,3.50675,3.225,0.81784,0.98641,ns,True
+frequency,I,"Past lab (paper, DIV21)","Current lab (Helena + Advaith, KCl, -60 mV)",20,24,2.41995,8.95,0.0,0.0,***,False
+frequency,I,"Past lab (paper, DIV21)",Advaith Cs-Glu (0 mV),20,15,2.41995,3.225,0.34204,0.98641,ns,True
+frequency,I,"Current lab (Helena + Advaith, KCl, -60 mV)",Advaith Cs-Glu (0 mV),24,15,8.95,3.225,0.0001,0.00041,***,True
+amplitude,E,"Past lab (paper, DIV9)","Past lab (paper, DIV21)",24,16,18.31539,16.4347,0.05159,0.10318,ns,False
+amplitude,E,"Past lab (paper, DIV9)","Current lab (Sam + Advaith, K-Glu, -60 mV)",24,66,18.31539,10.4724,0.0,0.0,***,False
+amplitude,E,"Past lab (paper, DIV9)",Advaith Cs-Glu (-80 mV),24,16,18.31539,13.66508,0.00274,0.00822,**,True
+amplitude,E,"Past lab (paper, DIV21)","Current lab (Sam + Advaith, K-Glu, -60 mV)",16,66,16.4347,10.4724,0.0,0.0,***,False
+amplitude,E,"Past lab (paper, DIV21)",Advaith Cs-Glu (-80 mV),16,16,16.4347,13.66508,0.07965,0.10318,ns,True
+amplitude,E,"Current lab (Sam + Advaith, K-Glu, -60 mV)",Advaith Cs-Glu (-80 mV),66,16,10.4724,13.66508,0.00143,0.00572,**,True
+amplitude,I,"Past lab (paper, DIV9)","Past lab (paper, DIV21)",13,20,19.78551,21.81193,0.51901,0.51901,ns,False
+amplitude,I,"Past lab (paper, DIV9)","Current lab (Helena + Advaith, KCl, -60 mV)",13,24,19.78551,14.56586,0.00099,0.00496,**,False
+amplitude,I,"Past lab (paper, DIV9)",Advaith Cs-Glu (0 mV),13,15,19.78551,16.85092,0.03409,0.10227,ns,True
+amplitude,I,"Past lab (paper, DIV21)","Current lab (Helena + Advaith, KCl, -60 mV)",20,24,21.81193,14.56586,7e-05,0.00043,***,False
+amplitude,I,"Past lab (paper, DIV21)",Advaith Cs-Glu (0 mV),20,15,21.81193,16.85092,0.00102,0.00496,**,True
+amplitude,I,"Current lab (Helena + Advaith, KCl, -60 mV)",Advaith Cs-Glu (0 mV),24,15,14.56586,16.85092,0.10289,0.20577,ns,True
+risetime,E,"Past lab (paper, DIV9)","Past lab (paper, DIV21)",22,16,1.70052,1.46876,0.00148,0.0074,**,False
+risetime,E,"Past lab (paper, DIV9)","Current lab (Sam + Advaith, K-Glu, -60 mV)",22,66,1.70052,1.67892,0.64024,0.75148,ns,False
+risetime,E,"Past lab (paper, DIV9)",Advaith Cs-Glu (-80 mV),22,16,1.70052,1.58377,0.12783,0.46216,ns,True
+risetime,E,"Past lab (paper, DIV21)","Current lab (Sam + Advaith, K-Glu, -60 mV)",16,66,1.46876,1.67892,0.00022,0.00134,**,False
+risetime,E,"Past lab (paper, DIV21)",Advaith Cs-Glu (-80 mV),16,16,1.46876,1.58377,0.37574,0.75148,ns,True
+risetime,E,"Current lab (Sam + Advaith, K-Glu, -60 mV)",Advaith Cs-Glu (-80 mV),66,16,1.67892,1.58377,0.11554,0.46216,ns,True
+risetime,I,"Past lab (paper, DIV9)","Past lab (paper, DIV21)",13,20,1.078,0.8223,0.08003,0.24009,ns,False
+risetime,I,"Past lab (paper, DIV9)","Current lab (Helena + Advaith, KCl, -60 mV)",13,24,1.078,0.85502,0.17632,0.35263,ns,False
+risetime,I,"Past lab (paper, DIV9)",Advaith Cs-Glu (0 mV),13,15,1.078,1.42326,0.00148,0.00591,**,True
+risetime,I,"Past lab (paper, DIV21)","Current lab (Helena + Advaith, KCl, -60 mV)",20,24,0.8223,0.85502,0.76826,0.76826,ns,False
+risetime,I,"Past lab (paper, DIV21)",Advaith Cs-Glu (0 mV),20,15,0.8223,1.42326,0.0,1e-05,***,True
+risetime,I,"Current lab (Helena + Advaith, KCl, -60 mV)",Advaith Cs-Glu (0 mV),24,15,0.85502,1.42326,0.0,0.0,***,True
+charge,E,"Current lab (Sam + Advaith, K-Glu, -60 mV)",Advaith Cs-Glu (-80 mV),66,16,0.07102,0.09569,0.00652,0.00652,**,True
+charge,I,"Current lab (Helena + Advaith, KCl, -60 mV)",Advaith Cs-Glu (0 mV),24,15,0.09389,0.1602,0.00015,0.00015,***,True
+halfdecay,E,"Current lab (Sam + Advaith, K-Glu, -60 mV)",Advaith Cs-Glu (-80 mV),66,16,2.85675,2.71671,0.11827,0.11827,ns,True
+halfdecay,I,"Current lab (Helena + Advaith, KCl, -60 mV)",Advaith Cs-Glu (0 mV),24,15,2.71071,4.10055,4e-05,4e-05,***,True
+halfwidth,E,"Current lab (Advaith only, K-Glu, -60 mV)",Advaith Cs-Glu (-80 mV),3,16,11.92125,6.88147,0.13829,0.13829,ns,True
+halfwidth,I,"Current lab (Helena + Advaith, KCl, -60 mV)",Advaith Cs-Glu (0 mV),24,15,6.11252,9.77681,0.0,0.0,***,True

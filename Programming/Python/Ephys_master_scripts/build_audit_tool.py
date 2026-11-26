@@ -43,6 +43,20 @@ def window_trace(path, st, win):
     return fs, i0, lo, lp_d, sl
 
 
+def add_old_name_aliases(paths, master_xlsx):
+    """Recordings whose files still carry their original (old_name) file name on disk: also index them by the
+    master's new_name so windows referring to new_name can be found."""
+    try:
+        import pandas as pd
+        f = pd.read_excel(master_xlsx, sheet_name="files", usecols=["new_name", "old_name"])
+        for nn, on in zip(f["new_name"], f["old_name"]):
+            if nn not in paths and on in paths:
+                paths[nn] = paths[on]
+    except Exception as e:
+        print("note: could not add old_name aliases:", e)
+    return paths
+
+
 def main():
     here = Path(__file__).resolve().parent
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -56,6 +70,7 @@ def main():
     win = pd.read_excel(xl, sheet_name="audit_windows")
     key = pd.read_excel(xl, sheet_name="audit_events_key")
     paths = {p.name: p for p in a.data_root.rglob("*.abf") if p.is_file()}
+    paths = add_old_name_aliases(paths, a.data_root / "Ephys_master.xlsx")
     base = {}
     if a.base_html:
         txt = a.base_html.read_text(encoding="utf-8")

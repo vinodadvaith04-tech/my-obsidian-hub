@@ -4,6 +4,10 @@ from figstyle import *
 from matplotlib.gridspec import GridSpec
 setup(); C='/home/claude/work/cs/'; O='/home/claude/work/style/out/'
 a=pd.read_csv(C+'cs_analysis_set.csv')
+# OUTLIERS left out of Figures 1 and 2 (decided 26 Nov 2026): recordings in which the holding current goes beyond +-1 nA at any time (cell lost / leaky): 5 of 210
+LOST=(a[['Ihold_median_pA','Ihold_first10s_pA','Ihold_last10s_pA']].abs().max(axis=1)>1000)
+print('left out of Figures 1-2:',a[LOST].new_name.tolist()); a=a[~LOST].copy()
+a['noise_p2p']=6*a.noise_lp3k_pA   # NOISE STANDARD: peak-to-peak = 6 x MAD-SD
 H=[-80,-70,-60,-50,-40,-30,0,10]
 cm=lambda c: a.groupby(['cellkey','holding_command_mV'])[c].mean().unstack()
 xl='Command holding (mV)'
@@ -12,14 +16,14 @@ ZN='↑k / ↓k = k points beyond the zoom axis'
 zextra=[Line2D([0],[0],color='none',label=ZN)]
 # ================= Figure 1: noise, drift, holding current (row 1 full scale, row 2 zoom)
 fig,axs=plt.subplots(2,3,figsize=(14,9.4))
-spec=[('noise_lp3k_pA',BL,'Noise per cell (pA)','A  Noise (MAD-SD, 3 kHz low-pass)',(0,6.5),'D  Noise, zoom to 0-6.5 pA',False),
+spec=[('noise_p2p',BL,'Noise per cell (pA, peak-to-peak)','A  Noise (peak-to-peak, 3 kHz low-pass)',(0,40),'D  Noise, zoom to 0-40 pA',False),
       ('drift_total_pA',RD,'Drift per cell (pA over the 2 min)','B  Drift over 2 min, full scale',(-150,100),'E  Drift, zoom to -150 to +100 pA',True),
       ('Ihold_median_pA',GR,'Holding current per cell (pA)','C  Holding current, full scale',(-450,350),'F  Holding current, zoom to -450 to +350 pA',True)]
 for j,(c,col,yl,t1,zl,t2,z0) in enumerate(spec):
     g=G(cm(c),col); box_panel(axs[0,j],g,full_ylim(g,zero=not z0),yl,t1,xlabel=xl,zero=z0)
     box_panel(axs[1,j],g,zl,yl,t2,xlabel=xl,zero=z0,zoom=True)
 legend(axs[0,0],'upper center',(0.55,1.0),extra=zextra)
-foot(fig,'Each dot is one cell (mean of its recordings at that command holding). -20 mV and +15 mV (1 cell each) are in the tables but not drawn. Drift is signed: negative = current falling over the 2 min.\nUpper row: all cells, full scale. Lower row: the same data on a narrower scale.',.004)
+foot(fig,'Each dot is one cell (mean of its recordings at that command holding). -20 mV and +15 mV (1 cell each) are in the tables but not drawn. Drift is signed: negative = current falling over the 2 min.\nUpper row: full scale. Lower row: the same data on a narrower scale. 5 recordings with a holding current beyond 1 nA (cell lost) are left out.',.004)
 save(fig,O+'Cs_Figure1.png',rect=(0,.045,1,1))
 # ================= Figure 2: event frequency
 fi,fo=cm('f_in'),cm('f_out'); yl='miniML frequency per cell (Hz)'
@@ -32,7 +36,7 @@ box_panel(axs[1,1],go,(0,.4),yl,'D  Outward events, zoom to 0-0.4 Hz',xlabel=xl,
 for ax in (axs[0,0],axs[1,1]): ax.axvspan(-.5,1.5,color=BL,alpha=.06,zorder=0)
 for ax in (axs[0,1],axs[1,0]): ax.axvspan(5.5,7.5,color=RD,alpha=.06,zorder=0)
 legend(axs[0,1],'upper left',(0.0,1.0),extra=zextra)
-foot(fig,'Shaded: candidate isolating holdings. Blue: -80, -70 for EPSCs (A, and D = residual outward events). Red: 0, +10 for IPSCs (B, and C = residual inward events).\nEach dot is one cell (mean of its recordings at that holding). -20 and +15 mV (1 cell each) are not drawn.',.004)
+foot(fig,'Shaded: candidate isolating holdings. Blue: -80, -70 for EPSCs (A, and D = residual outward events). Red: 0, +10 for IPSCs (B, and C = residual inward events).\nEach dot is one cell (mean of its recordings at that holding). -20 and +15 mV (1 cell each) are not drawn. 5 recordings with a holding current beyond 1 nA (cell lost) are left out.',.004)
 save(fig,O+'Cs_Figure2.png',rect=(0,.05,1,1))
 # ================= Figure 3: E/I preservation (linear axes; row 1 full scale, row 2 zoom)
 res=json.load(open(C+'cs_tables_part2.json'))['primary']['ei']

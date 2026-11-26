@@ -111,6 +111,20 @@ def _read_audit(path: Path):
     return out
 
 
+def add_old_name_aliases(paths, master_xlsx):
+    """Recordings whose files still carry their original (old_name) file name on disk: also index them by the
+    master's new_name so windows referring to new_name can be found."""
+    try:
+        import pandas as pd
+        f = pd.read_excel(master_xlsx, sheet_name="files", usecols=["new_name", "old_name"])
+        for nn, on in zip(f["new_name"], f["old_name"]):
+            if nn not in paths and on in paths:
+                paths[nn] = paths[on]
+    except Exception as e:
+        print("note: could not add old_name aliases:", e)
+    return paths
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--master", type=Path, default=em.default_master())
@@ -220,6 +234,7 @@ def main():
         return
 
     paths = {p.name: p for p in root.rglob("*.abf") if p.is_file()}
+    paths = add_old_name_aliases(paths, a.master)
     rows, key, labels = [], [], []
     npages = math.ceil(len(order) / PER_PAGE)
     for pg in range(npages):

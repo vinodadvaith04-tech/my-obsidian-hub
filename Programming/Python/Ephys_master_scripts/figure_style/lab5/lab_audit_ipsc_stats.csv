@@ -1,0 +1,13 @@
+figure,a,b,n_a,n_b,med_a,med_b,p,p_holm,stars,cs_pair
+audited,"Past lab (paper, DIV9)","Past lab (paper, DIV21)",13,20,3.50675,2.41995,0.3288,0.3288,ns,False
+audited,"Past lab (paper, DIV9)","Current lab KCl (audited windows, -60 mV)",13,24,3.50675,8.08333,4e-05,0.00022,***,False
+audited,"Past lab (paper, DIV9)","Advaith Cs-Glu (audited windows, 0 mV)",13,15,3.50675,5.66667,0.1069,0.2138,ns,True
+audited,"Past lab (paper, DIV21)","Current lab KCl (audited windows, -60 mV)",20,24,2.41995,8.08333,1e-05,3e-05,***,False
+audited,"Past lab (paper, DIV21)","Advaith Cs-Glu (audited windows, 0 mV)",20,15,2.41995,5.66667,0.0205,0.06151,ns,True
+audited,"Current lab KCl (audited windows, -60 mV)","Advaith Cs-Glu (audited windows, 0 mV)",24,15,8.08333,5.66667,0.01107,0.04427,*,True
+projected,"Past lab (paper, DIV9)","Past lab (paper, DIV21)",13,20,3.50675,2.41995,0.3288,0.39422,ns,False
+projected,"Past lab (paper, DIV9)","Current lab KCl (miniML x 1.01, -60 mV)",13,24,3.50675,8.99895,3e-05,0.00014,***,False
+projected,"Past lab (paper, DIV9)","Advaith Cs-Glu (miniML x 1.42, 0 mV)",13,15,3.50675,4.58874,0.19711,0.39422,ns,True
+projected,"Past lab (paper, DIV21)","Current lab KCl (miniML x 1.01, -60 mV)",20,24,2.41995,8.99895,0.0,0.0,***,False
+projected,"Past lab (paper, DIV21)","Advaith Cs-Glu (miniML x 1.42, 0 mV)",20,15,2.41995,4.58874,0.05962,0.17886,ns,True
+projected,"Current lab KCl (miniML x 1.01, -60 mV)","Advaith Cs-Glu (miniML x 1.42, 0 mV)",24,15,8.99895,4.58874,0.00899,0.03595,*,True
