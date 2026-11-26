@@ -37,4 +37,17 @@
 | 22   | 2    | Vgat cre | 10/11 | Female | 17/11 | 6     | 10    | 18/11 | 2D1&2  | Long       |       |     |     |       |
 | 23   | 2    | Vgat cre | 10/11 | Female | 17/11 | 6     | 11    | 18/11 | 2D1&2  | Acute      | 26/11 |     |     |       |
 | 24   | 2    | Vgat cre | 10/11 | Female | 17/11 | 6     | 12    | 18/11 | 2D1&2  | Patch      |       |     |     |       |
+|      | 3    | Vgat cre |       | Male   |       |       |       |       |        |            |       |     |     |       |
+|      | 3    | Vgat cre |       | Male   |       |       |       |       |        |            |       |     |     |       |
+|      | 3    | Vgat cre |       | Male   |       |       |       |       |        |            |       |     |     |       |
+|      | 3    | Vgat cre |       | Male   |       |       |       |       |        |            |       |     |     |       |
+|      | 3    | Vgat cre |       | Male   |       |       |       |       |        |            |       |     |     |       |
+|      | 3    | Vgat cre |       | Male   |       |       |       |       |        |            |       |     |     |       |
+|      | 3    | Vgat cre |       | Male   |       |       |       |       |        |            |       |     |     |       |
+|      | 3    | Vgat cre |       | Male   |       |       |       |       |        |            |       |     |     |       |
+|      | 3    | Vgat cre |       | Male   |       |       |       |       |        |            |       |     |     |       |
+|      | 3    | Vgat cre |       | Male   |       |       |       |       |        |            |       |     |     |       |
+|      | 3    | Vgat cre |       | Male   |       |       |       |       |        |            |       |     |     |       |
+|      | 3    | Vgat cre |       | Male   |       |       |       |       |        |            |       |     |     |       |
+|      |      |          |       |        |       |       |       |       |        |            |       |     |     |       |
 |      |      |          |       |        |       |       |       |       |        |            |       |     |     |       |
