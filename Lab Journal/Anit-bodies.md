@@ -65,6 +65,11 @@ Mouse PSD-95 -----  M 407
 Rabbit - Iba-1 ----- Rabbit 568
 Goat - CD68 ----- Goat 488 (donkey)
 
+**1st batch** 
+Vgat--Chicken------anti-Chicken--488(donkey)
+Vglut--mouse-------anti-mouse--594(donkey)
+Iba-1--Rabbit-------anti-Rabbit--647(donkey)
+CD68--Goat---------anti-Goat--405(donkey)
 
 
 
