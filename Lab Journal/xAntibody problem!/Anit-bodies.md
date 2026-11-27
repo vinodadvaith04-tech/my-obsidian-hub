@@ -47,10 +47,26 @@ Vglut--mouse-------anti-mouse--594(donkey)
 Iba-1--Rabbit-----------anti-Rabbit--647(donkey)
 CD68--Goat-------------anti-Goat--405(donkey)
 Using horse serum 
-**Backup**
-~~CD68--Rat---------------anti-Rat--405(goat)~~
 
-Try second panel with guinea pig. 
+**Backup**
+Vgat--Chicken----------anti-Chicken--647(donkey)
+Vglut--GP-------GP--594(goat)
+Iba-1--Rabbit-----------anti-Rabbit--488(donkey)
+CD68--Rat---------------anti-Rat--405(goat)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Plan different conc to confirm new anti-bodies
 

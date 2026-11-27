@@ -15,6 +15,6 @@ Iba-1----rabbit
 Vgat-----chicken
 
 
-| VGlut | CD68 |     | Iba-1 | Vgat | Vglut | CD68 | Comments |
-| ----- | ---- | --- | ----- | ---- | ----- | ---- | -------- |
-|       |      |     |       |      |       |      |          |
+| VGlut  | CD68 |     | Iba-1 | Vgat | Vglut | CD68 | Comments |
+| ------ | ---- | --- | ----- | ---- | ----- | ---- | -------- |
+| G. Pig |      |     |       |      |       |      |          |
