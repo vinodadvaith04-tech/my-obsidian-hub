@@ -18,9 +18,12 @@ Vgat-----chicken
 | VGlut  | CD68 |     | Iba-1               | Vgat                | Vglut           | CD68            | Comments                                                    |
 | ------ | ---- | --- | ------------------- | ------------------- | --------------- | --------------- | ----------------------------------------------------------- |
 | G. Pig | Goat |     | 647/488<br>(donkey) | 488/647<br>(donkey) | 568<br>(donkey) | 405<br>(donkey) | We need to buy<br>anti-G.Pig 568(donkey)                    |
-| G. Pig | Rat  |     | 568                 | 488/647             | 647/488         | 405<br>(goat)   | Need to buy more Rat CD68 eventually. Goat blocking buffer. |
+| G. Pig | Rat  |     | 568                 | 488/647             | 647/488         | 405<br>         | Need to buy more Rat CD68 eventually. Goat blocking buffer. |
+
 All other combinations have on of the 4 problems
-	anti-goat secondary binding to other goat hosted secondaries. 
-	mouse on mouse tissue
+	-Anti-goat secondary binding to other goat hosted secondaries. (Entire channels filled with anti-goat fluorescence) 
+	-Mouse on mouse tissue problem. (lot of background noise and more importantly binds quite a bit to microglia.)
+	-Rat mouse cross species reactivity (The old gephyrin cd68 problem we had)
+	-Buying more than 1 antibodies (Expensive)
 
 
