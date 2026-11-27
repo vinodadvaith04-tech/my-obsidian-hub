@@ -8,13 +8,13 @@ After going through everything in the Wierenga lab and DCN sheet this is everyth
 **Inhibitory vs Excitatory engulfment by microglia and microglial activation!**
 
 *Iba-1 is only rabbit, however it works very well and it is tested so hence we do not need to buy anything else.* 
-*Vgat is rabbit and chicken only, sinch Iba-1 is rabbit we are force to take vgat chicken.* 
+*Vgat is rabbit and chicken only, sinch Iba-1 is rabbit we are forced to take vgat chicken.* 
 
 **Confirmed**
 Iba-1----rabbit
 Vgat-----chicken
 
 
-| CD68 | VGlut |     |     |     |     |     |
-| ---- | ----- | --- | --- | --- | --- | --- |
-|      |       |     |     |     |     |     |
+| VGlut | CD68 |     | Iba-1 | Vgat | Vglut | CD68 | Comments |
+| ----- | ---- | --- | ----- | ---- | ----- | ---- | -------- |
+|       |      |     |       |      |       |      |          |
